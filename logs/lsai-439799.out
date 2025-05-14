@@ -68,3 +68,11 @@ slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: go
 2025-05-14 15:21:53,118 - root - INFO - Step: 300 | Loss: 6.57 | Tokens per second: 7207.34 | Training tokens per second (%): 54.36 | MFU (%): 37.56 | TFLOPs: 371.48
 2025-05-14 15:21:55,879 - root - INFO - Step: 305 | Loss: 8.26 | Tokens per second: 7529.30 | Training tokens per second (%): 21.34 | MFU (%): 39.24 | TFLOPs: 388.07
 2025-05-14 15:21:58,623 - root - INFO - Step: 310 | Loss: 7.59 | Tokens per second: 7577.75 | Training tokens per second (%): 15.84 | MFU (%): 39.49 | TFLOPs: 390.57
+2025-05-14 15:22:01,407 - root - INFO - Step: 315 | Loss: 6.87 | Tokens per second: 7467.10 | Training tokens per second (%): 28.90 | MFU (%): 38.91 | TFLOPs: 384.86
+2025-05-14 15:22:04,205 - root - INFO - Step: 320 | Loss: 7.61 | Tokens per second: 7427.20 | Training tokens per second (%): 31.73 | MFU (%): 38.71 | TFLOPs: 382.81
+2025-05-14 15:22:06,985 - root - INFO - Step: 325 | Loss: 7.07 | Tokens per second: 7478.54 | Training tokens per second (%): 27.17 | MFU (%): 38.97 | TFLOPs: 385.45
+2025-05-14 15:22:09,780 - root - INFO - Step: 330 | Loss: 6.34 | Tokens per second: 7434.62 | Training tokens per second (%): 30.51 | MFU (%): 38.75 | TFLOPs: 383.19
+2025-05-14 15:22:12,485 - root - INFO - Step: 335 | Loss: 7.73 | Tokens per second: 7689.62 | Training tokens per second (%): 6.10 | MFU (%): 40.07 | TFLOPs: 396.33
+2025-05-14 15:22:15,225 - root - INFO - Step: 340 | Loss: 7.40 | Tokens per second: 7587.38 | Training tokens per second (%): 16.78 | MFU (%): 39.54 | TFLOPs: 391.06
+2025-05-14 15:22:17,983 - root - INFO - Step: 345 | Loss: 7.28 | Tokens per second: 7537.52 | Training tokens per second (%): 19.16 | MFU (%): 39.28 | TFLOPs: 388.49
+2025-05-14 15:22:20,735 - root - INFO - Step: 350 | Loss: 7.21 | Tokens per second: 7554.98 | Training tokens per second (%): 19.25 | MFU (%): 39.37 | TFLOPs: 389.39
