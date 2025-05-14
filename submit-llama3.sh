@@ -3,7 +3,7 @@
 #SBATCH --partition=debug
 #SBATCH --time=00:14:59
 #SBATCH --job-name=lsai
-#SBATCH --output=/iopsstor/scratch/cscs/baraq/assignment-2/logs/%x-%j.out
+#SBATCH --output=/iopsstor/scratch/cscs/baraq/proj/logs/%x-%j.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=4
@@ -16,7 +16,7 @@ echo "START TIME: $(date)"
 
 # Set up ENV
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-ASSIGNMENT_DIR="/iopsstor/scratch/cscs/baraq/assignment-2"
+ASSIGNMENT_DIR="/iopsstor/scratch/cscs/baraq/proj"
 
 CMD_PREFIX="numactl --membind=0-3"
 
@@ -30,13 +30,13 @@ TRAINING_CMD="python3 $ASSIGNMENT_DIR/train.py \
 
 PROFILING_CMD="nsys profile -s none -w true \
 --trace='nvtx,cudnn,cublas,cuda' \
---output=/iopsstor/scratch/cscs/baraq/assignment-2/nsys-trace.nsys-rep \
+--output=/iopsstor/scratch/cscs/baraq/proj/nsys-trace.nsys-rep \
 --force-overwrite true \
 --capture-range=cudaProfilerApi \
 --capture-range-end=stop -x true numactl --membind=0-3 python3 $ASSIGNMENT_DIR/train.py --profile"
 
-# srun --cpus-per-task $SLURM_CPUS_PER_TASK bash -c "$CMD_PREFIX $TRAINING_CMD"
+srun --cpus-per-task $SLURM_CPUS_PER_TASK bash -c "$CMD_PREFIX $TRAINING_CMD"
 
-srun --cpus-per-task $SLURM_CPUS_PER_TASK bash -c "$PROFILING_CMD"
+# srun --cpus-per-task $SLURM_CPUS_PER_TASK bash -c "$PROFILING_CMD"
 
 echo "END TIME: $(date)"
