@@ -16,6 +16,7 @@ PRECISION_STR_TO_DTYPE = {
     "fp64": torch.float64,
 }
 
+
 def init_logger():
     logger.setLevel(logging.INFO)
     ch = logging.StreamHandler()
