@@ -6,8 +6,8 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
 from dataset import CollatorForCLM, ParquetDataset
-from model import Transformer, TransformerModelArgs
-from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype
+from model import Transformer, TransformerModelArgs, scale_model_config
+from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
 
 def train(args):
   logger.info(f"Experiment args: {args}")
@@ -38,8 +38,15 @@ def train(args):
         vocab_size=tokenizer.vocab_size,
         seq_len=args.sequence_length,
     )
+  
+  if args.scale > 1:
+    model_config = scale_model_config(model_config=model_config, scale=args.scale, scale_only_n_layers=True)
+    
   with set_default_dtype(model_dtype):
     model = Transformer(model_config).to(device)
+    
+  logger.info(f"Total model parameters: {sum(p.numel() for p in model.parameters()):,}")
+
   
   if args.compile:
     logger.info("Using `torch.compile`")
@@ -116,4 +123,7 @@ def train(args):
 if __name__ == "__main__":
   init_logger()
   args = get_args()
+  if args.set_seed is not None:
+      set_seed(args.set_seed)
+      logger.info(f"Setting seed to {args.set_seed}")
   train(args)

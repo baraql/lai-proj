@@ -1,9 +1,10 @@
 import argparse
 import functools
 import logging
+import random
 
 from contextlib import contextmanager
-
+import numpy as np
 import torch
 from torch.optim.lr_scheduler import LambdaLR
 
@@ -99,8 +100,9 @@ def set_default_dtype(dtype: torch.dtype):
         yield
     finally:
         torch.set_default_dtype(old_dtype)
-
-def get_args():
+        
+        
+def get_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--dataset",
@@ -183,5 +185,34 @@ def get_args():
         action='store_true',
         help="Set to compile the model with `torch.compile`"
     )
+    parser.add_argument(
+        "--scale",
+        type=int,
+        default=1,
+        help="Scale layers_n in model config to increase model params"
+    )
+    parser.add_argument(
+        "--set-seed",
+        type=int,
+        default=None,
+        help="If not None, set's the seed before running the experiments"
+    )
+    return parser
+
+
+def get_args():
+    parser = get_arg_parser()
     args = parser.parse_args()
     return args
+
+
+def set_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)  # for multi-GPU
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+

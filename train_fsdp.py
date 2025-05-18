@@ -6,8 +6,8 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
 from dataset import CollatorForCLM, ParquetDataset
-from model import Transformer, TransformerModelArgs
-from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype
+from model import Transformer, TransformerModelArgs, scale_model_config
+from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
 
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
 import torch.distributed as dist
@@ -49,6 +49,11 @@ def train(args):
         vocab_size=tokenizer.vocab_size,
         seq_len=args.sequence_length,
     )
+  
+  if args.scale > 1:
+    model_config = scale_model_config(model_config=model_config, scale=args.scale, scale_only_n_layers=True)
+    
+    
   with set_default_dtype(model_dtype):
     model = Transformer(model_config).to(device)
     total = sum(p.numel() for p in model.parameters())
@@ -83,7 +88,9 @@ def train(args):
 
   if local_rank == 0:
     logger.info("Starting training!")
+    
   train_step = 0
+  
   while train_step < args.training_steps:
     train_step += 1
 
@@ -135,8 +142,15 @@ def train(args):
 
   if local_rank == 0:
     logger.info("Training completed")
+    
+  dist.barrier()  # Wait for all processes
+  dist.destroy_process_group()
+  
 
 if __name__ == "__main__":
   init_logger()
   args = get_args()
+  if args.set_seed is not None:
+    set_seed(args.set_seed)
+    logger.info(f"Setting seed to {args.set_seed}")
   train(args)

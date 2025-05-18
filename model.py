@@ -5,6 +5,8 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 
+from utils import logger
+
 @dataclass
 class TransformerModelArgs:
     dim: int = 4096
@@ -18,6 +20,49 @@ class TransformerModelArgs:
     norm_type: str = "rmsnorm"
     seq_len: int = 2048 # defined later by config
     vocab_size: int = -1  # defined later by tokenizer
+    
+    
+MIN_MODEL_CONFIG = TransformerModelArgs(
+    dim=256,
+    n_layers=8,
+    n_heads=4,
+    n_kv_heads=8,
+    ffn_dim_multiplier=1.3,
+    multiple_of=256,
+    rope_theta=500000,
+)
+    
+    
+def scale_model_config(model_config: TransformerModelArgs, scale: int, scale_only_n_layers: bool):
+    # scale dim, n_layers and n_heads 
+    # the rest stays the same
+    logger.info(f"Scaling the model with scale={scale}, scaling only n_layer={scale_only_n_layers}")
+    
+    if scale_only_n_layers:
+        return TransformerModelArgs(
+            dim=model_config.dim,
+            n_layers=scale * model_config.n_layers, 
+            n_heads=model_config.n_heads,
+            n_kv_heads=model_config.n_kv_heads,
+            ffn_dim_multiplier=model_config.ffn_dim_multiplier,
+            multiple_of=model_config.multiple_of,
+            rope_theta=model_config.rope_theta,
+            vocab_size=model_config.vocab_size,
+            seq_len=model_config.seq_len,
+        )
+    else:
+        return TransformerModelArgs(
+            dim=scale * model_config.dim,
+            n_layers=scale * model_config.n_layers, 
+            n_heads=scale * model_config.n_heads,
+            n_kv_heads=model_config.n_kv_heads,
+            ffn_dim_multiplier=model_config.ffn_dim_multiplier,
+            multiple_of=model_config.multiple_of,
+            rope_theta=model_config.rope_theta,
+            vocab_size=model_config.vocab_size,
+            seq_len=model_config.seq_len,
+        )
+    
     
 class RMSNorm(nn.Module):
     """
