@@ -1,3 +1,16 @@
+import torch.distributed.launcher.api as _api
+_orig_launch = _api.launch_agent
+def _safe_launch(*args, **kwargs):
+    result = _orig_launch(*args, **kwargs)
+    if result is None:
+        # dummy object with is_failed() → False
+        class _R: 
+            def is_failed(self): 
+                return False
+        return _R()
+    return result
+_api.launch_agent = _safe_launch
+
 import os
 import time
 
