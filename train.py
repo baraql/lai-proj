@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
 from dataset import CollatorForCLM, ParquetDataset
-from model import Transformer, TransformerModelArgs, scale_model_config
+from model import Transformer
 from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
 
 def train(args):
@@ -27,21 +27,11 @@ def train(args):
 
   # Set up Model
   logger.info("Setting up Model...")
-  model_config = TransformerModelArgs(
-        dim=4096,
-        n_layers=32,
-        n_heads=32,
-        n_kv_heads=8,
-        ffn_dim_multiplier=1.3,
-        multiple_of=1024,
-        rope_theta=500000,
-        vocab_size=tokenizer.vocab_size,
-        seq_len=args.sequence_length,
-    )
   
-  if args.scale > 1:
-    model_config = scale_model_config(model_config=model_config, scale=args.scale, scale_only_n_layers=True)
-    
+  model_config = args.scaling_strategy.scale(args.scaling_factor)
+  model_config.vocab_size = tokenizer.vocab_size
+  logger.info(f"Loading a model with scale={args.scaling_factor}, scaling_strategy={args.scaling_strategy}, config:\n{model_config}")
+
   with set_default_dtype(model_dtype):
     model = Transformer(model_config).to(device)
     

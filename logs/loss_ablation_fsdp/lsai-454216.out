@@ -1,0 +1,263 @@
+START TIME: Wed May 21 01:44:18 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 01:44:41,210 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,210 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,210 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,210 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,211 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,211 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,211 - root - INFO - Set seed: 42
+2025-05-21 01:44:41,211 - root - INFO - Set seed: 42
+2025-05-21 01:44:45,745 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=1, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 01:44:45,745 - root - INFO - [rank 0] world size: 8
+2025-05-21 01:44:45,745 - root - INFO - Initializing tokenizer and dataset...
+2025-05-21 01:44:47,870 - root - INFO - Building model...
+2025-05-21 01:44:47,870 - root - INFO - Loading a model with scale=1, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 01:44:47,870 - root - INFO - Model config: TransformerModelArgs(dim=256, n_layers=8, n_heads=8, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total params: 75501824
+2025-05-21 01:44:48,622 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-21 01:44:48,622 - root - INFO - [rank 2] local params: 9437728
+Total params: 75501824
+2025-05-21 01:44:48,809 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-21 01:44:48,810 - root - INFO - [rank 0] local params: 9437728
+2025-05-21 01:44:48,810 - root - INFO - Starting training!
+Total params: 75501824
+2025-05-21 01:44:48,923 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=1, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 01:44:48,923 - root - INFO - [rank 4] world size: 8
+2025-05-21 01:44:48,923 - root - INFO - Initializing tokenizer and dataset...
+2025-05-21 01:44:48,938 - root - INFO - [rank 5] model is now: FullyShardedDataParallel
+2025-05-21 01:44:48,938 - root - INFO - [rank 5] local params: 9437728
+2025-05-21 01:44:49,578 - root - INFO - Building model...
+2025-05-21 01:44:49,579 - root - INFO - Loading a model with scale=1, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 01:44:49,579 - root - INFO - Model config: TransformerModelArgs(dim=256, n_layers=8, n_heads=8, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total params: 75501824
+Total params: 75501824
+2025-05-21 01:44:50,391 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-21 01:44:50,391 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-21 01:44:50,392 - root - INFO - [rank 1] local params: 9437728
+2025-05-21 01:44:50,392 - root - INFO - [rank 3] local params: 9437728
+Total params: 75501824
+2025-05-21 01:44:50,445 - root - INFO - [rank 4] model is now: FullyShardedDataParallel
+2025-05-21 01:44:50,446 - root - INFO - [rank 4] local params: 9437728
+2025-05-21 01:44:50,446 - root - INFO - Starting training!
+Total params: 75501824
+Total params: 75501824
+2025-05-21 01:44:51,147 - root - INFO - [rank 6] model is now: FullyShardedDataParallel
+2025-05-21 01:44:51,147 - root - INFO - [rank 6] local params: 9437728
+2025-05-21 01:44:51,148 - root - INFO - [rank 7] model is now: FullyShardedDataParallel
+2025-05-21 01:44:51,148 - root - INFO - [rank 7] local params: 9437728
+2025-05-21 01:44:55,653 - root - INFO - Step: 1 | Loss: 12.03 | Tokens per second: 786.65 | Training tokens per second (%): 10.94 | MFU (%): 0.01 | TFLOPs: 0.12
+2025-05-21 01:44:55,654 - root - INFO - Step: 1 | Loss: 11.86 | Tokens per second: 598.49 | Training tokens per second (%): 4.42 | MFU (%): 0.01 | TFLOPs: 0.09
+2025-05-21 01:44:55,811 - root - INFO - Step: 5 | Loss: 11.97 | Tokens per second: 104340.75 | Training tokens per second (%): 47.99 | MFU (%): 1.66 | TFLOPs: 16.41
+2025-05-21 01:44:55,811 - root - INFO - Step: 5 | Loss: 11.90 | Tokens per second: 104864.32 | Training tokens per second (%): 37.92 | MFU (%): 1.67 | TFLOPs: 16.49
+2025-05-21 01:44:55,987 - root - INFO - Step: 10 | Loss: 12.00 | Tokens per second: 116242.01 | Training tokens per second (%): 23.40 | MFU (%): 1.85 | TFLOPs: 18.28
+2025-05-21 01:44:55,987 - root - INFO - Step: 10 | Loss: 11.97 | Tokens per second: 116034.12 | Training tokens per second (%): 17.56 | MFU (%): 1.85 | TFLOPs: 18.25
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank7]:     input_ids, labels = next(train_dl_iterator)
+[rank7]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank7]:     data = self._next_data()
+[rank7]:            ^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank7]:     index = self._next_index()  # may raise StopIteration
+[rank7]:             ^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank7]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: StopIteration
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank5]:     input_ids, labels = next(train_dl_iterator)
+[rank5]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank5]:     data = self._next_data()
+[rank5]:            ^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank5]:     index = self._next_index()  # may raise StopIteration
+[rank5]:             ^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank5]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: StopIteration
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank4]:     input_ids, labels = next(train_dl_iterator)
+[rank4]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank4]:     data = self._next_data()
+[rank4]:            ^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank4]:     index = self._next_index()  # may raise StopIteration
+[rank4]:             ^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank4]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: StopIteration
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank6]:     input_ids, labels = next(train_dl_iterator)
+[rank6]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank6]:     data = self._next_data()
+[rank6]:            ^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank6]:     index = self._next_index()  # may raise StopIteration
+[rank6]:             ^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank6]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: StopIteration
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank0]:     input_ids, labels = next(train_dl_iterator)
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank0]:     index = self._next_index()  # may raise StopIteration
+[rank0]:             ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank0]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: StopIteration
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank2]:     input_ids, labels = next(train_dl_iterator)
+[rank2]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank2]:     data = self._next_data()
+[rank2]:            ^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank2]:     index = self._next_index()  # may raise StopIteration
+[rank2]:             ^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank2]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: StopIteration
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank1]:     input_ids, labels = next(train_dl_iterator)
+[rank1]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank1]:     data = self._next_data()
+[rank1]:            ^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank1]:     index = self._next_index()  # may raise StopIteration
+[rank1]:             ^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank1]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: StopIteration
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 164, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py", line 109, in train
+[rank3]:     input_ids, labels = next(train_dl_iterator)
+[rank3]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 701, in __next__
+[rank3]:     data = self._next_data()
+[rank3]:            ^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 756, in _next_data
+[rank3]:     index = self._next_index()  # may raise StopIteration
+[rank3]:             ^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py", line 691, in _next_index
+[rank3]:     return next(self._sampler_iter)  # may raise StopIteration
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: StopIteration
+W0521 01:44:57.111000 43831 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 44193 closing signal SIGTERM
+W0521 01:44:57.112000 43831 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 44195 closing signal SIGTERM
+W0521 01:44:57.112000 43831 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 44196 closing signal SIGTERM
+W0521 01:44:57.114000 12249 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 12599 closing signal SIGTERM
+W0521 01:44:57.115000 12249 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 12600 closing signal SIGTERM
+W0521 01:44:57.115000 12249 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 12602 closing signal SIGTERM
+E0521 01:44:57.360000 12249 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 12601) of binary: /usr/bin/python
+E0521 01:44:57.376000 43831 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 44194) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_01:44:57
+  host      : nid006444
+  rank      : 6 (local_rank: 2)
+  exitcode  : 1 (pid: 12601)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp_new.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_01:44:57
+  host      : nid006443
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 44194)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006444: task 1: Exited with exit code 1
+srun: Terminating StepId=454216.0
+srun: error: nid006443: task 0: Exited with exit code 1
+END TIME: Wed May 21 01:44:58 CEST 2025

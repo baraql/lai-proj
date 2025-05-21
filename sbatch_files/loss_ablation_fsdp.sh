@@ -37,8 +37,9 @@ srun python -m torch.distributed.run \
       --batch-size 1 \
       --learning-rate 5e-5 \
       --lr-warmup-steps 100 \
-      --training-steps 100 \
-      --scale 1 \
+      --training-steps 1000 \
+      --scaling-factor 19 \
+      --scaling-strategy all \
       --set-seed 42
 
 echo "END TIME: $(date)"

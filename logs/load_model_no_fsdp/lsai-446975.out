@@ -1,0 +1,43 @@
+START TIME: Sun May 18 14:42:11 CEST 2025
+Running /iopsstor/scratch/cscs/elyulina/lai-proj/load_model_no_fsdp.py
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 14:42:30,810 - root - INFO - Starting the main function
+2025-05-18 14:42:30,810 - root - INFO - Running binary search with scale low=15, high=30, precision=0
+2025-05-18 14:42:31,332 - root - INFO - Scaling the model with scale=22, scaling only n_layer=True
+2025-05-18 14:42:31,332 - root - INFO - Loading a model with scale=22, dim=4096, n_layers=176, n_heads=32
+2025-05-18 14:44:57,496 - root - INFO - Actual model parameters: 39,461,457,920
+2025-05-18 14:44:57,496 - root - INFO - Took 2 min 26 sec
+2025-05-18 14:44:57,496 - root - INFO - 
+
+
+2025-05-18 14:44:58,304 - root - INFO - Scaling the model with scale=26, scaling only n_layer=True
+2025-05-18 14:44:58,305 - root - INFO - Loading a model with scale=26, dim=4096, n_layers=208, n_heads=32
+2025-05-18 14:47:47,717 - root - INFO - Actual model parameters: 46,441,041,920
+2025-05-18 14:47:47,718 - root - INFO - Took 2 min 49 sec
+2025-05-18 14:47:47,718 - root - INFO - 
+
+
+2025-05-18 14:47:48,553 - root - INFO - Scaling the model with scale=28, scaling only n_layer=True
+2025-05-18 14:47:48,553 - root - INFO - Loading a model with scale=28, dim=4096, n_layers=224, n_heads=32
+2025-05-18 14:50:50,669 - root - INFO - Error while loading the model!
+2025-05-18 14:50:50,670 - root - INFO - CUDA out of memory. Tried to allocate 112.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.63 GiB is free. Including non-PyTorch memory, this process has 91.45 GiB memory in use. Of the allocated memory 90.05 GiB is allocated by PyTorch, and 880.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-18 14:50:50,688 - root - INFO - Took 3 min 2 sec
+2025-05-18 14:50:50,689 - root - INFO - 
+
+
+2025-05-18 14:50:51,528 - root - INFO - Scaling the model with scale=27, scaling only n_layer=True
+2025-05-18 14:50:51,528 - root - INFO - Loading a model with scale=27, dim=4096, n_layers=216, n_heads=32
+2025-05-18 14:53:46,941 - root - INFO - Actual model parameters: 48,185,937,920
+2025-05-18 14:53:46,941 - root - INFO - Took 2 min 55 sec
+2025-05-18 14:53:46,941 - root - INFO - 
+
+
+2025-05-18 14:53:47,298 - root - INFO - Best fit: 27
+2025-05-18 14:53:47,812 - root - INFO - Scaling the model with scale=27, scaling only n_layer=True
+2025-05-18 14:53:47,812 - root - INFO - Loading a model with scale=27, dim=4096, n_layers=216, n_heads=32
+2025-05-18 14:56:42,955 - root - INFO - Actual model parameters: 48,185,937,920
+2025-05-18 14:56:42,955 - root - INFO - Took 2 min 55 sec
+2025-05-18 14:56:42,955 - root - INFO - 
+
+END TIME: Sun May 18 14:56:50 CEST 2025

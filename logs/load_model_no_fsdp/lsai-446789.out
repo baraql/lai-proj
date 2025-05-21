@@ -1,0 +1,9 @@
+START TIME: Sun May 18 13:48:13 CEST 2025
+Running /iopsstor/scratch/cscs/elyulina/lai-proj/load_model_no_fsdp.py
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 446789.0 ON nid007005 CANCELLED AT 2025-05-18T13:59:43 ***
+slurmstepd: error: *** JOB 446789 ON nid007005 CANCELLED AT 2025-05-18T13:59:43 ***
+srun: forcing job termination
+srun: got SIGCONT

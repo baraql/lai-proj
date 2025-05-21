@@ -1,0 +1,104 @@
+START TIME: Wed May 21 02:24:32 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+    log_dist(f"Starting the main function")
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+    log_dist(f"Starting the main function")
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 20, in log_dist
+    log_dist(message)
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded
+W0521 02:25:22.973000 227555 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 227968 closing signal SIGTERM
+W0521 02:25:22.974000 227555 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 227969 closing signal SIGTERM
+W0521 02:25:22.975000 227555 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 227970 closing signal SIGTERM
+W0521 02:25:22.977000 78815 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 79214 closing signal SIGTERM
+W0521 02:25:22.978000 78815 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 79215 closing signal SIGTERM
+W0521 02:25:22.979000 78815 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 79216 closing signal SIGTERM
+E0521 02:25:23.354000 227555 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 227967) of binary: /usr/bin/python
+E0521 02:25:23.393000 78815 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 79213) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:25:22
+  host      : nid007125
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 227967)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:25:22
+  host      : nid007126
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 79213)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid007125: task 0: Exited with exit code 1
+srun: Terminating StepId=454249.0
+srun: error: nid007126: task 1: Exited with exit code 1

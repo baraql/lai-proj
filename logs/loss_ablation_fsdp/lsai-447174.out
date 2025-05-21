@@ -1,0 +1,94 @@
+START TIME: Sun May 18 18:16:47 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 18:17:10,290 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:17:17,063 - root - INFO - [rank 0] world size: 4
+2025-05-18 18:17:17,063 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:17:19,564 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-18 18:17:53,088 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-18 18:17:53,088 - root - INFO - [rank 2] local params: 2013332480
+Total params: 8053329920
+2025-05-18 18:17:53,264 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-18 18:17:53,264 - root - INFO - [rank 1] local params: 2013332480
+Total params: 8053329920
+2025-05-18 18:17:53,433 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-18 18:17:53,434 - root - INFO - [rank 0] local params: 2013332480
+2025-05-18 18:17:53,435 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 18:17:56,359 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-18 18:17:56,359 - root - INFO - [rank 3] local params: 2013332480
+2025-05-18 18:18:04,071 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 385.39 | Training tokens per second (%): 19.38 | MFU (%): 0.72 | TFLOPs: 7.14
+2025-05-18 18:18:06,329 - root - INFO - Step: 5 | Loss: 11.92 | Tokens per second: 7323.15 | Training tokens per second (%): 11.41 | MFU (%): 13.72 | TFLOPs: 135.64
+2025-05-18 18:18:09,215 - root - INFO - Step: 10 | Loss: 11.89 | Tokens per second: 7148.17 | Training tokens per second (%): 25.72 | MFU (%): 13.39 | TFLOPs: 132.40
+[Rank 1] done[Rank 2] done[Rank 3] done
+
+
+2025-05-18 18:18:12,130 - root - INFO - Step: 15 | Loss: 11.67 | Tokens per second: 7077.46 | Training tokens per second (%): 35.21 | MFU (%): 13.25 | TFLOPs: 131.09
+2025-05-18 18:18:12,130 - root - INFO - Training completed
+[Rank 0] done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+srun: error: nid006439: tasks 0,2: Exited with exit code 1
+srun: Terminating StepId=447174.0
+slurmstepd: error: *** STEP 447174.0 ON nid006439 CANCELLED AT 2025-05-18T18:18:14 ***
+srun: error: nid006439: task 3: Exited with exit code 1
+END TIME: Sun May 18 18:18:15 CEST 2025

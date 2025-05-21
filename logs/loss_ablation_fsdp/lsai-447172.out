@@ -1,0 +1,66 @@
+START TIME: Sun May 18 18:13:48 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 18:14:14,292 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:14:14,296 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:14:14,297 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:14:14,306 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:14:17,844 - root - INFO - [rank 2] world size: 4
+2025-05-18 18:14:17,844 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:14:17,914 - root - INFO - [rank 0] world size: 4
+2025-05-18 18:14:17,914 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:14:17,980 - root - INFO - [rank 3] world size: 4
+2025-05-18 18:14:17,980 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:14:18,021 - root - INFO - [rank 1] world size: 4
+2025-05-18 18:14:18,021 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:14:21,260 - root - INFO - Setting up Model...
+2025-05-18 18:14:21,261 - root - INFO - Setting up Model...
+2025-05-18 18:14:21,261 - root - INFO - Setting up Model...
+2025-05-18 18:14:21,261 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-18 18:14:55,755 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-18 18:14:55,755 - root - INFO - [rank 2] local params: 2013332480
+2025-05-18 18:14:55,757 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 18:14:56,345 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-18 18:14:56,345 - root - INFO - [rank 3] local params: 2013332480
+2025-05-18 18:14:56,346 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 18:14:56,695 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-18 18:14:56,696 - root - INFO - [rank 1] local params: 2013332480
+2025-05-18 18:14:56,697 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 18:14:57,396 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-18 18:14:57,396 - root - INFO - [rank 0] local params: 2013332480
+2025-05-18 18:14:57,398 - root - INFO - Starting training!
+2025-05-18 18:15:01,383 - root - INFO - Step: 1 | Loss: 11.93 | Tokens per second: 814.55 | Training tokens per second (%): 19.38 | MFU (%): 1.53 | TFLOPs: 15.09
+2025-05-18 18:15:01,385 - root - INFO - Step: 1 | Loss: 11.93 | Tokens per second: 1029.58 | Training tokens per second (%): 19.38 | MFU (%): 1.93 | TFLOPs: 19.07
+2025-05-18 18:15:01,384 - root - INFO - Step: 1 | Loss: 11.93 | Tokens per second: 875.41 | Training tokens per second (%): 19.38 | MFU (%): 1.64 | TFLOPs: 16.21
+2025-05-18 18:15:01,384 - root - INFO - Step: 1 | Loss: 11.93 | Tokens per second: 728.93 | Training tokens per second (%): 19.38 | MFU (%): 1.37 | TFLOPs: 13.50
+2025-05-18 18:15:07,657 - root - INFO - Step: 5 | Loss: 11.89 | Tokens per second: 2620.50 | Training tokens per second (%): 11.41 | MFU (%): 4.91 | TFLOPs: 48.54
+2025-05-18 18:15:07,657 - root - INFO - Step: 5 | Loss: 11.89 | Tokens per second: 2620.95 | Training tokens per second (%): 11.41 | MFU (%): 4.91 | TFLOPs: 48.55
+2025-05-18 18:15:07,657 - root - INFO - Step: 5 | Loss: 11.89 | Tokens per second: 2620.85 | Training tokens per second (%): 11.41 | MFU (%): 4.91 | TFLOPs: 48.54
+2025-05-18 18:15:07,657 - root - INFO - Step: 5 | Loss: 11.89 | Tokens per second: 2620.99 | Training tokens per second (%): 11.41 | MFU (%): 4.91 | TFLOPs: 48.55
+2025-05-18 18:15:15,580 - root - INFO - Step: 10 | Loss: 11.92 | Tokens per second: 2591.68 | Training tokens per second (%): 25.72 | MFU (%): 4.85 | TFLOPs: 48.00
+2025-05-18 18:15:15,580 - root - INFO - Step: 10 | Loss: 11.92 | Tokens per second: 2591.65 | Training tokens per second (%): 25.72 | MFU (%): 4.85 | TFLOPs: 48.00
+2025-05-18 18:15:15,580 - root - INFO - Step: 10 | Loss: 11.92 | Tokens per second: 2591.67 | Training tokens per second (%): 25.72 | MFU (%): 4.85 | TFLOPs: 48.00
+2025-05-18 18:15:15,580 - root - INFO - Step: 10 | Loss: 11.92 | Tokens per second: 2591.71 | Training tokens per second (%): 25.72 | MFU (%): 4.85 | TFLOPs: 48.00
+2025-05-18 18:15:23,508 - root - INFO - Step: 15 | Loss: 11.69 | Tokens per second: 2590.20 | Training tokens per second (%): 35.21 | MFU (%): 4.85 | TFLOPs: 47.98
+2025-05-18 18:15:23,508 - root - INFO - Training completed
+[Rank 3] done
+2025-05-18 18:15:23,508 - root - INFO - Step: 15 | Loss: 11.69 | Tokens per second: 2590.24 | Training tokens per second (%): 35.21 | MFU (%): 4.85 | TFLOPs: 47.98
+[Rank 0] done
+2025-05-18 18:15:23,508 - root - INFO - Step: 15 | Loss: 11.69 | Tokens per second: 2590.19 | Training tokens per second (%): 35.21 | MFU (%): 4.85 | TFLOPs: 47.98
+[Rank 1] done
+2025-05-18 18:15:23,508 - root - INFO - Step: 15 | Loss: 11.69 | Tokens per second: 2590.19 | Training tokens per second (%): 35.21 | MFU (%): 4.85 | TFLOPs: 47.98
+[Rank 2] done
+2025-05-18 18:15:23,508 - root - INFO - Training completed
+2025-05-18 18:15:23,508 - root - INFO - Training completed
+2025-05-18 18:15:23,508 - root - INFO - Training completed
+END TIME: Sun May 18 18:15:26 CEST 2025

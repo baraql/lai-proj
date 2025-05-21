@@ -1,0 +1,13 @@
+START TIME: Sun May 18 15:19:24 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 15:19:44,880 - root - INFO - Set seed to 42
+2025-05-18 15:19:44,880 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=27, set_seed=42)
+2025-05-18 15:19:44,881 - root - INFO - Setting up DataLoaders...
+2025-05-18 15:19:47,767 - root - INFO - Setting up Model...
+2025-05-18 15:19:47,768 - root - INFO - Scaling the model with scale=27, scaling only n_layer=True
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 447004.0 ON nid006458 CANCELLED AT 2025-05-18T15:21:15 ***
+slurmstepd: error: *** JOB 447004 ON nid006458 CANCELLED AT 2025-05-18T15:21:15 ***
+srun: forcing job termination
+srun: got SIGCONT

@@ -2,7 +2,7 @@
 
 #SBATCH --account=a-large-sc
 #SBATCH --partition=normal
-#SBATCH --time=00:14:59
+#SBATCH --time=00:29:59
 #SBATCH --job-name=lsai
 #SBATCH --output=/iopsstor/scratch/cscs/$MY_USER/lai-proj/logs/load_model_no_fsdp/%x-%j.out
 #SBATCH --nodes=1

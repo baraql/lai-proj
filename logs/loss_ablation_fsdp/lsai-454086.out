@@ -1,0 +1,149 @@
+START TIME: Wed May 21 00:26:51 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+            from model import Transformer, TransformerModelArgs, scale_model_configfrom model import Transformer, TransformerModelArgs, scale_model_configfrom model import Transformer, TransformerModelArgs, scale_model_config
+
+
+ImportErrorImportErrorImportError    : : : from model import Transformer, TransformerModelArgs, scale_model_configcannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)
+
+
+
+ImportError: cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 22, in <module>
+            from model import Transformer, TransformerModelArgs, scale_model_configfrom model import Transformer, TransformerModelArgs, scale_model_config    from model import Transformer, TransformerModelArgs, scale_model_config
+
+from model import Transformer, TransformerModelArgs, scale_model_config
+
+ImportErrorImportErrorImportError: ImportError: cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py): cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py): cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)
+cannot import name 'scale_model_config' from 'model' (/iopsstor/scratch/cscs/elyulina/lai-proj/model.py)
+
+
+E0521 00:27:14.867000 137615 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 137971) of binary: /usr/bin/python
+E0521 00:27:14.869000 197536 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 197907) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006440
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 137972)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006440
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 137973)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006440
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 137974)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006440
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 137971)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006445
+  rank      : 5 (local_rank: 1)
+  exitcode  : 1 (pid: 197908)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006445
+  rank      : 6 (local_rank: 2)
+  exitcode  : 1 (pid: 197909)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006445
+  rank      : 7 (local_rank: 3)
+  exitcode  : 1 (pid: 197910)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_00:27:14
+  host      : nid006445
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 197907)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006440: task 0: Exited with exit code 1
+srun: Terminating StepId=454086.0
+srun: error: nid006445: task 1: Exited with exit code 1
+END TIME: Wed May 21 00:27:16 CEST 2025

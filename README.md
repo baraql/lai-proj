@@ -19,7 +19,7 @@ This repository contains the project for the ETH course **Large Scale AI Enginee
 
  You can verify that it's set by running: 
  ```bash
- $ echo MY_USER
+ $ echo $MY_USER
  ```
 
  Then to submit any sbatch script that uses `$MY_USER` in the directives, simply run:
@@ -76,13 +76,64 @@ echo "END TIME: $(date)"
 
 ## Experiment 1: maximum model size that fits on a single GPU without FSDP 
 
-First, we establish the biggest model that can fit into a single GPU wihtout FSDP. For that we run a binary search changing the number of layers in the model until we find the best fit.
+First, we establish the biggest model that can fit into a single GPU wihtout FSDP. For that we run a binary search scaling model's parameters until we find the best fit. We also implemented another scaling strategy that only changes the number of layers, allowing for more flexibility and therefore fitting a bigger model at the expense of its architecture. 
 
-**Results**: the biggest model has 48,185,937,920 parameters, achieved with dim=4096, n_layers=216, n_heads=32
+**Results**:
+Scaling all parameters, the biggest model has **46,322,328,320** parameters, achieved with dim=4864, n_layers=152, n_heads=152. Scaling only the number of layers, the biggest model has **48,185,937,920** parameters, achieved with dim=4096, n_layers=216, n_heads=32.
 
-**Implementation**: `scratch/lai-proj/load_model_no_fsdp.py` \
-**Sbatch file**: `/users/elyulina/scratch/lai-proj/sbatch_files/load_model_no_fsdp.sh` \
-**Log file**: `scratch/lai-proj/logs/load_model_no_fsdp/lsai-446975.out`
+**Implementation**: `load_model_no_fsdp.py` \
+**Sbatch file**: `sbatch_files/load_model_no_fsdp.sh` \
+**Log files**: `logs/load_model_no_fsdp/lsai-453992.out` (scaling all parameters), `logs/load_model_no_fsdp/lsai-454054.out` (scaling only the number of layers)
+
+## Experiment 2: loss ablation with FSDP and without FSDP 
+To prove the correctness of FSDP implementation, we fix the seed and train the same model with FSDP (trained on 2 nodes with 4 GPUs each) or without FSDP. Then we compare the loss values parsed from the log files.  
+
+**Results**:
+![My Plot](plots/loss_comparison_2025-05-21_01-25-12.png)
+```
+=== Max Loss Difference ===
+Step: 20
+Log FSDP Loss: 11.3200
+Log NO FSDP Loss: 11.3300
+Absolute Difference: 0.0100
+
+=== Mean Metrics ===
+Log FSDP:
+  tokens_per_sec: 4814.07
+  training_tokens_pct: 27.98
+  mfu: 6.08
+  tflops: 60.09
+Log NO FSDP:
+  tokens_per_sec: 7515.06
+  training_tokens_pct: 23.94
+  mfu: 39.16
+  tflops: 387.34
+```
+
+As we can see, the results are indentical (with the biggest difference in loss values of 0.01) proving the correct implementation of FSDP. 
+
+**Implementation**: `loss_ablation.py` \
+**Reproduction**: \
+Activate a conda environment:
+```bash
+$ conda activate 
+```
+
+And run: 
+```bash
+python loss_ablation.py --fsdp-logs=/users/elyulina/scratch/lai-proj/logs/loss_ablation_fsdp/lsai-454149.out --no-fsdp-logs=/users/elyulina/scratch/lai-proj/logs/loss_ablation_no_fsdp/lsai-454162.out
+```
+
+## Experiment 3: increasing the model's size with FSDP
+
+trying to make it work and it doesn't :\(
+
+[PyTorch Tutorial](https://docs.pytorch.org/tutorials/intermediate/FSDP_advanced_tutorial.html) \
+[Ohio Supercomputer Center Tutorial](https://www.osc.edu/resources/getting_started/howto/howto_pytorch_fully_sharded_data_parallel_fsdp) \
+[Medium Tutorial](https://medium.com/@kyeg/unlock-multi-gpu-finetuning-secrets-huggingface-models-pytorch-fsdp-explained-a58bab8f510e)
+
+
+
 
 
 
