@@ -6,7 +6,7 @@
 #SBATCH --job-name=lsai
 #SBATCH --output=/iopsstor/scratch/cscs/$MY_USER/lai-proj/logs/loss_ablation_fsdp/%x-%j.out
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-node=4
 #SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=72
 #SBATCH --mem=460000
@@ -37,9 +37,9 @@ srun python -m torch.distributed.run \
       --batch-size 1 \
       --learning-rate 5e-5 \
       --lr-warmup-steps 100 \
-      --training-steps 1000 \
-      --scaling-factor 19 \
-      --scaling-strategy all \
+      --training-steps 100 \
+      --scaling-factor 1 \
+      --scaling-strategy n_layers \
       --set-seed 42
 
 echo "END TIME: $(date)"
