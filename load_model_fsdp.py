@@ -110,7 +110,6 @@ def load_model_fsdp(scaling_factor: int = 4, scaling_strategy: ScalingStrategy =
         #         TransformerBlock,
         #     },
         # )
-        
 
         
         # # configure mixed precision for FSDP
@@ -244,7 +243,12 @@ if __name__ == "__main__":
     # log_dist(f"Best fit: {best_fit}")
     
     # load_model_fsdp(scaling_factor=19, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
-    load_model_fsdp(scaling_factor=20, scaling_strategy=scaling_strategy)
+    # 
+    
+    # for running with 4 GPUS (memory ~193.81 GB per a process), best fit = ?? (with 22 already getting OOM), see logs/load_model_fsdp/lsai-457520.out
+    # for running with 1 GPU (memory ~775.24 GB per a process), best fit = ??
+
+    load_model_fsdp(scaling_factor=22, scaling_strategy=scaling_strategy)
 
 
     

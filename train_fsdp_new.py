@@ -61,7 +61,7 @@ def train(args):
         logger.info(f"Model config: {model_config}")
     
     with set_default_dtype(model_dtype):
-        model = Transformer(model_config).to(device)
+        model = Transformer(model_config)
         total = sum(p.numel() for p in model.parameters())
         print("Total params:", total)
 
@@ -140,7 +140,7 @@ def train(args):
             training_tps = ntraining_tokens_since_last_log / time_delta
 
             if local_rank == 0:
-                        logger.info(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
+                logger.info(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
 
             ntokens_since_last_log = 0
             ntraining_tokens_since_last_log = 0
