@@ -1,0 +1,194 @@
+START TIME: Wed May 21 02:31:23 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 02:32:07,515 - root - INFO - Starting the main function
+2025-05-21 02:32:07,515 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:32:07,939 - root - INFO - Starting the main function
+2025-05-21 02:32:07,939 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:32:18,072 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:32:18,077 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:1045: UserWarning: The passed-in `module` is on CPU and will thus have FSDP's sharding initialization run on CPU, which may be slower than on GPU. We recommend passing in the `device_id` argument for FSDP to move `module` to GPU for the sharding initialization. `module` must also be on GPU device to work with the `sync_module_states=True` flag since that requires GPU communication.
+  warnings.warn(
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank6]:     high = 24
+[rank6]:            ^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank6]:     
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank6]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank6]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank1]:     high = 24
+[rank1]:            ^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank1]:     
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank1]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: TypeError: log_dist() takes 1 positional argument but 3 were given
+2025-05-21 02:34:27,951 - root - INFO - Actual model parameters: 4,176,954,400
+2025-05-21 02:34:27,951 - root - INFO - [rank 4] model is now: FullyShardedDataParallel
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank4]:     high = 24
+[rank4]:            ^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank4]:     
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank4]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank4]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank5]:     high = 24
+[rank5]:            ^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank5]:     
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank5]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank5]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank7]:     high = 24
+[rank7]:            ^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank7]:     
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank7]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank2]:     high = 24
+[rank2]:            ^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank2]:     
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank2]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank4]:[W521 02:34:28.927425996 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+2025-05-21 02:34:30,027 - root - INFO - Actual model parameters: 4,176,954,400
+2025-05-21 02:34:30,027 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank0]:     high = 24
+[rank0]:            ^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank0]:     
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank0]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 133, in <module>
+[rank3]:     high = 24
+[rank3]:            ^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 100, in binary_search
+[rank3]:     
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 63, in load_model_fsdp
+[rank3]:     log_dist(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: TypeError: log_dist() takes 1 positional argument but 3 were given
+[rank0]:[W521 02:34:30.162361361 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0521 02:34:40.551000 91564 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 91933 closing signal SIGTERM
+W0521 02:34:40.552000 91564 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 91934 closing signal SIGTERM
+W0521 02:34:40.552000 91564 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 91935 closing signal SIGTERM
+W0521 02:34:40.649000 149553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 149929 closing signal SIGTERM
+W0521 02:34:40.650000 149553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 149930 closing signal SIGTERM
+W0521 02:34:40.651000 149553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 149931 closing signal SIGTERM
+E0521 02:34:40.766000 91564 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 91932) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:34:40
+  host      : nid006793
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 91932)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+E0521 02:34:40.928000 149553 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 149928) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:34:40
+  host      : nid006792
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 149928)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006793: task 1: Exited with exit code 1
+srun: Terminating StepId=454256.0
+slurmstepd: error: *** STEP 454256.0 ON nid006792 CANCELLED AT 2025-05-21T02:34:41 ***
+srun: error: nid006792: task 0: Terminated
+srun: Force Terminated StepId=454256.0

@@ -1,0 +1,213 @@
+START TIME: Wed May 21 02:37:39 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 02:38:10,220 - root - INFO - Starting the main function
+2025-05-21 02:38:10,220 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL, auto_wrap_policy=None
+2025-05-21 02:38:10,318 - root - INFO - Starting the main function
+2025-05-21 02:38:10,318 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL, auto_wrap_policy=None
+2025-05-21 02:38:15,778 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:38:15,897 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:40:23,582 - root - INFO - Error while loading the model!
+2025-05-21 02:40:23,582 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 0 has a total capacity of 94.50 GiB of which 30.85 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:40:23,584 - root - INFO - Took 2 min 13 sec
+2025-05-21 02:40:23,584 - root - INFO - 
+
+
+[rank5]:[W521 02:40:23.642368211 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 5]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank4]:[W521 02:40:23.657619835 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 4]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank6]:[W521 02:40:24.645043977 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 6]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank1]:[W521 02:40:25.800315222 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:40:25,819 - root - INFO - Error while loading the model!
+2025-05-21 02:40:25,819 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 0 has a total capacity of 94.50 GiB of which 30.51 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:40:25,821 - root - INFO - Took 2 min 15 sec
+2025-05-21 02:40:25,821 - root - INFO - 
+
+
+[rank0]:[W521 02:40:25.594032844 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank7]:[W521 02:40:26.166447782 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 7]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]:[W521 02:40:26.935461572 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank3]:[W521 02:40:29.865454912 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:40:34,202 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:40:34,293 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:42:03,244 - root - INFO - Error while loading the model!
+2025-05-21 02:42:03,244 - root - INFO - CUDA out of memory. Tried to allocate 5.40 GiB. GPU 0 has a total capacity of 94.50 GiB of which 6.83 GiB is free. Including non-PyTorch memory, this process has 87.58 GiB memory in use. Of the allocated memory 86.55 GiB is allocated by PyTorch, and 21.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:42:03,246 - root - INFO - Took 1 min 29 sec
+2025-05-21 02:42:03,246 - root - INFO - 
+
+
+[rank4]:[W521 02:42:03.432017315 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 4]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank5]:[W521 02:42:04.132381704 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 5]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank6]:[W521 02:42:04.339382337 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 6]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:42:04,411 - root - INFO - Error while loading the model!
+2025-05-21 02:42:04,411 - root - INFO - CUDA out of memory. Tried to allocate 5.40 GiB. GPU 0 has a total capacity of 94.50 GiB of which 6.65 GiB is free. Including non-PyTorch memory, this process has 87.58 GiB memory in use. Of the allocated memory 86.55 GiB is allocated by PyTorch, and 21.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:42:04,413 - root - INFO - Took 1 min 30 sec
+2025-05-21 02:42:04,414 - root - INFO - 
+
+
+[rank7]:[W521 02:42:04.428201568 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 7]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]:[W521 02:42:04.296229434 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]:[W521 02:42:04.377256036 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank1]:[W521 02:42:05.259978292 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank3]:[W521 02:42:05.389867616 ProcessGroupNCCL.cpp:4454] [PG ID 1 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank4]: [rank4]: Traceback (most recent call last):
+[rank4]: [rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 135, in <module>
+[rank4]: [rank4]:     
+[rank4]: [rank4]:    ^^
+[rank4]: [rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank4]: [rank4]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank4]: [rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: [rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 80, in load_model_fsdp
+[rank4]: [rank4]:     dist.barrier()  # Wait for all processes
+[rank4]: [rank4]:     ^^^^^^^^^^^^^^
+[rank4]: [rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]: [rank4]:     return func(*args, **kwargs)
+[rank4]: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank4]: [rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank4]: [rank4]:     work = group.barrier(opts=opts)
+[rank4]: [rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: [rank4]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank4]: [rank4]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank4]: [rank4]: Last error:
+[rank4]: [rank4]: socketPollConnect: connect returned Connection refused, exceeded error retry count (35)
+[rank5]: [rank5]: Traceback (most recent call last):
+[rank5]: [rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 135, in <module>
+[rank5]: [rank5]:     
+[rank5]: [rank5]:    ^^
+[rank5]: [rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank5]: [rank5]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank5]: [rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: [rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 80, in load_model_fsdp
+[rank5]: [rank5]:     dist.barrier()  # Wait for all processes
+[rank5]: [rank5]:     ^^^^^^^^^^^^^^
+[rank5]: [rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank5]: [rank5]:     return func(*args, **kwargs)
+[rank5]: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank5]: [rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank5]: [rank5]:     work = group.barrier(opts=opts)
+[rank5]: [rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: [rank5]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank5]: [rank5]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank5]: [rank5]: Last error:
+[rank5]: [rank5]: socketPollConnect: connect returned Connection refused, exceeded error retry count (35)
+[rank6]: [rank6]: Traceback (most recent call last):
+[rank6]: [rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 135, in <module>
+[rank6]: [rank6]:     
+[rank6]: [rank6]:    ^^
+[rank6]: [rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank6]: [rank6]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank6]: [rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: [rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 80, in load_model_fsdp
+[rank6]: [rank6]:     dist.barrier()  # Wait for all processes
+[rank6]: [rank6]:     ^^^^^^^^^^^^^^
+[rank6]: [rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank6]: [rank6]:     return func(*args, **kwargs)
+[rank6]: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank6]: [rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank6]: [rank6]:     work = group.barrier(opts=opts)
+[rank6]: [rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: [rank6]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank6]: [rank6]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank6]: [rank6]: Last error:
+[rank6]: [rank6]: socketPollConnect: connect returned Connection refused, exceeded error retry count (35)
+[rank7]: [rank7]: Traceback (most recent call last):
+[rank7]: [rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 135, in <module>
+[rank7]: [rank7]:     
+[rank7]: [rank7]:    ^^
+[rank7]: [rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank7]: [rank7]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank7]: [rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: [rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 80, in load_model_fsdp
+[rank7]: [rank7]:     dist.barrier()  # Wait for all processes
+[rank7]: [rank7]:     ^^^^^^^^^^^^^^
+[rank7]: [rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank7]: [rank7]:     return func(*args, **kwargs)
+[rank7]: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank7]: [rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank7]: [rank7]:     work = group.barrier(opts=opts)
+[rank7]: [rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: [rank7]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank7]: [rank7]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank7]: [rank7]: Last error:
+[rank7]: [rank7]: socketPollConnect: connect returned Connection refused, exceeded error retry count (35)
+[rank4]:[W521 02:43:04.066166316 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0521 02:43:11.490000 238199 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 238560 closing signal SIGTERM
+W0521 02:43:11.491000 238199 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 238561 closing signal SIGTERM
+W0521 02:43:11.492000 238199 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 238562 closing signal SIGTERM
+E0521 02:43:11.763000 238199 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 238559) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:43:11
+  host      : nid007021
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 238559)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid007021: task 1: Exited with exit code 1
+srun: Terminating StepId=454259.0
+slurmstepd: error: *** STEP 454259.0 ON nid007019 CANCELLED AT 2025-05-21T02:43:13 ***
+W0521 02:43:13.063000 200154 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 02:43:13.071000 200154 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 200510 closing signal SIGTERM
+W0521 02:43:13.073000 200154 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 200511 closing signal SIGTERM
+W0521 02:43:13.075000 200154 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 200512 closing signal SIGTERM
+W0521 02:43:13.079000 200154 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 200513 closing signal SIGTERM
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 200154 got signal: 15
+srun: error: nid007019: task 0: Exited with exit code 1

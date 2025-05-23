@@ -1,0 +1,323 @@
+START TIME: Wed May 21 01:57:02 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=19, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,665 - root - INFO - Setting seed to 42
+2025-05-21 01:57:38,666 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=19, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 01:57:45,326 - root - INFO - [rank 0] world size: 8
+2025-05-21 01:57:45,326 - root - INFO - Setting up DataLoaders...
+2025-05-21 01:57:45,415 - root - INFO - [rank 4] world size: 8
+2025-05-21 01:57:45,416 - root - INFO - Setting up DataLoaders...
+2025-05-21 01:57:54,577 - root - INFO - Setting up Model...
+2025-05-21 01:57:54,578 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:54,578 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:54,578 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:54,578 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:57,764 - root - INFO - Setting up Model...
+2025-05-21 01:57:57,764 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:57,764 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:57,764 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 01:57:57,764 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total params: 46322328320
+Total params: 46322328320
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank5]:     model = FSDP(model)
+[rank5]:             ^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank5]:     _init_param_handle_from_module(
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank5]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank5]:     handle = FlatParamHandle(
+[rank5]:              ^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank5]:     self._init_flat_param_and_metadata(
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank5]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank5]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank5]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank5]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank5]:     return torch.cat(flat_tensors, dim=0)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 1 has a total capacity of 94.50 GiB of which 6.61 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank6]:     model = FSDP(model)
+[rank6]:             ^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank6]:     _init_param_handle_from_module(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank6]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank6]:     handle = FlatParamHandle(
+[rank6]:              ^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank6]:     self._init_flat_param_and_metadata(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank6]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank6]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank6]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank6]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank6]:     return torch.cat(flat_tensors, dim=0)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 2 has a total capacity of 94.50 GiB of which 6.61 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Total params: 46322328320
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank7]:     model = FSDP(model)
+[rank7]:             ^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank7]:     _init_param_handle_from_module(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank7]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank7]:     handle = FlatParamHandle(
+[rank7]:              ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank7]:     self._init_flat_param_and_metadata(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank7]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank7]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank7]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank7]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank7]:     return torch.cat(flat_tensors, dim=0)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 3 has a total capacity of 94.50 GiB of which 6.57 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Total params: 46322328320
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank4]:     model = FSDP(model)
+[rank4]:             ^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank4]:     _init_param_handle_from_module(
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank4]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank4]:     handle = FlatParamHandle(
+[rank4]:              ^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank4]:     self._init_flat_param_and_metadata(
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank4]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank4]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank4]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank4]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank4]:     return torch.cat(flat_tensors, dim=0)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 0 has a total capacity of 94.50 GiB of which 6.52 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank4]:[W521 02:00:51.488648966 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+Total params: 46322328320
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank0]:     model = FSDP(model)
+[rank0]:             ^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank0]:     _init_param_handle_from_module(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank0]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank0]:     handle = FlatParamHandle(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank0]:     self._init_flat_param_and_metadata(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank0]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank0]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank0]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank0]:     return torch.cat(flat_tensors, dim=0)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 0 has a total capacity of 94.50 GiB of which 6.55 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Total params: 46322328320
+[rank0]:[W521 02:00:53.576487720 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank3]:     model = FSDP(model)
+[rank3]:             ^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank3]:     _init_param_handle_from_module(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank3]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank3]:     handle = FlatParamHandle(
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank3]:     self._init_flat_param_and_metadata(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank3]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank3]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank3]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank3]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank3]:     return torch.cat(flat_tensors, dim=0)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 3 has a total capacity of 94.50 GiB of which 6.53 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Total params: 46322328320
+W0521 02:00:54.518000 18563 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 18945 closing signal SIGTERM
+W0521 02:00:54.519000 18563 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 18946 closing signal SIGTERM
+W0521 02:00:54.519000 18563 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 18947 closing signal SIGTERM
+Total params: 46322328320
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank2]:     model = FSDP(model)
+[rank2]:             ^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank2]:     _init_param_handle_from_module(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank2]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank2]:     handle = FlatParamHandle(
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank2]:     self._init_flat_param_and_metadata(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank2]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank2]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank2]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank2]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank2]:     return torch.cat(flat_tensors, dim=0)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 2 has a total capacity of 94.50 GiB of which 6.51 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 64, in train
+[rank1]:     model = FSDP(model)
+[rank1]:             ^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank1]:     _init_param_handle_from_module(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 636, in _init_param_handle_from_module
+[rank1]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 648, in _init_param_handle_from_params
+[rank1]:     handle = FlatParamHandle(
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 602, in __init__
+[rank1]:     self._init_flat_param_and_metadata(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 761, in _init_flat_param_and_metadata
+[rank1]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank1]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 883, in flatten_tensors_into_flat_param
+[rank1]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors
+[rank1]:     return torch.cat(flat_tensors, dim=0)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.28 GiB. GPU 1 has a total capacity of 94.50 GiB of which 6.49 GiB is free. Including non-PyTorch memory, this process has 87.68 GiB memory in use. Of the allocated memory 86.58 GiB is allocated by PyTorch, and 570.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+E0521 02:00:55.047000 18563 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 18944) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:00:54
+  host      : nid006444
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 18944)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006444: task 1: Exited with exit code 1
+srun: Terminating StepId=454237.0
+slurmstepd: error: *** STEP 454237.0 ON nid006443 CANCELLED AT 2025-05-21T02:00:56 ***
+W0521 02:00:56.334000 50748 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 02:00:56.353000 50748 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 51113 closing signal SIGTERM
+W0521 02:00:56.355000 50748 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 51114 closing signal SIGTERM
+W0521 02:00:56.357000 50748 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 51115 closing signal SIGTERM
+W0521 02:00:56.358000 50748 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 51116 closing signal SIGTERM
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 50748 got signal: 15
+srun: error: nid006443: task 0: Exited with exit code 1
+END TIME: Wed May 21 02:00:57 CEST 2025

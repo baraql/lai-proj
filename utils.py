@@ -8,6 +8,8 @@ import numpy as np
 import torch
 from torch.optim.lr_scheduler import LambdaLR
 
+from model import ScalingStrategy
+
 logger = logging.getLogger()
 
 PRECISION_STR_TO_DTYPE = {
@@ -187,10 +189,17 @@ def get_arg_parser():
         help="Set to compile the model with `torch.compile`"
     )
     parser.add_argument(
-        "--scale",
+        "--scaling-factor",
         type=int,
         default=1,
-        help="Scale layers_n in model config to increase model params"
+        help="Scale the model to increase model params"
+    )
+    parser.add_argument(
+        "--scaling-strategy",
+        type=lambda s: ScalingStrategy(s.lower()),
+        choices=list(ScalingStrategy),
+        default=ScalingStrategy.ALL,
+        help="Scaling strategy to apply to the model (options: all, n_layers)"
     )
     parser.add_argument(
         "--set-seed",

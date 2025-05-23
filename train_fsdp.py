@@ -1,45 +1,81 @@
-import torch.distributed.launcher.api as _api
-_orig_launch = _api.launch_agent
-def _safe_launch(*args, **kwargs):
-    result = _orig_launch(*args, **kwargs)
-    if result is None:
-        # dummy object with is_failed() → False
-        class _R: 
-            def is_failed(self): 
-                return False
-        return _R()
-    return result
-_api.launch_agent = _safe_launch
-
 import os
 import time
+import functools
 
+import psutil 
 import torch
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
-
-from dataset import CollatorForCLM, ParquetDataset
-from model import Transformer, TransformerModelArgs, scale_model_config
-from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
-
-from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+from torch.distributed.fsdp import (
+    FullyShardedDataParallel as FSDP,
+    MixedPrecision,
+    ShardingStrategy,
+    CPUOffload
+)
+from torch.distributed.fsdp.wrap import (
+    transformer_auto_wrap_policy,
+    size_based_auto_wrap_policy,
+    enable_wrap,
+    wrap
+)
 import torch.distributed as dist
 
+
+from dataset import CollatorForCLM, ParquetDataset
+from model import Transformer, ScalingStrategy, TransformerBlock
+from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
+
+
+# Only the node with the global rank 0 will print it 
+def log_dist(message):
+  if int(os.environ["RANK"]) == 0:
+      logger.info(f"[RANK 0 / {int(os.environ["WORLD_SIZE"])}] {message}")
+
+
+def print_time_stats(start_time, end_time):
+  elapsed = end_time - start_time
+  minutes = int(elapsed // 60)
+  seconds = int(elapsed % 60)
+  log_dist(f"Took {minutes} min {seconds} sec")
+    
+    
+def print_GPU_stats():
+  log_dist(f"AVAILABLE GPUS: {int(os.environ["WORLD_SIZE"])}")
+  log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / int(os.environ["LOCAL_WORLD_SIZE"])}")
+  
+  
+def print_memory_info():
+  mem = psutil.virtual_memory()
+  log_dist(f"Total RAM: {mem.total / (1024**3):.2f} GB")
+  log_dist(f"Available RAM: {mem.available / (1024**3):.2f} GB")
+  tasks = int(os.environ["LOCAL_WORLD_SIZE"])
+  per_process_mem = mem.available / ((1024**3) * tasks)
+  log_dist(f"Available per-process RAM: {per_process_mem:.2f} GB")
+  
+  if torch.cuda.is_available():
+      i = 0
+      log_dist(f"GPU {i}: {torch.cuda.get_device_name(i)}")
+      log_dist(f"  Total memory: {torch.cuda.get_device_properties(i).total_memory / (1024**3):.2f} GB")
+      log_dist(f"  Allocated memory: {torch.cuda.memory_allocated(i) / (1024**3):.2f} GB")
+      log_dist(f"  Cached memory: {torch.cuda.memory_reserved(i) / (1024**3):.2f} GB")
+  else:
+      log_dist("No GPU available")
+    
+    
 def train(args):
+  print_GPU_stats()
+  print_memory_info()
+  
+  start_time = time.time()
+
   local_rank = int(os.environ["LOCAL_RANK"])
-  if local_rank == 0:
-    logger.info(f"Experiment args: {args}")
-  # Init
-  device = torch.device(f"cuda:{int(os.getenv('LOCAL_RANK', 0))}")
-  torch.cuda.set_device(local_rank)
-  model_dtype = PRECISION_STR_TO_DTYPE[args.model_dtype]
 
-  dist.init_process_group(backend="nccl", init_method="env://")
-
-  # Set up DataLoader
-  if local_rank == 0:
-    logger.info(f"[rank {dist.get_rank()}] world size: {dist.get_world_size()}")
-    logger.info("Setting up DataLoaders...")
+  log_dist(f"Experiment args: {args}")
+  
+  # SET UP DATALOADER
+  log_dist(f"world size: {int(os.environ["WORLD_SIZE"])}")
+  log_dist("Setting up DataLoaders...")
+    
   tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name_or_path)
   train_ds = ParquetDataset(args.dataset, tokenizer, args.sequence_length, args.batch_size*args.training_steps)
   train_collator = CollatorForCLM(args.sequence_length, tokenizer.pad_token_id)
@@ -48,39 +84,69 @@ def train(args):
                         collate_fn=train_collator)
   train_dl_iterator = iter(train_dl)
 
-  # Set up Model
-  if local_rank == 0:
-    logger.info("Setting up Model...")
-  model_config = TransformerModelArgs(
-        dim=4096,
-        n_layers=32,
-        n_heads=32,
-        n_kv_heads=8,
-        ffn_dim_multiplier=1.3,
-        multiple_of=1024,
-        rope_theta=500000,
-        vocab_size=tokenizer.vocab_size,
-        seq_len=args.sequence_length,
-    )
+  # PREPARE MODEL CONFIG
+  log_dist("Setting up Model...")
+  model_config = args.scaling_strategy.scale(args.scaling_factor)
+  model_config.vocab_size = tokenizer.vocab_size
+  log_dist(f"Loading a model with scale={args.scaling_factor}, scaling_strategy={args.scaling_strategy}, config:\n{model_config}")
+
+
+  # INIT THE MODEL 
+  model_dtype = PRECISION_STR_TO_DTYPE[args.model_dtype]
+  device = torch.device(f"cuda:{int(os.getenv('LOCAL_RANK', 0))}")
   
-  if args.scale > 1:
-    model_config = scale_model_config(model_config=model_config, scale=args.scale, scale_only_n_layers=True)
-    
-    
   with set_default_dtype(model_dtype):
-    model = Transformer(model_config).to(device)
-    total = sum(p.numel() for p in model.parameters())
-    print("Total params:", total)
+    ## !! don't call .to(device) here, it should be loaded to RAM first !!
+    model = Transformer(model_config)
+  
+  total_params = sum(p.numel() for p in model.parameters())
+  print("Total model parameters:", total_params)
+  
+  # SETTING CUDA DEVICE
+  local_rank = int(os.environ["LOCAL_RANK"])
+  torch.cuda.set_device(local_rank)
+  
+  
+  # SETUP TORCH DISTRIBUTED 
+  if not dist.is_initialized():
+    dist.init_process_group(backend="nccl", init_method="env://")
+        
 
-  model = FSDP(model)
-  logger.info(f"[rank {dist.get_rank()}] model is now: {model.__class__.__name__}")
-  local = sum(p.numel() for p in model.parameters())
-  logger.info("[rank %d] local params: %d", dist.get_rank(), local)
+  # FSDP 
+  # we need to specify the wrap policy otw the default policy will wrap whole layers at once and they still don't fit
+  auto_wrap_policy = functools.partial(
+      transformer_auto_wrap_policy,
+      transformer_layer_cls={
+          TransformerBlock,
+      },
+  )
 
+  # configure mixed precision for FSDP
+  mixed_precision_policy = MixedPrecision(
+      param_dtype=model_dtype,
+      reduce_dtype=model_dtype,
+      buffer_dtype=model_dtype
+  )
+
+
+  # apply FSDP directly to the model
+  log_dist("Wrapping model with FSDP")
+  model = FSDP(
+      model,
+      auto_wrap_policy=auto_wrap_policy,
+      mixed_precision=mixed_precision_policy,
+      sharding_strategy=ShardingStrategy.FULL_SHARD,  # most memory efficient
+      device_id=torch.cuda.current_device(), ## !! important to specify it here !!
+      cpu_offload=CPUOffload(offload_params=True),  # offload parameters to CPU when not in use
+      limit_all_gathers=True,  # prevent OOM during all-gathers
+  )
+    
+  log_dist(f"The model is now: {model.__class__.__name__}")
+  local_params = sum(p.numel() for p in model.parameters())
+  logger.info("[rank %d] local params: %d", dist.get_rank(), local_params)
     
   if args.compile:
-    if local_rank == 0:
-      logger.info("Using `torch.compile`")
+    log_dist("Using `torch.compile`")
     model = torch.compile(model, fullgraph=True)
   
   model.train() # turn on training mode
@@ -99,8 +165,7 @@ def train(args):
   ntraining_tokens_since_last_log = 0
   time_last_log = time.perf_counter()
 
-  if local_rank == 0:
-    logger.info("Starting training!")
+  log_dist("Starting training!")
     
   train_step = 0
   
@@ -143,7 +208,7 @@ def train(args):
       training_tps = ntraining_tokens_since_last_log / time_delta
 
       if local_rank == 0:
-        logger.info(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
+        log_dist(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
       ntokens_since_last_log = 0
       ntraining_tokens_since_last_log = 0
       time_last_log = time.perf_counter()
@@ -152,10 +217,11 @@ def train(args):
     if args.profile and args.profile_step_end == train_step:
       torch.cuda.cudart().cudaProfilerStop()
 
-
-  if local_rank == 0:
-    logger.info("Training completed")
+  log_dist("Training completed")
     
+  end_time = time.time()
+  print_time_stats(start_time, end_time)
+  
   dist.barrier()  # Wait for all processes
   dist.destroy_process_group()
   
@@ -165,5 +231,5 @@ if __name__ == "__main__":
   args = get_args()
   if args.set_seed is not None:
     set_seed(args.set_seed)
-    logger.info(f"Setting seed to {args.set_seed}")
+    log_dist(f"Setting seed to {args.set_seed}")
   train(args)

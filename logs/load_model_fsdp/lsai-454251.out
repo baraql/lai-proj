@@ -1,0 +1,168 @@
+START TIME: Wed May 21 02:26:24 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 02:27:14,624 - root - INFO - Starting the main function
+2025-05-21 02:27:14,624 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:27:14,998 - root - INFO - Starting the main function
+2025-05-21 02:27:14,998 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank2]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank2]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank2]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank2]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank3]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank3]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank3]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank3]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank3]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank3]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank0]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank0]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank0]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank0]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank6]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank6]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank6]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank6]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank4]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank4]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank4]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank4]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank5]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank5]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank5]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank5]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank7]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank7]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank7]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank7]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 132, in <module>
+[rank1]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy)
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 99, in binary_search
+[rank1]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy)
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 49, in load_model_fsdp
+[rank1]:     log_dist(local_rank, f"Loading a model with scale={scaling_factor}, scaling_strategy={scaling_strategy}, config:\n{model_config}")
+[rank1]: TypeError: log_dist() takes 1 positional argument but 2 were given
+[rank4]:[W521 02:27:20.342693401 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank0]:[W521 02:27:20.506235622 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0521 02:27:20.889000 229297 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 229678 closing signal SIGTERM
+W0521 02:27:20.889000 229297 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 229679 closing signal SIGTERM
+W0521 02:27:20.890000 229297 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 229680 closing signal SIGTERM
+W0521 02:27:20.896000 80267 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 80663 closing signal SIGTERM
+W0521 02:27:20.896000 80267 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 80664 closing signal SIGTERM
+W0521 02:27:20.897000 80267 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 80665 closing signal SIGTERM
+E0521 02:27:21.254000 229297 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 229677) of binary: /usr/bin/python
+E0521 02:27:21.274000 80267 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 80662) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:27:20
+  host      : nid007125
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 229677)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:27:20
+  host      : nid007126
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 80662)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid007126: task 1: Exited with exit code 1
+srun: Terminating StepId=454251.0
+srun: error: nid007125: task 0: Exited with exit code 1

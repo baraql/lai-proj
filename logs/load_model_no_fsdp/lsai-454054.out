@@ -1,0 +1,45 @@
+START TIME: Wed May 21 00:00:49 CEST 2025
+Running /iopsstor/scratch/cscs/elyulina/lai-proj/load_model_no_fsdp.py
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 00:01:11,285 - root - INFO - Starting the main function
+2025-05-21 00:01:11,285 - root - INFO - Running binary search with scale low=15, high=30, precision=0, scaling_strategy=ScalingStrategy.N_LAYERS
+2025-05-21 00:01:11,854 - root - INFO - Loading a model with scale=22, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=200, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 00:03:59,167 - root - INFO - Actual model parameters: 44,696,145,920
+2025-05-21 00:03:59,167 - root - INFO - Took 2 min 47 sec
+2025-05-21 00:03:59,167 - root - INFO - 
+
+
+2025-05-21 00:03:59,961 - root - INFO - Loading a model with scale=26, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=232, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 00:07:10,749 - root - INFO - Error while loading the model!
+2025-05-21 00:07:10,749 - root - INFO - CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.64 GiB is free. Including non-PyTorch memory, this process has 91.42 GiB memory in use. Of the allocated memory 90.02 GiB is allocated by PyTorch, and 880.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 00:07:10,785 - root - INFO - Took 3 min 11 sec
+2025-05-21 00:07:10,785 - root - INFO - 
+
+
+2025-05-21 00:07:11,608 - root - INFO - Loading a model with scale=24, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=216, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 00:10:08,781 - root - INFO - Actual model parameters: 48,185,937,920
+2025-05-21 00:10:08,782 - root - INFO - Took 2 min 57 sec
+2025-05-21 00:10:08,782 - root - INFO - 
+
+
+2025-05-21 00:10:09,606 - root - INFO - Loading a model with scale=25, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=224, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 00:13:13,329 - root - INFO - Error while loading the model!
+2025-05-21 00:13:13,329 - root - INFO - CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.64 GiB is free. Including non-PyTorch memory, this process has 91.42 GiB memory in use. Of the allocated memory 90.02 GiB is allocated by PyTorch, and 880.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 00:13:13,348 - root - INFO - Took 3 min 4 sec
+2025-05-21 00:13:13,349 - root - INFO - 
+
+
+2025-05-21 00:13:13,691 - root - INFO - Best fit: 24
+2025-05-21 00:13:14,197 - root - INFO - Loading a model with scale=24, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=216, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 00:16:11,253 - root - INFO - Actual model parameters: 48,185,937,920
+2025-05-21 00:16:11,253 - root - INFO - Took 2 min 57 sec
+2025-05-21 00:16:11,253 - root - INFO - 
+
+
+END TIME: Wed May 21 00:16:22 CEST 2025

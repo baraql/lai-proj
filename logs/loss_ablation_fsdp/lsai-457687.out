@@ -1,0 +1,40 @@
+START TIME: Thu May 22 14:24:39 CEST 2025
+Node IP: 172.28.31.60
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 14:25:03,217 - root - INFO - Setting seed to 42
+2025-05-22 14:25:03,217 - root - INFO - Setting seed to 42
+2025-05-22 14:25:03,217 - root - INFO - Setting seed to 42
+2025-05-22 14:25:03,217 - root - INFO - Setting seed to 42
+2025-05-22 14:25:03,217 - root - INFO - [RANK 0 / 4] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=10, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-22 14:25:03,217 - root - INFO - [RANK 0 / 4] world size: 4
+2025-05-22 14:25:03,217 - root - INFO - [RANK 0 / 4] Setting up DataLoaders...
+2025-05-22 14:25:06,785 - root - INFO - [RANK 0 / 4] Setting up Model...
+2025-05-22 14:25:06,785 - root - INFO - [RANK 0 / 4] Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total model parameters: 7329958400
+Total model parameters: 7329958400
+Total model parameters: 7329958400
+2025-05-22 14:25:37,738 - root - INFO - [RANK 0 / 4] Wrapping model with FSDP
+Total model parameters: 7329958400
+2025-05-22 14:25:38,989 - root - INFO - [rank 2] local params: 1832489600
+2025-05-22 14:25:39,111 - root - INFO - [rank 3] local params: 1832489600
+2025-05-22 14:25:39,149 - root - INFO - [RANK 0 / 4] The model is now: FullyShardedDataParallel
+2025-05-22 14:25:39,150 - root - INFO - [rank 0] local params: 1832489600
+2025-05-22 14:25:39,154 - root - INFO - [RANK 0 / 4] Starting training!
+2025-05-22 14:25:39,594 - root - INFO - [rank 1] local params: 1832489600
+2025-05-22 14:25:46,809 - root - INFO - [RANK 0 / 4] Step: 1 | Loss: 11.93 | Tokens per second: 535.17 | Training tokens per second (%): 19.38 | MFU (%): 1.14 | TFLOPs: 11.27
+2025-05-22 14:25:55,817 - root - INFO - [RANK 0 / 4] Step: 5 | Loss: 11.97 | Tokens per second: 1818.83 | Training tokens per second (%): 11.41 | MFU (%): 3.87 | TFLOPs: 38.31
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 457687.0 ON nid006505 CANCELLED AT 2025-05-22T14:26:05 ***
+slurmstepd: error: *** JOB 457687 ON nid006505 CANCELLED AT 2025-05-22T14:26:05 ***
+srun: forcing job termination
+W0522 14:26:05.316000 39175 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+srun: got SIGCONT
+W0522 14:26:05.316000 5085 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0522 14:26:05.316000 39175 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 39523 closing signal SIGTERM
+W0522 14:26:05.317000 5085 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 5497 closing signal SIGTERM
+W0522 14:26:05.318000 5085 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 5498 closing signal SIGTERM
+W0522 14:26:05.317000 39175 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 39524 closing signal SIGTERM

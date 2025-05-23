@@ -1,0 +1,258 @@
+START TIME: Wed May 21 03:48:49 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'RMSNorm' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.RMSNorm'> implements a `reset_parameters()` method.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'RMSNorm' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.RMSNorm'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank3]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank3]:     model = FSDP(
+[rank3]:             ^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank3]:     _auto_wrap(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank3]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank3]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank3]:                                         ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank3]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank3]:                                         ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 563, in _recursive_wrap
+[rank3]:     return _wrap(module, wrapper_cls, **kwargs), nonwrapped_numel
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 492, in _wrap
+[rank3]:     return wrapper_cls(module, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank3]:     _init_param_handle_from_module(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank3]:     _materialize_meta_module(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank3]:     raise e
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank3]:     module.reset_parameters()  # type: ignore[operator]
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank3]:     raise AttributeError(
+[rank3]: AttributeError: 'RMSNorm' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank2]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank2]:     model = FSDP(
+[rank2]:             ^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank2]:     _auto_wrap(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank2]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank2]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank2]:                                         ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank2]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank2]:                                         ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 563, in _recursive_wrap
+[rank2]:     return _wrap(module, wrapper_cls, **kwargs), nonwrapped_numel
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 492, in _wrap
+[rank2]:     return wrapper_cls(module, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank2]:     _init_param_handle_from_module(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank2]:     _materialize_meta_module(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank2]:     raise e
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank2]:     module.reset_parameters()  # type: ignore[operator]
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank2]:     raise AttributeError(
+[rank2]: AttributeError: 'RMSNorm' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'RMSNorm' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.RMSNorm'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank7]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank7]:     model = FSDP(
+[rank7]:             ^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank7]:     _auto_wrap(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank7]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank7]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank7]:                                         ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 545, in _recursive_wrap
+[rank7]:     wrapped_child, num_wrapped_params = _recursive_wrap(
+[rank7]:                                         ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 563, in _recursive_wrap
+[rank7]:     return _wrap(module, wrapper_cls, **kwargs), nonwrapped_numel
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 492, in _wrap
+[rank7]:     return wrapper_cls(module, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank7]:     _init_param_handle_from_module(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank7]:     _materialize_meta_module(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank7]:     raise e
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank7]:     module.reset_parameters()  # type: ignore[operator]
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank7]:     raise AttributeError(
+[rank7]: AttributeError: 'RMSNorm' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+W0521 03:49:19.199000 115550 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 115923 closing signal SIGTERM
+W0521 03:49:19.199000 115550 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 115924 closing signal SIGTERM
+W0521 03:49:19.200000 115550 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 115926 closing signal SIGTERM
+E0521 03:49:19.377000 115550 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 115925) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_03:49:19
+  host      : nid006793
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 115925)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+W0521 03:49:19.800000 126053 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126408 closing signal SIGTERM
+W0521 03:49:19.801000 126053 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126409 closing signal SIGTERM
+W0521 03:49:19.802000 126053 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126410 closing signal SIGTERM
+E0521 03:49:20.016000 126053 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 126411) of binary: /usr/bin/python
+W0521 03:49:20.024000 126053 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006859_126053_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 03:49:20.377897269 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:34694, remote=[nid006793]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006c21bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400022a789c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400022a78fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400022a7d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x400022a7ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x400022a7f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x400022a8061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40001d0a9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40001c70c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #11: /usr/bin/python() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #14: /usr/bin/python() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #18: /usr/bin/python() [0x55f968]
+frame #19: /usr/bin/python() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #22: /usr/bin/python() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #25: <unknown function> + 0x284c4 (0x40001b5a84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x40001b5a8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 03:49:20.051000 126053 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006859_126053_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 03:49:20.393314565 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:34694, remote=[nid006793]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006c21bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400022a789c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400022a78fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400022a7d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x400022a7ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x400022a7f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x400022a8061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40001d0a9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40001c70c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #11: /usr/bin/python() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #14: /usr/bin/python() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #18: /usr/bin/python() [0x55f968]
+frame #19: /usr/bin/python() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #22: /usr/bin/python() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #25: <unknown function> + 0x284c4 (0x40001b5a84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x40001b5a8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 03:49:20.066000 126053 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006859_126053_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_03:49:19
+  host      : nid006859
+  rank      : 7 (local_rank: 3)
+  exitcode  : 1 (pid: 126411)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006793: task 0: Exited with exit code 1
+srun: Terminating StepId=454286.0
+srun: error: nid006859: task 1: Exited with exit code 1

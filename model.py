@@ -1,11 +1,12 @@
 from dataclasses import dataclass
 from typing import Optional, Tuple
+from enum import Enum
+from copy import deepcopy
 
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
 
-from utils import logger
 
 @dataclass
 class TransformerModelArgs:
@@ -21,48 +22,55 @@ class TransformerModelArgs:
     seq_len: int = 2048 # defined later by config
     vocab_size: int = -1  # defined later by tokenizer
     
-    
+MIN_N_HEADS = 8
+
+# A model confg to scale all the params at the same time  
 MIN_MODEL_CONFIG = TransformerModelArgs(
     dim=256,
-    n_layers=8,
-    n_heads=4,
+    n_layers=MIN_N_HEADS,
+    n_heads=MIN_N_HEADS,
     n_kv_heads=8,
     ffn_dim_multiplier=1.3,
     multiple_of=256,
     rope_theta=500000,
+    seq_len=4096,
 )
-    
-    
-def scale_model_config(model_config: TransformerModelArgs, scale: int, scale_only_n_layers: bool):
-    # scale dim, n_layers and n_heads 
-    # the rest stays the same
-    logger.info(f"Scaling the model with scale={scale}, scaling only n_layer={scale_only_n_layers}")
-    
-    if scale_only_n_layers:
-        return TransformerModelArgs(
-            dim=model_config.dim,
-            n_layers=scale * model_config.n_layers, 
-            n_heads=model_config.n_heads,
-            n_kv_heads=model_config.n_kv_heads,
-            ffn_dim_multiplier=model_config.ffn_dim_multiplier,
-            multiple_of=model_config.multiple_of,
-            rope_theta=model_config.rope_theta,
-            vocab_size=model_config.vocab_size,
-            seq_len=model_config.seq_len,
-        )
-    else:
-        return TransformerModelArgs(
-            dim=scale * model_config.dim,
-            n_layers=scale * model_config.n_layers, 
-            n_heads=scale * model_config.n_heads,
-            n_kv_heads=model_config.n_kv_heads,
-            ffn_dim_multiplier=model_config.ffn_dim_multiplier,
-            multiple_of=model_config.multiple_of,
-            rope_theta=model_config.rope_theta,
-            vocab_size=model_config.vocab_size,
-            seq_len=model_config.seq_len,
-        )
-    
+
+# A model config that is used for training by default 
+DEFAULT_MODEL_CONFIG = TransformerModelArgs(
+    dim=4096,
+    n_layers=32,
+    n_heads=32,
+    n_kv_heads=8,
+    ffn_dim_multiplier=1.3,
+    multiple_of=1024,
+    rope_theta=500000,
+    seq_len=4096,
+)
+
+class ScalingStrategy(Enum):
+    ALL = "all"
+    N_LAYERS = "n_layers"
+
+    def scale(self, scaling_factor: int, base_config: Optional[TransformerModelArgs] = None) -> TransformerModelArgs:
+        assert scaling_factor >= 1
+
+        if self == ScalingStrategy.ALL:
+            config = deepcopy(base_config or MIN_MODEL_CONFIG)
+            config.dim *= scaling_factor
+            config.n_layers *= scaling_factor
+            config.n_heads *= scaling_factor
+            return config
+
+        # adding multiples of 8 to the default number of heads
+        elif self == ScalingStrategy.N_LAYERS:
+            config = deepcopy(base_config or DEFAULT_MODEL_CONFIG)
+            config.n_layers = config.n_layers + MIN_N_HEADS * (scaling_factor - 1) 
+            return config
+
+        else:
+            raise NotImplementedError(f"Scaling strategy {self} not implemented")
+          
     
 class RMSNorm(nn.Module):
     """

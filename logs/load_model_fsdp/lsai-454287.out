@@ -1,0 +1,311 @@
+START TIME: Wed May 21 03:51:22 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 03:51:50,658 - root - INFO - Loading a model with scale=21, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5376, n_layers=168, n_heads=168, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 03:51:50,658 - root - INFO - Creating model with meta device to avoid OOM during initialization
+2025-05-21 03:51:50,753 - root - INFO - Total model parameters: 62,219,592,960
+2025-05-21 03:51:50,753 - root - INFO - Wrapping model with FSDP
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'Transformer' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'Transformer' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank3]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank3]:     model = FSDP(
+[rank3]:             ^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank3]:     _init_param_handle_from_module(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank3]:     _materialize_meta_module(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank3]:     raise e
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank3]:     module.reset_parameters()  # type: ignore[operator]
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank3]:     raise AttributeError(
+[rank3]: AttributeError: 'Transformer' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank1]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank1]:     model = FSDP(
+[rank1]:             ^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank1]:     _init_param_handle_from_module(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank1]:     _materialize_meta_module(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank1]:     raise e
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank1]:     module.reset_parameters()  # type: ignore[operator]
+[rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank1]:     raise AttributeError(
+[rank1]: AttributeError: 'Transformer' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'Transformer' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank0]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank0]:     model = FSDP(
+[rank0]:             ^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank0]:     _init_param_handle_from_module(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank0]:     _materialize_meta_module(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank0]:     raise e
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank0]:     module.reset_parameters()  # type: ignore[operator]
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'Transformer' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+[rank0]:[W521 03:51:52.415741554 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'Transformer' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error 'Transformer' object has no attribute 'reset_parameters'. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank7]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank7]:     model = FSDP(
+[rank7]:             ^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank7]:     _init_param_handle_from_module(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank7]:     _materialize_meta_module(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank7]:     raise e
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank7]:     module.reset_parameters()  # type: ignore[operator]
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank7]:     raise AttributeError(
+[rank7]: AttributeError: 'Transformer' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank6]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 101, in load_model_fsdp
+[rank6]:     model = FSDP(
+[rank6]:             ^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[rank6]:     _init_param_handle_from_module(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 593, in _init_param_handle_from_module
+[rank6]:     _materialize_meta_module(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 933, in _materialize_meta_module
+[rank6]:     raise e
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py", line 926, in _materialize_meta_module
+[rank6]:     module.reset_parameters()  # type: ignore[operator]
+[rank6]:     ^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank6]:     raise AttributeError(
+[rank6]: AttributeError: 'Transformer' object has no attribute 'reset_parameters'. Did you mean: 'get_parameter'?
+W0521 03:51:52.718000 117400 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 117736 closing signal SIGTERM
+W0521 03:51:52.718000 117400 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 117738 closing signal SIGTERM
+W0521 03:51:52.719000 117400 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 117739 closing signal SIGTERM
+E0521 03:51:52.996000 117400 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 117737) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_03:51:52
+  host      : nid006793
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 117737)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W521 03:51:53.656741608 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:45886, remote=[nid006793]:29500): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400056c6bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40000d4c89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x40000d4c8d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x40000d4cb208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x40000d4cca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x40000d4ce9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x400007af9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x40000715c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #10: /usr/bin/python() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x4c6f64]
+frame #13: /usr/bin/python() [0x6e48f0]
+frame #14: /usr/bin/python() [0x686910]
+frame #15: <unknown function> + 0x8597c (0x40000605597c in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #16: <unknown function> + 0xeba4c (0x4000060bba4c in /usr/lib/aarch64-linux-gnu/libc.so.6)
+
+W0521 03:51:53.327000 127852 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1333] The node 'nid006859_127852_0' has failed to send a keep-alive heartbeat to the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 03:51:53.660964071 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:45886, remote=[nid006793]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400056c6bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40000d4c89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40000d4c8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40000d4cd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40000d4ce99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400007af9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40000715c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x400005ff84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400005ff8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 03:51:53.335000 127852 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 128231 closing signal SIGTERM
+W0521 03:51:53.337000 127852 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 128232 closing signal SIGTERM
+W0521 03:51:53.338000 127852 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 128233 closing signal SIGTERM
+W0521 03:51:53.339000 127852 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 128234 closing signal SIGTERM
+[W521 03:51:53.200624015 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:45886, remote=[nid006793]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400056c6bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40000d4c89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40000d4c8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40000d4cd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40000d4ce99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400007af9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40000715c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x400005ff84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400005ff8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 03:51:53.875000 127852 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006859_127852_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 03:51:53.214931482 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006859-hsn1]:45886, remote=[nid006793]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400056c6bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40000d4c89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40000d4c8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40000d4cd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40000d4ce99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400007af9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40000715c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x400005ff84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400005ff8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 03:51:53.887000 127852 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006859_127852_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: Broken pipe
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 906, in _invoke_run
+    num_nodes_waiting = rdzv_handler.num_nodes_waiting()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1255, in num_nodes_waiting
+    self._state_holder.sync()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 423, in sync
+    set_response = self._backend.set_state(state_bits, self._token)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 100, in set_state
+    base64_state: bytes = self._call_store(
+                          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: nid006793: task 0: Exited with exit code 1
+srun: Terminating StepId=454287.0
+srun: error: nid006859: task 1: Exited with exit code 1
