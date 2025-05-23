@@ -189,6 +189,7 @@ Here are the corresponding log files:
 | 2         | 8              |                                     |                |
 | 2         | 10             |                                     |                |
 | 2         | 12             |                                     |                |
+| 2         | 14             |                                     |                |
 | 4         | 1              |                                     |                |
 | 4         | 2              |                                     |                |
 | 4         | 4              |                                     |                |
@@ -196,6 +197,7 @@ Here are the corresponding log files:
 | 4         | 8              |                                     |                |
 | 4         | 10             |                                     |                |
 | 4         | 12             |                                     |                |
+| 4         | 14             |                                     |                |
 | 8         | 1              |                                     |                |
 | 8         | 2              |                                     |                |
 | 8         | 4              |                                     |                |
@@ -203,6 +205,8 @@ Here are the corresponding log files:
 | 8         | 8              |                                     |                |
 | 8         | 10             |                                     |                |
 | 8         | 12             |                                     |                |
+| 8         | 14             |                                     |                |
+| 8         | 16             |                                     |                |
 | 16        | 1              |                                     |                |
 | 16        | 2              |                                     |                |
 | 16        | 4              |                                     |                |
@@ -215,7 +219,8 @@ Here are the corresponding log files:
 | 16        | 18             | logs/train_fsdp/lsai-460690.out     |    ❌ (OOM)    |
 | 16        | 20             | logs/train_fsdp/lsai-460667.out     |    ❌ (OOM)    |
 
-Then, we plot the results for each metric.
+Then, we plot the results for each metric:
+TODO
 
 
 
