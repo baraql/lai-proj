@@ -1,0 +1,140 @@
+START TIME: Thu May 22 14:03:20 CEST 2025
+Node IP: 172.28.30.96
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 14:03:44,513 - root - INFO - Setting seed to 42
+2025-05-22 14:03:44,513 - root - INFO - Setting seed to 42
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 223, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 223, in <module>
+        train(args)train(args)
+
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 63, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 63, in train
+2025-05-22 14:03:44,513 - root - INFO - Setting seed to 42
+2025-05-22 14:03:44,513 - root - INFO - Setting seed to 42
+    log_dist(f"[rank {dist.get_rank()}] world size: {dist.get_world_size()}")
+    log_dist(f"[rank {dist.get_rank()}] world size: {dist.get_world_size()}")
+2025-05-22 14:03:44,513 - root - INFO - [RANK 0 / 4] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=20, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 223, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 223, in <module>
+                            ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  ^ 
+^^  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2246, in get_rank
+^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2246, in get_rank
+    train(args)
+    train(args)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 63, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 63, in train
+    log_dist(f"[rank {dist.get_rank()}] world size: {dist.get_world_size()}")
+    log_dist(f"[rank {dist.get_rank()}] world size: {dist.get_world_size()}")
+                                ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^^^^
+^  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2246, in get_rank
+^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2246, in get_rank
+    default_pg = _get_default_group()
+                default_pg = _get_default_group() 
+    ^^^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^
+^^  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 1276, in _get_default_group
+^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 1276, in _get_default_group
+        default_pg = _get_default_group()default_pg = _get_default_group()
+
+    raise ValueError(
+ValueError: Default process group has not been initialized, please make sure to call init_process_group.
+    raise ValueError(
+ValueError: Default process group has not been initialized, please make sure to call init_process_group.
+                                 ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 1276, in _get_default_group
+
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 1276, in _get_default_group
+    raise ValueError(
+ValueError: Default process group has not been initialized, please make sure to call init_process_group.
+    raise ValueError(
+ValueError: Default process group has not been initialized, please make sure to call init_process_group.
+E0522 14:03:45.144000 153157 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 153500) of binary: /usr/bin/python
+E0522 14:03:45.145000 190902 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 191242) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-22_14:03:45
+  host      : nid006447
+  rank      : 3 (local_rank: 1)
+  exitcode  : 1 (pid: 191243)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-22_14:03:45
+  host      : nid006447
+  rank      : 2 (local_rank: 0)
+  exitcode  : 1 (pid: 191242)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-22_14:03:45
+  host      : nid006442
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 153501)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-22_14:03:45
+  host      : nid006442
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 153500)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006447: task 1: Exited with exit code 1
+srun: Terminating StepId=457612.0
+srun: error: nid006442: task 0: Exited with exit code 1

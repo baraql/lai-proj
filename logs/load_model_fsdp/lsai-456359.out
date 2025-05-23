@@ -1,0 +1,23 @@
+START TIME: Thu May 22 00:46:41 CEST 2025
+Node IP: 172.28.31.104
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 00:47:01,803 - root - INFO - [RANK 0 / 4] Total RAM: 854.46 GB
+2025-05-22 00:47:01,803 - root - INFO - [RANK 0 / 4] Available RAM: 775.58 GB
+2025-05-22 00:47:01,803 - root - INFO - [RANK 0 / 4] Available per-process RAM: 193.89 GB
+2025-05-22 00:47:08,584 - root - INFO - [RANK 0 / 4] GPU 0: NVIDIA GH200 120GB
+2025-05-22 00:47:08,584 - root - INFO - [RANK 0 / 4]   Total memory: 94.50 GB
+2025-05-22 00:47:08,584 - root - INFO - [RANK 0 / 4]   Allocated memory: 0.00 GB
+2025-05-22 00:47:08,584 - root - INFO - [RANK 0 / 4]   Cached memory: 0.00 GB
+2025-05-22 00:47:09,076 - root - INFO - [RANK 0 / 4] Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Memory used by model: 13.59 GB
+Memory used by model: 13.58 GB
+Memory used by model: 13.59 GB
+2025-05-22 00:47:37,778 - root - INFO - [RANK 0 / 4] Total model parameters: 7,329,958,400
+2025-05-22 00:47:37,786 - root - INFO - [RANK 0 / 4] Took 0 min 29 sec
+2025-05-22 00:47:37,786 - root - INFO - [RANK 0 / 4] 
+
+
+Memory used by model: 13.59 GB
+END TIME: Thu May 22 00:47:41 CEST 2025

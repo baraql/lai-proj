@@ -1,0 +1,97 @@
+START TIME: Thu May 22 00:24:56 CEST 2025
+Node IP: 172.28.34.72
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 00:25:17,334 - root - INFO - Total RAM: 854.46 GB
+2025-05-22 00:25:17,334 - root - INFO - Total RAM: 854.46 GB
+2025-05-22 00:25:17,334 - root - INFO - Total RAM: 854.46 GB
+2025-05-22 00:25:17,334 - root - INFO - Total RAM: 854.46 GB
+2025-05-22 00:25:17,334 - root - INFO - Available RAM: 774.40 GB
+2025-05-22 00:25:17,334 - root - INFO - Available RAM: 774.40 GB
+2025-05-22 00:25:17,334 - root - INFO - Available RAM: 774.40 GB
+2025-05-22 00:25:17,334 - root - INFO - Available RAM: 774.40 GB
+2025-05-22 00:25:17,334 - root - INFO - Available per-process RAM: 193.60 GB
+2025-05-22 00:25:17,334 - root - INFO - Available per-process RAM: 193.60 GB
+2025-05-22 00:25:17,335 - root - INFO - Available per-process RAM: 193.60 GB
+2025-05-22 00:25:17,335 - root - INFO - Available per-process RAM: 193.60 GB
+2025-05-22 00:25:23,960 - root - INFO - GPU 0: NVIDIA GH200 120GB
+2025-05-22 00:25:23,960 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:23,960 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:23,960 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:23,960 - root - INFO - GPU 1: NVIDIA GH200 120GB
+2025-05-22 00:25:23,960 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:23,960 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:23,960 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:23,960 - root - INFO - GPU 2: NVIDIA GH200 120GB
+2025-05-22 00:25:23,960 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:23,960 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:23,961 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:23,961 - root - INFO - GPU 3: NVIDIA GH200 120GB
+2025-05-22 00:25:23,961 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:23,961 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:23,961 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,004 - root - INFO - GPU 0: NVIDIA GH200 120GB
+2025-05-22 00:25:24,005 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,005 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO - GPU 1: NVIDIA GH200 120GB
+2025-05-22 00:25:24,005 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,005 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO - GPU 2: NVIDIA GH200 120GB
+2025-05-22 00:25:24,005 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,005 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO - GPU 3: NVIDIA GH200 120GB
+2025-05-22 00:25:24,005 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,005 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,005 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO - GPU 0: NVIDIA GH200 120GB
+2025-05-22 00:25:24,041 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,041 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO - GPU 1: NVIDIA GH200 120GB
+2025-05-22 00:25:24,041 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,041 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO - GPU 2: NVIDIA GH200 120GB
+2025-05-22 00:25:24,041 - root - INFO - GPU 0: NVIDIA GH200 120GB
+2025-05-22 00:25:24,041 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,041 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,041 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,041 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO - GPU 3: NVIDIA GH200 120GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,042 - root - INFO - GPU 1: NVIDIA GH200 120GB
+2025-05-22 00:25:24,042 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,042 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO - GPU 2: NVIDIA GH200 120GB
+2025-05-22 00:25:24,042 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,042 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO - GPU 3: NVIDIA GH200 120GB
+2025-05-22 00:25:24,042 - root - INFO -   Total memory: 94.50 GB
+2025-05-22 00:25:24,042 - root - INFO -   Allocated memory: 0.00 GB
+2025-05-22 00:25:24,042 - root - INFO -   Cached memory: 0.00 GB
+2025-05-22 00:25:24,517 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 00:25:24,517 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 00:25:24,531 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 00:25:24,531 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 00:25:53,485 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-22 00:25:53,686 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-22 00:25:53,909 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-22 00:25:53,918 - root - INFO - [rank 0]Took 0 min 29 sec
+2025-05-22 00:25:53,918 - root - INFO - [rank 0]
+
+
+2025-05-22 00:25:55,300 - root - INFO - Total model parameters: 7,329,958,400
+END TIME: Thu May 22 00:25:57 CEST 2025

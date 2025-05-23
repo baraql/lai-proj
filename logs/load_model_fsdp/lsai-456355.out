@@ -1,0 +1,52 @@
+START TIME: Thu May 22 00:44:53 CEST 2025
+Node IP: 172.28.31.104
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 228, in <module>
+    print_memory_info()
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 202, in print_memory_info
+    log_dist(f"Total RAM: {mem.total / (1024**3):.2f} GB")
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 31, in log_dist
+    logger.info(f"[RANK 0 / {int(os.environ["GLOBAL_WORLD_SIZE"])}] {message}")
+                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 685, in __getitem__
+KeyError: 'GLOBAL_WORLD_SIZE'
+W0522 00:45:14.563000 244393 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 244741 closing signal SIGTERM
+W0522 00:45:14.564000 244393 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 244742 closing signal SIGTERM
+W0522 00:45:14.564000 244393 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 244743 closing signal SIGTERM
+E0522 00:45:14.929000 244393 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 244740) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-22_00:45:14
+  host      : nid006518
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 244740)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006518: task 0: Exited with exit code 1
+srun: Terminating StepId=456355.0

@@ -1,0 +1,12 @@
+START TIME: Thu May 22 00:04:55 CEST 2025
+Node IP: 172.28.52.219
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 00:05:15,553 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 00:05:45,804 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-22 00:05:47,035 - root - INFO - [rank 0]Took 0 min 32 sec
+2025-05-22 00:05:47,035 - root - INFO - [rank 0]
+
+
+END TIME: Thu May 22 00:05:48 CEST 2025

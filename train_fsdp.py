@@ -1,16 +1,3 @@
-# import torch.distributed.launcher.api as _api
-# _orig_launch = _api.launch_agent
-# def _safe_launch(*args, **kwargs):
-#     result = _orig_launch(*args, **kwargs)
-#     if result is None:
-#         # dummy object with is_failed() → False
-#         class _R: 
-#             def is_failed(self): 
-#                 return False
-#         return _R()
-#     return result
-# _api.launch_agent = _safe_launch
-
 import os
 import time
 import functools
@@ -41,18 +28,44 @@ from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params,
 
 # Only the node with the global rank 0 will print it 
 def log_dist(message):
-    if int(os.environ["RANK"]) == 0:
-        logger.info(f"[RANK 0 / {int(os.environ["WORLD_SIZE"])}] {message}")
+  if int(os.environ["RANK"]) == 0:
+      logger.info(f"[RANK 0 / {int(os.environ["WORLD_SIZE"])}] {message}")
 
 
 def print_time_stats(start_time, end_time):
-    elapsed = end_time - start_time
-    minutes = int(elapsed // 60)
-    seconds = int(elapsed % 60)
-    log_dist(f"Took {minutes} min {seconds} sec")
+  elapsed = end_time - start_time
+  minutes = int(elapsed // 60)
+  seconds = int(elapsed % 60)
+  log_dist(f"Took {minutes} min {seconds} sec")
+    
+    
+def print_GPU_stats():
+  log_dist(f"AVAILABLE GPUS: {int(os.environ["WORLD_SIZE"])}")
+  log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / int(os.environ["LOCAL_WORLD_SIZE"])}")
+  
+  
+def print_memory_info():
+  mem = psutil.virtual_memory()
+  log_dist(f"Total RAM: {mem.total / (1024**3):.2f} GB")
+  log_dist(f"Available RAM: {mem.available / (1024**3):.2f} GB")
+  tasks = int(os.environ["LOCAL_WORLD_SIZE"])
+  per_process_mem = mem.available / ((1024**3) * tasks)
+  log_dist(f"Available per-process RAM: {per_process_mem:.2f} GB")
+  
+  if torch.cuda.is_available():
+      i = 0
+      log_dist(f"GPU {i}: {torch.cuda.get_device_name(i)}")
+      log_dist(f"  Total memory: {torch.cuda.get_device_properties(i).total_memory / (1024**3):.2f} GB")
+      log_dist(f"  Allocated memory: {torch.cuda.memory_allocated(i) / (1024**3):.2f} GB")
+      log_dist(f"  Cached memory: {torch.cuda.memory_reserved(i) / (1024**3):.2f} GB")
+  else:
+      log_dist("No GPU available")
     
     
 def train(args):
+  print_GPU_stats()
+  print_memory_info()
+  
   start_time = time.time()
 
   local_rank = int(os.environ["LOCAL_RANK"])
@@ -218,5 +231,5 @@ if __name__ == "__main__":
   args = get_args()
   if args.set_seed is not None:
     set_seed(args.set_seed)
-    logger.info(f"Setting seed to {args.set_seed}")
+    log_dist(f"Setting seed to {args.set_seed}")
   train(args)
