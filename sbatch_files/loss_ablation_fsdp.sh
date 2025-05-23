@@ -40,6 +40,13 @@ echo Node IP: $head_node_ip
 # Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
 # 
 # Then (i believe) the port is already used so need to change to another port (eg 29505, 29500)
+
+# 10 pass
+# 11 pass
+# 12 pass
+# 13 pass
+# 14 pass
+# 15 fail
 srun torchrun \
     --nnodes $SLURM_JOB_NUM_NODES \
     --nproc_per_node $SLURM_GPUS_PER_NODE \
