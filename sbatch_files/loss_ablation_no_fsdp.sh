@@ -19,17 +19,20 @@ echo "START TIME: $(date)"
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 ASSIGNMENT_DIR="/iopsstor/scratch/cscs/$MY_USER/lai-proj"
 
+# scaling factor = 5 works
+# 9 works
+# 10 fails
+# 11 fails
 TRAINING_CMD="python3 $ASSIGNMENT_DIR/train.py \
     --sequence-length 4096 \
     --batch-size 1 \
     --learning-rate 5e-5 \
     --lr-warmup-steps 100 \
     --training-steps 100 \
-    --scaling-factor 19 \
+    --scaling-factor 9 \
     --scaling-strategy all \
     --set-seed 42 \
     "
-
 srun --cpus-per-task $SLURM_CPUS_PER_TASK bash -c "$TRAINING_CMD"
 
 echo "END TIME: $(date)"
