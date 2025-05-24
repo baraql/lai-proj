@@ -350,26 +350,25 @@ We have decided to choose the standard approach of powers of 2 for the number of
 For each number of GPUs, we start scaling the model until we get the OOM error, logging the training metrics for each scale. 
 
 Here are the corresponding log files:
-| # GPUs      | scaling factor | log file                              | success?       |
-| ----------- | -------------- | -----------------------------------   | -------------- |
-| 1 (No FSDP) | 2              | logs/loss_ablation_no_fsdp/460955.out |                |
-| 1 (No FSDP) | 4              | logs/loss_ablation_no_fsdp/460958.out |                |
-| 1 (No FSDP) | 6              | logs/loss_ablation_no_fsdp/460959.out |                |
-| 1 (No FSDP) | 8              | logs/loss_ablation_no_fsdp/460964.out |                |
-| 1 (No FSDP) | 10             | logs/loss_ablation_no_fsdp/460969.out |                |
-| 2  (FSDP)   | 2              | logs/loss_ablation_fsdp/461379.out    |                |
-| 2  (FSDP)   | 4              | logs/loss_ablation_fsdp/461380.out    |                |
-| 2  (FSDP)   | 6              | logs/loss_ablation_fsdp/461406.out    |                |
-| 2  (FSDP)   | 10             | logs/loss_ablation_fsdp/461407.out    |                |
-| 2  (FSDP)   | 14             | logs/loss_ablation_fsdp/461412.out    |                |
-| 16 (FSDP)   | 1              | logs/loss_ablation_fsdp/461073.out    |                |
-| 16 (FSDP)   | 2              | logs/loss_ablation_fsdp/460981.out    |                |
-| 16 (FSDP)   | 6              | logs/loss_ablation_fsdp/460997.out    |                |
-| 16 (FSDP)   | 10             | logs/loss_ablation_fsdp/461014.out    |                |
-| 16 (FSDP)   | 14             | logs/loss_ablation_fsdp/461015.out    |                |
-| 16 (FSDP)   | 16             | logs/loss_ablation_fsdp/461072.out    |                |
-| 16 (FSDP)   | 18             | logs/train_fsdp/lsai-460690.out       |    ❌ (OOM)    |
-| 16 (FSDP)   | 20             | logs/train_fsdp/lsai-460667.out       |    ❌ (OOM)    |
+| # GPUs      | scaling factor | log file                           |  success?    |
+| ----------- | -------------- | ---------------------------------- | -------------|
+| 1 (No FSDP) | 2              | logs/train_no_fsdp/lsai-460955.out |              |
+| 1 (No FSDP) | 4              | logs/train_no_fsdp/lsai-460958.out |              |
+| 1 (No FSDP) | 6              | logs/train_no_fsdp/lsai-460959.out |              |
+| 1 (No FSDP) | 8              | logs/train_no_fsdp/lsai-460964.out |              |
+| 1 (No FSDP) | 10             | logs/train_no_fsdp/lsai-460969.out |              |
+| 2  (FSDP)   | 2              | logs/train_fsdp/lsai-461379.out    |              |
+| 2  (FSDP)   | 4              | logs/train_fsdp/lsai-461380.out    |              |
+| 2  (FSDP)   | 6              | logs/train_fsdp/lsai-461406.out    |              |
+| 2  (FSDP)   | 10             | logs/train_fsdp/lsai-461407.out    |              |
+| 2  (FSDP)   | 14             | logs/train_fsdp/lsai-461412.out    |              |
+| 16 (FSDP)   | 1              | logs/train_fsdp/lsai-461073.out    |              |
+| 16 (FSDP)   | 2              | logs/train_fsdp/lsai-460981.out    |              |
+| 16 (FSDP)   | 6              | logs/train_fsdp/lsai-460997.out    |              |
+| 16 (FSDP)   | 10             | logs/train_fsdp/lsai-461014.out    |              |
+| 16 (FSDP)   | 14             | logs/train_fsdp/lsai-461015.out    |              |
+| 16 (FSDP)   | 16             | logs/train_fsdp/lsai-461072.out    | ❌ (OOM)     |
+
 
 
 Then, we plot the results for each metric:
