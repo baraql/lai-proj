@@ -1,0 +1,51 @@
+START TIME: Tue May 20 23:26:03 CEST 2025
+Running /iopsstor/scratch/cscs/elyulina/lai-proj/load_model_no_fsdp.py
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-20 23:26:27,152 - root - INFO - Starting the main function
+2025-05-20 23:26:27,152 - root - INFO - Running binary search with scale low=1, high=20, precision=0, scale only n_layers=False
+2025-05-20 23:26:27,667 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:26:59,350 - root - INFO - Actual model parameters: 7,329,958,400
+2025-05-20 23:26:59,350 - root - INFO - Took 0 min 32 sec
+2025-05-20 23:26:59,350 - root - INFO - 
+
+
+2025-05-20 23:27:00,021 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:28:30,624 - root - INFO - Actual model parameters: 23,184,940,800
+2025-05-20 23:28:30,625 - root - INFO - Took 1 min 31 sec
+2025-05-20 23:28:30,625 - root - INFO - 
+
+
+2025-05-20 23:28:31,352 - root - INFO - Loading a model with scale=18, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4608, n_layers=144, n_heads=144, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:31:04,611 - root - INFO - Actual model parameters: 39,769,625,088
+2025-05-20 23:31:04,611 - root - INFO - Took 2 min 33 sec
+2025-05-20 23:31:04,611 - root - INFO - 
+
+
+2025-05-20 23:31:05,392 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:34:02,383 - root - INFO - Actual model parameters: 46,322,328,320
+2025-05-20 23:34:02,383 - root - INFO - Took 2 min 57 sec
+2025-05-20 23:34:02,383 - root - INFO - 
+
+
+2025-05-20 23:34:03,178 - root - INFO - Loading a model with scale=20, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5120, n_layers=160, n_heads=160, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:37:25,638 - root - INFO - Error while loading the model!
+2025-05-20 23:37:25,638 - root - INFO - CUDA out of memory. Tried to allocate 176.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.73 GiB is free. Including non-PyTorch memory, this process has 91.71 GiB memory in use. Of the allocated memory 91.16 GiB is allocated by PyTorch, and 11.17 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-20 23:37:25,696 - root - INFO - Took 3 min 22 sec
+2025-05-20 23:37:25,696 - root - INFO - 
+
+
+2025-05-20 23:37:26,012 - root - INFO - Best fit: 19
+2025-05-20 23:37:26,559 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-20 23:40:23,470 - root - INFO - Actual model parameters: 46,322,328,320
+2025-05-20 23:40:23,471 - root - INFO - Took 2 min 57 sec
+2025-05-20 23:40:23,471 - root - INFO - 
+
+
+END TIME: Tue May 20 23:40:30 CEST 2025

@@ -1,0 +1,218 @@
+START TIME: Sun May 18 17:51:24 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 17:51:47,223 - root - INFO - Setting seed to 42
+2025-05-18 17:51:47,223 - root - INFO - Setting seed to 42
+2025-05-18 17:51:47,223 - root - INFO - Setting seed to 42
+2025-05-18 17:51:47,223 - root - INFO - Setting seed to 42
+2025-05-18 17:51:47,223 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 17:51:54,001 - root - INFO - [rank 0] world size: 4
+2025-05-18 17:51:54,002 - root - INFO - Setting up DataLoaders...
+2025-05-18 17:51:56,819 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-18 17:52:31,428 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-18 17:52:31,428 - root - INFO - [rank 2] local params: 2013332480
+Total params: 8053329920
+2025-05-18 17:52:31,539 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-18 17:52:31,540 - root - INFO - [rank 3] local params: 2013332480
+Total params: 8053329920
+2025-05-18 17:52:31,908 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-18 17:52:31,909 - root - INFO - [rank 0] local params: 2013332480
+2025-05-18 17:52:31,910 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 17:52:34,468 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-18 17:52:34,469 - root - INFO - [rank 1] local params: 2013332480
+2025-05-18 17:52:42,173 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 399.42 | Training tokens per second (%): 19.38 | MFU (%): 0.75 | TFLOPs: 7.40
+2025-05-18 17:52:44,393 - root - INFO - Step: 5 | Loss: 11.92 | Tokens per second: 7451.11 | Training tokens per second (%): 11.41 | MFU (%): 13.95 | TFLOPs: 138.01
+2025-05-18 17:52:47,244 - root - INFO - Step: 10 | Loss: 11.89 | Tokens per second: 7236.63 | Training tokens per second (%): 25.72 | MFU (%): 13.55 | TFLOPs: 134.04
+2025-05-18 17:52:50,124 - root - INFO - Step: 15 | Loss: 11.67 | Tokens per second: 7164.37 | Training tokens per second (%): 35.21 | MFU (%): 13.42 | TFLOPs: 132.70
+2025-05-18 17:52:53,005 - root - INFO - Step: 20 | Loss: 11.33 | Tokens per second: 7160.85 | Training tokens per second (%): 34.78 | MFU (%): 13.41 | TFLOPs: 132.64
+2025-05-18 17:52:55,832 - root - INFO - Step: 25 | Loss: 10.83 | Tokens per second: 7298.01 | Training tokens per second (%): 18.28 | MFU (%): 13.67 | TFLOPs: 135.18
+2025-05-18 17:52:58,686 - root - INFO - Step: 30 | Loss: 9.78 | Tokens per second: 7228.57 | Training tokens per second (%): 26.99 | MFU (%): 13.54 | TFLOPs: 133.89
+2025-05-18 17:53:01,499 - root - INFO - Step: 35 | Loss: 9.88 | Tokens per second: 7335.51 | Training tokens per second (%): 13.78 | MFU (%): 13.74 | TFLOPs: 135.87
+2025-05-18 17:53:04,293 - root - INFO - Step: 40 | Loss: 9.85 | Tokens per second: 7385.63 | Training tokens per second (%): 9.95 | MFU (%): 13.83 | TFLOPs: 136.80
+2025-05-18 17:53:07,114 - root - INFO - Step: 45 | Loss: 9.35 | Tokens per second: 7312.04 | Training tokens per second (%): 15.59 | MFU (%): 13.69 | TFLOPs: 135.44
+2025-05-18 17:53:09,910 - root - INFO - Step: 50 | Loss: 9.22 | Tokens per second: 7380.67 | Training tokens per second (%): 10.93 | MFU (%): 13.82 | TFLOPs: 136.71
+2025-05-18 17:53:12,779 - root - INFO - Step: 55 | Loss: 9.35 | Tokens per second: 7192.03 | Training tokens per second (%): 28.32 | MFU (%): 13.47 | TFLOPs: 133.21
+2025-05-18 17:53:15,642 - root - INFO - Step: 60 | Loss: 8.70 | Tokens per second: 7206.07 | Training tokens per second (%): 26.71 | MFU (%): 13.50 | TFLOPs: 133.47
+2025-05-18 17:53:18,499 - root - INFO - Step: 65 | Loss: 8.95 | Tokens per second: 7219.84 | Training tokens per second (%): 24.18 | MFU (%): 13.52 | TFLOPs: 133.73
+2025-05-18 17:53:21,355 - root - INFO - Step: 70 | Loss: 8.25 | Tokens per second: 7224.67 | Training tokens per second (%): 26.25 | MFU (%): 13.53 | TFLOPs: 133.82
+2025-05-18 17:53:24,183 - root - INFO - Step: 75 | Loss: 8.34 | Tokens per second: 7296.08 | Training tokens per second (%): 16.89 | MFU (%): 13.66 | TFLOPs: 135.14
+2025-05-18 17:53:27,010 - root - INFO - Step: 80 | Loss: 8.24 | Tokens per second: 7298.17 | Training tokens per second (%): 17.36 | MFU (%): 13.67 | TFLOPs: 135.18
+2025-05-18 17:53:29,841 - root - INFO - Step: 85 | Loss: 8.34 | Tokens per second: 7288.17 | Training tokens per second (%): 16.04 | MFU (%): 13.65 | TFLOPs: 134.99
+2025-05-18 17:53:32,825 - root - INFO - Step: 90 | Loss: 7.80 | Tokens per second: 6913.17 | Training tokens per second (%): 57.98 | MFU (%): 12.95 | TFLOPs: 128.05
+2025-05-18 17:53:35,793 - root - INFO - Step: 95 | Loss: 7.53 | Tokens per second: 6947.40 | Training tokens per second (%): 57.90 | MFU (%): 13.01 | TFLOPs: 128.68
+2025-05-18 17:53:38,880 - root - INFO - Step: 100 | Loss: 7.48 | Tokens per second: 6681.07 | Training tokens per second (%): 93.89 | MFU (%): 12.51 | TFLOPs: 123.75
+2025-05-18 17:53:38,880 - root - INFO - Training completed
+[Rank 1] done[Rank 2] done[Rank 3] done
+
+
+[Rank 0] done
+[rank0]:[W518 17:53:39.479423181 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+[W518 17:53:41.397293709 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006441]:48562, remote=[nid006441]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007a65bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400030eb89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400030eb8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400030ebd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x400030ebec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x400030ebf10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x400030ec061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40002b4e9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002ab4c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000299e84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000299e8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 17:53:41.195000 51885 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006441_51885_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W518 17:53:41.409993663 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006441]:48562, remote=[nid006441]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007a65bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400030eb89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400030eb8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400030ebd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x400030ebec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x400030ebf10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x400030ec061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40002b4e9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002ab4c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000299e84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000299e8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 17:53:41.207000 51885 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006441_51885_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: nid006441: tasks 0-1,3: Exited with exit code 1
+srun: Terminating StepId=447150.0
+END TIME: Sun May 18 17:53:42 CEST 2025

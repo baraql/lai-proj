@@ -1,0 +1,94 @@
+START TIME: Wed May 21 23:54:23 CEST 2025
+Node IP: 172.28.39.12
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 23:54:45,824 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:45,827 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:45,845 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:45,846 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:45,847 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:45,968 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:46,312 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:54:46,318 - root - INFO - Loading a model with scale=10, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2560, n_layers=80, n_heads=80, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 23:55:14,221 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:14,503 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:14,516 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:15,145 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:15,411 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:15,465 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:15,653 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:15,833 - root - INFO - Total model parameters: 7,329,958,400
+2025-05-21 23:55:21,826 - root - INFO - [rank 0]Took 0 min 36 sec
+2025-05-21 23:55:21,826 - root - INFO - [rank 0]
+
+
+[W521 23:55:23.120749489 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid007108]:44074, remote=[nid007089]:29500): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006a36bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400020bc89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x400020bc8d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x400020bcb208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x400020bcca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x400020bce9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x40001b1f9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x40001a85c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #10: /usr/bin/python() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #12: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #13: /usr/bin/python() [0x529450]
+frame #14: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #15: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #16: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #17: /usr/bin/python() [0x59bc74]
+frame #18: /usr/bin/python() [0x680934]
+frame #19: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #20: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #21: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x4000195f84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x4000195f8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 23:55:23.330000 101024 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007108_101024_0' has failed to shutdown the rendezvous '12591' due to an error of type RendezvousConnectionError.
+[W521 23:55:23.127507061 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid007108]:44074, remote=[nid007089]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006a36bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400020bc89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400020bc8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400020bcd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x400020bce99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x40001b1f9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40001a85c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x59bc74]
+frame #17: /usr/bin/python() [0x680934]
+frame #18: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #19: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #20: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #21: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #22: <unknown function> + 0x284c4 (0x4000195f84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #23: __libc_start_main + 0x98 (0x4000195f8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 23:55:23.336000 101024 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007108_101024_0' has failed to shutdown the rendezvous '12591' due to an error of type RendezvousConnectionError.
+END TIME: Wed May 21 23:55:24 CEST 2025

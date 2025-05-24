@@ -1,0 +1,21 @@
+START TIME: Sun May 18 14:12:24 CEST 2025
+Running /iopsstor/scratch/cscs/elyulina/lai-proj/load_model_no_fsdp.py
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 14:12:43,184 - root - INFO - Starting the main function
+2025-05-18 14:12:43,184 - root - INFO - Running binary search with scale low=15, high=30, precision=0
+2025-05-18 14:12:53,563 - root - INFO - Scaling the model with scale=22, scaling only n_layer=True
+2025-05-18 14:12:53,563 - root - INFO - Loading a model with scale=22, dim=4096, n_layers=704, n_heads=32
+2025-05-18 14:22:17,726 - root - INFO - Error while loading the model!
+2025-05-18 14:22:17,726 - root - INFO - CUDA out of memory. Tried to allocate 112.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.63 GiB is free. Including non-PyTorch memory, this process has 91.67 GiB memory in use. Of the allocated memory 90.27 GiB is allocated by PyTorch, and 880.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-18 14:22:18,770 - root - INFO - Took 9 min 35 sec
+2025-05-18 14:22:18,771 - root - INFO - 
+
+
+2025-05-18 14:22:19,686 - root - INFO - Scaling the model with scale=18, scaling only n_layer=True
+2025-05-18 14:22:19,687 - root - INFO - Loading a model with scale=18, dim=4096, n_layers=576, n_heads=32
+slurmstepd: error: *** STEP 446893.0 ON nid006976 CANCELLED AT 2025-05-18T14:27:18 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 446893 ON nid006976 CANCELLED AT 2025-05-18T14:27:18 DUE TO TIME LIMIT ***
+srun: forcing job termination
+slurmstepd: error: *** JOB 446893 STEPD TERMINATED ON nid006976 AT 2025-05-18T15:27:18 DUE TO JOB NOT ENDING WITH SIGNALS ***
+slurmstepd: error: Container 94414 in cgroup plugin has 4 processes, giving up after 3615 sec

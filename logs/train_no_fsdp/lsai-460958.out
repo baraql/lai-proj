@@ -1,0 +1,34 @@
+START TIME: Fri May 23 18:11:38 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-23 18:11:59,991 - root - INFO - Setting seed to 42
+2025-05-23 18:11:59,991 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=4, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-23 18:11:59,991 - root - INFO - Setting up DataLoaders...
+2025-05-23 18:12:03,431 - root - INFO - Setting up Model...
+2025-05-23 18:12:03,431 - root - INFO - Loading a model with scale=4, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=1024, n_layers=32, n_heads=32, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-23 18:12:08,621 - root - INFO - Total model parameters: 704,709,632
+2025-05-23 18:12:08,623 - root - INFO - Starting training!
+2025-05-23 18:12:09,715 - root - INFO - Step: 1 | Loss: 11.98 | Tokens per second: 3756.23 | Training tokens per second (%): 19.38 | MFU (%): 1.91 | TFLOPs: 18.91
+2025-05-23 18:12:10,209 - root - INFO - Step: 5 | Loss: 11.94 | Tokens per second: 33262.65 | Training tokens per second (%): 11.41 | MFU (%): 16.93 | TFLOPs: 167.43
+2025-05-23 18:12:10,821 - root - INFO - Step: 10 | Loss: 11.91 | Tokens per second: 33511.10 | Training tokens per second (%): 25.72 | MFU (%): 17.06 | TFLOPs: 168.68
+2025-05-23 18:12:11,544 - root - INFO - Step: 15 | Loss: 11.93 | Tokens per second: 28414.19 | Training tokens per second (%): 35.21 | MFU (%): 14.46 | TFLOPs: 143.02
+2025-05-23 18:12:12,174 - root - INFO - Step: 20 | Loss: 11.87 | Tokens per second: 32584.85 | Training tokens per second (%): 34.78 | MFU (%): 16.58 | TFLOPs: 164.02
+2025-05-23 18:12:12,798 - root - INFO - Step: 25 | Loss: 11.87 | Tokens per second: 32900.66 | Training tokens per second (%): 18.28 | MFU (%): 16.74 | TFLOPs: 165.61
+2025-05-23 18:12:13,428 - root - INFO - Step: 30 | Loss: 11.78 | Tokens per second: 32558.61 | Training tokens per second (%): 26.99 | MFU (%): 16.57 | TFLOPs: 163.89
+2025-05-23 18:12:14,045 - root - INFO - Step: 35 | Loss: 11.69 | Tokens per second: 33260.11 | Training tokens per second (%): 13.78 | MFU (%): 16.93 | TFLOPs: 167.42
+2025-05-23 18:12:14,667 - root - INFO - Step: 40 | Loss: 11.63 | Tokens per second: 33031.00 | Training tokens per second (%): 9.95 | MFU (%): 16.81 | TFLOPs: 166.26
+2025-05-23 18:12:15,289 - root - INFO - Step: 45 | Loss: 11.26 | Tokens per second: 33007.04 | Training tokens per second (%): 15.59 | MFU (%): 16.80 | TFLOPs: 166.14
+2025-05-23 18:12:15,915 - root - INFO - Step: 50 | Loss: 11.15 | Tokens per second: 32781.04 | Training tokens per second (%): 10.93 | MFU (%): 16.68 | TFLOPs: 165.01
+2025-05-23 18:12:16,543 - root - INFO - Step: 55 | Loss: 11.34 | Tokens per second: 32709.20 | Training tokens per second (%): 28.32 | MFU (%): 16.65 | TFLOPs: 164.64
+2025-05-23 18:12:17,174 - root - INFO - Step: 60 | Loss: 10.84 | Tokens per second: 32509.50 | Training tokens per second (%): 26.71 | MFU (%): 16.55 | TFLOPs: 163.64
+2025-05-23 18:12:17,802 - root - INFO - Step: 65 | Loss: 10.88 | Tokens per second: 32673.53 | Training tokens per second (%): 24.18 | MFU (%): 16.63 | TFLOPs: 164.46
+2025-05-23 18:12:18,440 - root - INFO - Step: 70 | Loss: 10.63 | Tokens per second: 32214.55 | Training tokens per second (%): 26.25 | MFU (%): 16.40 | TFLOPs: 162.15
+2025-05-23 18:12:19,066 - root - INFO - Step: 75 | Loss: 10.08 | Tokens per second: 32753.26 | Training tokens per second (%): 16.89 | MFU (%): 16.67 | TFLOPs: 164.87
+2025-05-23 18:12:19,696 - root - INFO - Step: 80 | Loss: 10.09 | Tokens per second: 32596.47 | Training tokens per second (%): 17.36 | MFU (%): 16.59 | TFLOPs: 164.08
+2025-05-23 18:12:20,327 - root - INFO - Step: 85 | Loss: 10.18 | Tokens per second: 32551.42 | Training tokens per second (%): 16.04 | MFU (%): 16.57 | TFLOPs: 163.85
+2025-05-23 18:12:20,986 - root - INFO - Step: 90 | Loss: 9.79 | Tokens per second: 31139.53 | Training tokens per second (%): 57.98 | MFU (%): 15.85 | TFLOPs: 156.74
+2025-05-23 18:12:21,662 - root - INFO - Step: 95 | Loss: 9.55 | Tokens per second: 30347.38 | Training tokens per second (%): 57.90 | MFU (%): 15.45 | TFLOPs: 152.76
+2025-05-23 18:12:22,367 - root - INFO - Step: 100 | Loss: 9.28 | Tokens per second: 29138.69 | Training tokens per second (%): 93.89 | MFU (%): 14.83 | TFLOPs: 146.67
+2025-05-23 18:12:22,367 - root - INFO - Training completed
+END TIME: Fri May 23 18:12:24 CEST 2025

@@ -1,0 +1,67 @@
+START TIME: Sun May 18 18:22:45 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 18:23:06,739 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 18:23:10,489 - root - INFO - [rank 0] world size: 1
+2025-05-18 18:23:10,489 - root - INFO - Setting up DataLoaders...
+2025-05-18 18:23:14,016 - root - INFO - Setting up Model...
+Total params: 8053329920
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+  warnings.warn(
+2025-05-18 18:23:49,838 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-18 18:23:49,838 - root - INFO - [rank 0] local params: 8053329920
+2025-05-18 18:23:49,840 - root - INFO - Starting training!
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 163, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 119, in train
+[rank0]:     clip_grad_norm_(model.parameters(), args.grad_max_norm)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/utils.py", line 89, in clip_grad_norm_
+[rank0]:     total_norm = torch.nn.utils.get_total_norm(grads, error_if_nonfinite=True)
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 34, in _no_grad_wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 102, in _get_total_norm
+[rank0]:     raise RuntimeError(
+[rank0]: RuntimeError: The total norm of order 2.0 for gradients from `parameters` is non-finite, so it cannot be clipped. To disable this error and scale the gradients by the non-finite norm anyway, set `error_if_nonfinite=False`
+E0518 18:23:53.723000 246240 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 246589) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-18_18:23:53
+  host      : nid006439
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 246589)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006439: task 0: Exited with exit code 1
+srun: Terminating StepId=447177.0
+END TIME: Sun May 18 18:23:54 CEST 2025

@@ -1,0 +1,43 @@
+START TIME: Fri May 23 23:51:02 CEST 2025
+Node IP: 172.28.30.184
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] Setting seed to 42
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] AVAILABLE GPUS: 2
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] NODES: 2.0
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] Total RAM: 854.46 GB
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] Available RAM: 775.92 GB
+2025-05-23 23:51:25,007 - root - INFO - [RANK 0 / 2] Available per-process RAM: 775.92 GB
+2025-05-23 23:51:26,194 - root - INFO - [RANK 0 / 2] GPU 0: NVIDIA GH200 120GB
+2025-05-23 23:51:26,194 - root - INFO - [RANK 0 / 2]   Total memory: 94.50 GB
+2025-05-23 23:51:26,194 - root - INFO - [RANK 0 / 2]   Allocated memory: 0.00 GB
+2025-05-23 23:51:26,195 - root - INFO - [RANK 0 / 2]   Cached memory: 0.00 GB
+2025-05-23 23:51:26,195 - root - INFO - [RANK 0 / 2] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=14, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-23 23:51:26,195 - root - INFO - [RANK 0 / 2] world size: 2
+2025-05-23 23:51:26,195 - root - INFO - [RANK 0 / 2] Setting up DataLoaders...
+2025-05-23 23:51:29,630 - root - INFO - [RANK 0 / 2] Setting up Model...
+2025-05-23 23:51:29,631 - root - INFO - [RANK 0 / 2] Loading a model with scale=14, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3584, n_layers=112, n_heads=112, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total model parameters: 19128929792
+2025-05-23 23:52:42,110 - root - INFO - [RANK 0 / 2] Wrapping model with FSDP
+Total model parameters: 19128929792
+2025-05-23 23:52:51,443 - root - INFO - [RANK 0 / 2] The model is now: FullyShardedDataParallel
+2025-05-23 23:52:51,444 - root - INFO - [rank 0] local params: 9564464896
+2025-05-23 23:52:51,449 - root - INFO - [RANK 0 / 2] Starting training!
+2025-05-23 23:52:52,183 - root - INFO - [rank 1] local params: 9564464896
+2025-05-23 23:53:06,423 - root - INFO - [RANK 0 / 2] Step: 1 | Loss: 11.92 | Tokens per second: 273.61 | Training tokens per second (%): 19.38 | MFU (%): 2.13 | TFLOPs: 21.10
+2025-05-23 23:53:35,586 - root - INFO - [RANK 0 / 2] Step: 5 | Loss: 12.00 | Tokens per second: 561.82 | Training tokens per second (%): 11.41 | MFU (%): 4.38 | TFLOPs: 43.33
+2025-05-23 23:54:09,977 - root - INFO - [RANK 0 / 2] Step: 10 | Loss: 11.79 | Tokens per second: 595.51 | Training tokens per second (%): 25.72 | MFU (%): 4.64 | TFLOPs: 45.92
+2025-05-23 23:54:44,300 - root - INFO - [RANK 0 / 2] Step: 15 | Loss: 11.28 | Tokens per second: 596.70 | Training tokens per second (%): 35.21 | MFU (%): 4.65 | TFLOPs: 46.02
+2025-05-23 23:55:18,711 - root - INFO - [RANK 0 / 2] Step: 20 | Loss: 10.72 | Tokens per second: 595.17 | Training tokens per second (%): 34.78 | MFU (%): 4.64 | TFLOPs: 45.90
+2025-05-23 23:55:53,043 - root - INFO - [RANK 0 / 2] Step: 25 | Loss: 10.36 | Tokens per second: 596.54 | Training tokens per second (%): 18.28 | MFU (%): 4.65 | TFLOPs: 46.00
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 461412.0 ON nid006466 CANCELLED AT 2025-05-23T23:56:07 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 461412 ON nid006466 CANCELLED AT 2025-05-23T23:56:07 DUE TO TIME LIMIT ***
+W0523 23:56:07.013000 123519 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+--- Logging error ---
+--- Logging error ---
+srun: forcing job termination
+srun: got SIGCONT

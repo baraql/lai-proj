@@ -1,0 +1,481 @@
+START TIME: Mon May 19 16:39:07 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,079 - root - INFO - Setting seed to 42
+2025-05-19 16:39:31,080 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 16:39:41,888 - root - INFO - [rank 4] world size: 8
+2025-05-19 16:39:41,889 - root - INFO - Setting up DataLoaders...
+2025-05-19 16:39:41,971 - root - INFO - [rank 0] world size: 8
+2025-05-19 16:39:41,971 - root - INFO - Setting up DataLoaders...
+2025-05-19 16:39:44,994 - root - INFO - Setting up Model...
+2025-05-19 16:39:44,994 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-19 16:40:18,606 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-19 16:40:18,606 - root - INFO - [rank 2] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:40:18,832 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-19 16:40:18,832 - root - INFO - [rank 1] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:40:18,931 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-19 16:40:18,931 - root - INFO - [rank 3] local params: 1006666240
+Total params: 8053329920
+Total params: 8053329920
+2025-05-19 16:40:19,040 - root - INFO - [rank 6] model is now: FullyShardedDataParallel
+2025-05-19 16:40:19,040 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-19 16:40:19,040 - root - INFO - [rank 6] local params: 1006666240
+2025-05-19 16:40:19,040 - root - INFO - [rank 0] local params: 1006666240
+2025-05-19 16:40:19,042 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 16:40:19,370 - root - INFO - [rank 5] model is now: FullyShardedDataParallel
+2025-05-19 16:40:19,370 - root - INFO - [rank 5] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:40:19,597 - root - INFO - [rank 4] model is now: FullyShardedDataParallel
+2025-05-19 16:40:19,597 - root - INFO - [rank 4] local params: 1006666240
+2025-05-19 16:40:19,598 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 16:40:24,180 - root - INFO - [rank 7] model is now: FullyShardedDataParallel
+2025-05-19 16:40:24,180 - root - INFO - [rank 7] local params: 1006666240
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank3]:     logits = model(input_ids)
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank3]:     args, kwargs = _pre_forward(
+[rank3]:                    ^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank3]:     unshard_fn(state, handle)
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank3]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank3]:     handle.unshard()
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank3]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank3]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank3]:     dist.all_gather_into_tensor(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank3]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank3]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank3]: Last error:
+[rank3]: Duplicate GPU detected : rank 3 and rank 7 both on CUDA device 3901000
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank4]:     logits = model(input_ids)
+[rank4]:              ^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank4]:     args, kwargs = _pre_forward(
+[rank4]:                    ^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank4]:     unshard_fn(state, handle)
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank4]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank4]:     handle.unshard()
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank4]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank4]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank4]:     dist.all_gather_into_tensor(
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank4]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank4]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank4]: Last error:
+[rank4]: Duplicate GPU detected : rank 4 and rank 0 both on CUDA device 901000
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank7]:     logits = model(input_ids)
+[rank7]:              ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank7]:     args, kwargs = _pre_forward(
+[rank7]:                    ^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank7]:     unshard_fn(state, handle)
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank7]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank7]:     handle.unshard()
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank7]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank7]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank7]:     dist.all_gather_into_tensor(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank7]:     return func(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank7]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank7]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank7]: Last error:
+[rank7]: Duplicate GPU detected : rank 7 and rank 3 both on CUDA device 3901000
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank0]:     logits = model(input_ids)
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:                    ^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank0]:     handle.unshard()
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank0]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank0]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank0]:     dist.all_gather_into_tensor(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank0]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank0]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank0]: Last error:
+[rank0]: Duplicate GPU detected : rank 0 and rank 4 both on CUDA device 901000
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank2]:     logits = model(input_ids)
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank2]:     args, kwargs = _pre_forward(
+[rank2]:                    ^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank2]:     unshard_fn(state, handle)
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank2]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank2]:     handle.unshard()
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank2]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank2]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank2]:     dist.all_gather_into_tensor(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank2]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank2]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank2]: Last error:
+[rank2]: Duplicate GPU detected : rank 2 and rank 6 both on CUDA device 2901000
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank1]:     logits = model(input_ids)
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank1]:     args, kwargs = _pre_forward(
+[rank1]:                    ^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank1]:     unshard_fn(state, handle)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank1]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank1]:     handle.unshard()
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank1]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank1]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank1]:     dist.all_gather_into_tensor(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank1]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank1]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank1]: Last error:
+[rank1]: Duplicate GPU detected : rank 1 and rank 5 both on CUDA device 1901000
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank6]:     logits = model(input_ids)
+[rank6]:              ^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank6]:     args, kwargs = _pre_forward(
+[rank6]:                    ^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank6]:     unshard_fn(state, handle)
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank6]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank6]:     handle.unshard()
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank6]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank6]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank6]:     dist.all_gather_into_tensor(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank6]:     return func(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank6]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank6]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank6]: Last error:
+[rank6]: Duplicate GPU detected : rank 6 and rank 2 both on CUDA device 2901000
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 124, in train
+[rank5]:     logits = model(input_ids)
+[rank5]:              ^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank5]:     args, kwargs = _pre_forward(
+[rank5]:                    ^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank5]:     unshard_fn(state, handle)
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank5]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank5]:     handle.unshard()
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank5]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank5]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank5]:     dist.all_gather_into_tensor(
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank5]:     return func(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank5]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank5]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank5]: Last error:
+[rank5]: Duplicate GPU detected : rank 5 and rank 1 both on CUDA device 1901000
+[rank0]:[W519 16:40:25.621493899 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank4]:[W519 16:40:25.628246284 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0519 16:40:26.306000 202556 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203161 closing signal SIGTERM
+W0519 16:40:26.306000 202556 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203164 closing signal SIGTERM
+W0519 16:40:26.307000 202556 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203166 closing signal SIGTERM
+W0519 16:40:26.504000 202553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203162 closing signal SIGTERM
+W0519 16:40:26.505000 202553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203167 closing signal SIGTERM
+W0519 16:40:26.505000 202553 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203168 closing signal SIGTERM
+E0519 16:40:26.836000 202556 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 203163) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-19_16:40:26
+  host      : nid006441
+  rank      : 5 (local_rank: 1)
+  exitcode  : 1 (pid: 203163)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+E0519 16:40:26.996000 202553 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 203165) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-19_16:40:26
+  host      : nid006441
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 203165)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+srun: error: nid006441: task 3: Exited with exit code 1
+srun: Terminating StepId=450406.0
+slurmstepd: error: *** STEP 450406.0 ON nid006441 CANCELLED AT 2025-05-19T16:40:27 ***
+srun: error: nid006441: tasks 0-2: Terminated
+srun: error: nid006443: tasks 4-7: Terminated
+srun: Force Terminated StepId=450406.0
+END TIME: Mon May 19 16:40:28 CEST 2025

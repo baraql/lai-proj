@@ -1,0 +1,1436 @@
+START TIME: Sun May 18 15:33:44 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,226 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Setting seed to 42
+2025-05-18 15:34:10,227 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=1000, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-18 15:34:16,956 - root - INFO - [rank 12] world size: 16
+2025-05-18 15:34:16,956 - root - INFO - Setting up DataLoaders...
+2025-05-18 15:34:17,033 - root - INFO - [rank 8] world size: 16
+2025-05-18 15:34:17,033 - root - INFO - Setting up DataLoaders...
+2025-05-18 15:34:19,357 - root - INFO - [rank 0] world size: 16
+2025-05-18 15:34:19,357 - root - INFO - Setting up DataLoaders...
+2025-05-18 15:34:21,302 - root - INFO - [rank 4] world size: 16
+2025-05-18 15:34:21,302 - root - INFO - Setting up DataLoaders...
+2025-05-18 15:34:25,267 - root - INFO - Setting up Model...
+2025-05-18 15:34:25,276 - root - INFO - Setting up Model...
+2025-05-18 15:34:25,276 - root - INFO - Setting up Model...
+2025-05-18 15:34:25,276 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-18 15:34:58,563 - root - INFO - [rank 11] model is now: FullyShardedDataParallel
+2025-05-18 15:34:58,564 - root - INFO - [rank 11] local params: 503333120
+Total params: 8053329920
+Total params: 8053329920
+2025-05-18 15:34:58,946 - root - INFO - [rank 8] model is now: FullyShardedDataParallel
+2025-05-18 15:34:58,946 - root - INFO - [rank 10] model is now: FullyShardedDataParallel
+2025-05-18 15:34:58,946 - root - INFO - [rank 8] local params: 503333120
+2025-05-18 15:34:58,946 - root - INFO - [rank 10] local params: 503333120
+2025-05-18 15:34:58,947 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 15:34:59,251 - root - INFO - [rank 6] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,252 - root - INFO - [rank 6] local params: 503333120
+Total params: 8053329920
+2025-05-18 15:34:59,649 - root - INFO - [rank 5] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,649 - root - INFO - [rank 5] local params: 503333120
+Total params: 8053329920
+Total params: 8053329920
+Total params: 8053329920
+2025-05-18 15:34:59,768 - root - INFO - [rank 7] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,769 - root - INFO - [rank 7] local params: 503333120
+2025-05-18 15:34:59,774 - root - INFO - [rank 12] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,774 - root - INFO - [rank 14] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,775 - root - INFO - [rank 12] local params: 503333120
+2025-05-18 15:34:59,775 - root - INFO - [rank 14] local params: 503333120
+2025-05-18 15:34:59,776 - root - INFO - Starting training!
+Total params: 8053329920
+Total params: 8053329920
+2025-05-18 15:34:59,920 - root - INFO - [rank 15] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,920 - root - INFO - [rank 15] local params: 503333120
+2025-05-18 15:34:59,964 - root - INFO - [rank 4] model is now: FullyShardedDataParallel
+2025-05-18 15:34:59,965 - root - INFO - [rank 4] local params: 503333120
+2025-05-18 15:34:59,966 - root - INFO - Starting training!
+Total params: 8053329920
+Total params: 8053329920
+2025-05-18 15:35:00,162 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-18 15:35:00,162 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-18 15:35:00,162 - root - INFO - [rank 1] local params: 503333120
+2025-05-18 15:35:00,162 - root - INFO - [rank 2] local params: 503333120
+Total params: 8053329920
+2025-05-18 15:35:00,519 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-18 15:35:00,520 - root - INFO - [rank 0] local params: 503333120
+2025-05-18 15:35:00,521 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-18 15:35:00,941 - root - INFO - [rank 9] model is now: FullyShardedDataParallel
+2025-05-18 15:35:00,941 - root - INFO - [rank 9] local params: 503333120
+Total params: 8053329920
+2025-05-18 15:35:03,114 - root - INFO - [rank 13] model is now: FullyShardedDataParallel
+2025-05-18 15:35:03,115 - root - INFO - [rank 13] local params: 503333120
+Total params: 8053329920
+2025-05-18 15:35:05,514 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-18 15:35:05,514 - root - INFO - [rank 3] local params: 503333120
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank4]:     logits = model(input_ids)
+[rank4]:              ^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank4]:     args, kwargs = _pre_forward(
+[rank4]:                    ^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank4]:     unshard_fn(state, handle)
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank4]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank4]:     handle.unshard()
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank4]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank4]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank4]:     dist.all_gather_into_tensor(
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank4]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank4]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank4]: Last error:
+[rank4]: Duplicate GPU detected : rank 4 and rank 0 both on CUDA device 901000
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank5]:     logits = model(input_ids)
+[rank5]:              ^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank5]:     args, kwargs = _pre_forward(
+[rank5]:                    ^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank5]:     unshard_fn(state, handle)
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank5]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank5]:     handle.unshard()
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank5]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank5]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank5]:     dist.all_gather_into_tensor(
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank5]:     return func(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank5]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank5]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank5]: Last error:
+[rank5]: Duplicate GPU detected : rank 5 and rank 1 both on CUDA device 1901000
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank6]:     logits = model(input_ids)
+[rank6]:              ^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank6]:     args, kwargs = _pre_forward(
+[rank6]:                    ^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank6]:     unshard_fn(state, handle)
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank6]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank6]:     handle.unshard()
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank6]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank6]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank6]:     dist.all_gather_into_tensor(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank6]:     return func(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank6]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank6]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank6]: Last error:
+[rank6]: Duplicate GPU detected : rank 6 and rank 2 both on CUDA device 2901000
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank7]:     logits = model(input_ids)
+[rank7]:              ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank7]:     args, kwargs = _pre_forward(
+[rank7]:                    ^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank7]:     unshard_fn(state, handle)
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank7]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank7]:     handle.unshard()
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank7]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank7]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank7]:     dist.all_gather_into_tensor(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank7]:     return func(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank7]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank7]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank7]: Last error:
+[rank7]: Duplicate GPU detected : rank 7 and rank 3 both on CUDA device 3901000
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank1]:     logits = model(input_ids)
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank1]:     args, kwargs = _pre_forward(
+[rank1]:                    ^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank1]:     unshard_fn(state, handle)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank1]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank1]:     handle.unshard()
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank1]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank1]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank1]:     dist.all_gather_into_tensor(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank1]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank1]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank1]: Last error:
+[rank1]: Duplicate GPU detected : rank 1 and rank 5 both on CUDA device 1901000
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank0]:     logits = model(input_ids)
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:                    ^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank0]:     handle.unshard()
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank0]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank0]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank0]:     dist.all_gather_into_tensor(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank0]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank0]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank0]: Last error:
+[rank0]: Duplicate GPU detected : rank 0 and rank 4 both on CUDA device 901000
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank3]:     logits = model(input_ids)
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank3]:     args, kwargs = _pre_forward(
+[rank3]:                    ^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank3]:     unshard_fn(state, handle)
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank3]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank3]:     handle.unshard()
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank3]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank3]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank3]:     dist.all_gather_into_tensor(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank3]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank3]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank3]: Last error:
+[rank3]: Duplicate GPU detected : rank 3 and rank 7 both on CUDA device 3901000
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank2]:     logits = model(input_ids)
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank2]:     args, kwargs = _pre_forward(
+[rank2]:                    ^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank2]:     unshard_fn(state, handle)
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank2]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank2]:     handle.unshard()
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank2]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank2]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank2]:     dist.all_gather_into_tensor(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank2]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, invalid usage (run with NCCL_DEBUG=WARN for details), NCCL version 2.25.1
+[rank2]: ncclInvalidUsage: This usually reflects invalid usage of NCCL library.
+[rank2]: Last error:
+[rank2]: Duplicate GPU detected : rank 2 and rank 6 both on CUDA device 2901000
+[rank0]:[W518 15:35:06.371749176 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank4]:[W518 15:35:06.371909330 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank8]:     train(args)
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank8]:     logits = model(input_ids)
+[rank8]:              ^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank8]:     args, kwargs = _pre_forward(
+[rank8]:                    ^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank8]:     unshard_fn(state, handle)
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank8]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank8]:     handle.unshard()
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank8]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank8]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank8]:     dist.all_gather_into_tensor(
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank8]:     return func(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank8]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank8]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank8]: Last error:
+[rank8]: socketProgress: Connection closed by remote peer nid006439<52606>
+[rank8]:[W518 15:35:11.087168164 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0518 15:35:11.315000 182931 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183508 closing signal SIGTERM
+W0518 15:35:11.316000 182931 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183510 closing signal SIGTERM
+W0518 15:35:11.316000 182931 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183512 closing signal SIGTERM
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank9]:     train(args)
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank9]:     logits = model(input_ids)
+[rank9]:              ^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank9]:     args, kwargs = _pre_forward(
+[rank9]:                    ^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank9]:     unshard_fn(state, handle)
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank9]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank9]:     handle.unshard()
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank9]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank9]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank9]:     dist.all_gather_into_tensor(
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank9]:     return func(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank9]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank9]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank9]: Last error:
+[rank9]: socketProgress: Connection closed by remote peer nid006442<59810>
+W0518 15:35:11.416000 182933 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183507 closing signal SIGTERM
+W0518 15:35:11.416000 182933 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183511 closing signal SIGTERM
+W0518 15:35:11.416000 182933 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 183513 closing signal SIGTERM
+W0518 15:35:11.621000 284469 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285045 closing signal SIGTERM
+W0518 15:35:11.624000 284469 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285046 closing signal SIGTERM
+W0518 15:35:11.626000 284469 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285047 closing signal SIGTERM
+[rank12]: Traceback (most recent call last):
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 150, in <module>
+[rank12]:     train(args)
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 109, in train
+[rank12]:     logits = model(input_ids)
+[rank12]:              ^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank12]:     args, kwargs = _pre_forward(
+[rank12]:                    ^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank12]:     unshard_fn(state, handle)
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank12]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_runtime_utils.py", line 301, in _unshard
+[rank12]:     handle.unshard()
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1355, in unshard
+[rank12]:     padded_unsharded_flat_param = self._all_gather_flat_param(unsharded_flat_param)
+[rank12]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_flat_param.py", line 1449, in _all_gather_flat_param
+[rank12]:     dist.all_gather_into_tensor(
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank12]:     return func(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3721, in all_gather_into_tensor
+[rank12]:     work = group._allgather_base(output_tensor, input_tensor, opts)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/NCCLUtils.hpp:328, remote process exited or there was a network error, NCCL version 2.25.1
+[rank12]: ncclRemoteError: A call failed possibly due to a network error or a remote process exiting prematurely.
+[rank12]: Last error:
+[rank12]: socketProgress: Connection closed by remote peer nid006442<48300>
+E0518 15:35:11.731000 182931 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 183506) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-18_15:35:11
+  host      : nid006439
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 183506)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W518 15:35:11.632891882 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006443-hsn1]:35532, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400050f4bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000077a89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000077a8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000077ad124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000077aec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000077af10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000077b061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400001dd9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40000143c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000002d84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000002d8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:11.878000 53464 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006443_53464_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W518 15:35:11.645784150 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006443-hsn1]:35532, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400050f4bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000077a89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000077a8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000077ad124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000077aec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000077af10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000077b061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400001dd9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40000143c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000002d84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000002d8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:11.890000 53464 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006443_53464_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+[W518 15:35:11.918179013 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid006442]:55374, remote=[nid006439]:12355): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x4000713abdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400027c089c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x400027c08d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x400027c0b208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x400027c0ca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x400027c0e9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x400022239460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x40002189c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python3() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #10: /usr/bin/python3() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #12: /usr/bin/python3() [0x4c6f64]
+frame #13: /usr/bin/python3() [0x6e48f0]
+frame #14: /usr/bin/python3() [0x686910]
+frame #15: <unknown function> + 0x8597c (0x40002079597c in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #16: <unknown function> + 0xeba4c (0x4000207fba4c in /usr/lib/aarch64-linux-gnu/libc.so.6)
+
+W0518 15:35:11.900000 284469 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1333] The node 'nid006442_284469_0' has failed to send a keep-alive heartbeat to the rendezvous 'none' due to an error of type RendezvousConnectionError.
+W0518 15:35:11.910000 120713 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 121314 closing signal SIGTERM
+W0518 15:35:11.914000 120713 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 121315 closing signal SIGTERM
+W0518 15:35:11.916000 120713 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 121316 closing signal SIGTERM
+W0518 15:35:11.919000 120713 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 121317 closing signal SIGTERM
+[W518 15:35:11.997756234 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006442]:57384, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007280bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000290689c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400029068fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002906d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002906ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002906f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40002907061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400023699044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x400022cfc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x400021b984c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x400021b98598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:11.984000 284468 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006442_284468_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W518 15:35:11.010484895 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006442]:57384, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007280bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000290689c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400029068fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002906d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002906ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002906f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40002907061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400023699044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x400022cfc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x400021b984c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x400021b98598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:11.995000 284468 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006442_284468_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+[W518 15:35:11.016289709 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006442]:57380, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40005e15bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000149b89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000149b8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000149bd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000149bec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000149bf10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000149c061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40000efe9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40000e64c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x40000d4e84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x40000d4e8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+W0518 15:35:12.002000 284466 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006442_284466_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W518 15:35:11.028659566 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006442]:57380, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40005e15bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000149b89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000149b8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000149bd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000149bec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000149bf10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000149c061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40000efe9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40000e64c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x40000d4e84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x40000d4e8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:12.014000 284466 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006442_284466_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+[W518 15:35:12.139457653 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006444-hsn1]:45066, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400072e3bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000296989c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400029698fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002969d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002969ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002969f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000296a061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400023cc9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002332c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000221c84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000221c8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+E0518 15:35:12.058000 182933 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 183509) of binary: /usr/bin/python3
+W0518 15:35:12.062000 120715 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006444_120715_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+W0518 15:35:12.063000 182933 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006439_182933_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W518 15:35:12.151543776 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006444-hsn1]:45078, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400064edbdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40001b7389c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40001b738fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40001b73d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40001b73ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40001b73f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40001b74061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400015d69044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x4000153cc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000142684c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x400014268598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+[W518 15:35:12.153840371 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006444-hsn1]:45066, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400072e3bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000296989c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400029698fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002969d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002969ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002969f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000296a061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400023cc9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002332c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000221c84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x4000221c8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:12.073000 120712 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006444_120712_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+W0518 15:35:12.075000 120715 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006444_120715_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+[W518 15:35:12.162948482 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006444-hsn1]:45078, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400064edbdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40001b7389c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40001b738fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40001b73d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40001b73ec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40001b73f10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40001b74061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400015d69044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x4000153cc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x4000142684c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+[W518 15:35:12.542114778 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006439]:39422, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40005ce4bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000136a89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000136a8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000136ad124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #26: __libc_start_main + 0x98 (0x400014268598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000136aec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000136af10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000136b061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40000dcd9044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40000d33c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+    base64_state: bytes = self._call_store("get", self._key)
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x40000c1d84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+frame #26: __libc_start_main + 0x98 (0x40000c1d8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: nid006439: task 0: Exited with exit code 1
+srun: Terminating StepId=447025.0
+[W518 15:35:12.842067519 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006443-hsn1]:35520, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40008df8bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x4000447e89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x4000447e8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x4000447ed124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x4000447eec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x4000447ef10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x4000447f061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x40003ee19044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40003e47c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python3() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #11: /usr/bin/python3() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #14: /usr/bin/python3() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #18: /usr/bin/python3() [0x55f968]
+frame #19: /usr/bin/python3() [0x503c0c]
+frame #20: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #21: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #22: /usr/bin/python3() [0x68bad8]
+frame #23: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #24: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #25: <unknown function> + 0x284c4 (0x40003d3184c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: __libc_start_main + 0x98 (0x40003d318598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #27: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:12.084000 182933 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006439_182933_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+W0518 15:35:12.084000 120712 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006444_120712_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+slurmstepd: error: *** STEP 447025.0 ON nid006439 CANCELLED AT 2025-05-18T15:35:12 ***
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+W0518 15:35:12.087000 53465 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006443_53465_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+W0518 15:35:12.088000 284469 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0518 15:35:12.090000 284469 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 285046 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 906, in _invoke_run
+    num_nodes_waiting = rdzv_handler.num_nodes_waiting()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1255, in num_nodes_waiting
+    self._state_holder.sync()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 725, in run
+    self._shutdown()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py", line 372, in _shutdown
+    self._pcontext.close(death_sig)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 572, in close
+    self._close(death_sig=death_sig, timeout=timeout)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 909, in _close
+    handler.proc.wait(time_to_wait)
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2047, in _wait
+    time.sleep(delay)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 120713 got signal: 15
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 262, in launch_agent
+    events.record(agent.get_event_succeeded())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 737, in get_event_succeeded
+    return self._construct_event(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 803, in _construct_event
+    "hostname": _get_fq_hostname(),
+                ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 368, in _get_fq_hostname
+    return socket.getfqdn(socket.gethostname())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 795, in getfqdn
+    hostname, aliases, ipaddrs = gethostbyaddr(name)
+                                 ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 182933 got signal: 15
+[W518 15:35:12.176012965 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006442]:55374, remote=[nid006439]:12355): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x4000713abdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400027c089c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400027c08fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400027c0d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x274 (0x400027c0ea64 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400022239460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40002189c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python3() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python3)
+frame #9: /usr/bin/python3() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python3)
+frame #12: /usr/bin/python3() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python3)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python3)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python3)
+frame #16: /usr/bin/python3() [0x55f968]
+frame #17: /usr/bin/python3() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python3)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python3)
+frame #20: /usr/bin/python3() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python3)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python3)
+frame #23: <unknown function> + 0x284c4 (0x4000207384c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400020738598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python3)
+
+W0518 15:35:12.162000 284469 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006442_284469_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 871, in _invoke_run
+    run_result = self._monitor_workers(self._worker_group)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py", line 394, in _monitor_workers
+    result = self._pcontext.wait(0)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 531, in wait
+    return self._poll()
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 861, in _poll
+    self.close()  # terminate all running procs
+    ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 572, in close
+    self._close(death_sig=death_sig, timeout=timeout)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 909, in _close
+    handler.proc.wait(time_to_wait)
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2047, in _wait
+    time.sleep(delay)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 284469 got signal: 15
+srun: error: nid006442: tasks 4-6: Terminated
+srun: error: nid006439: tasks 1,3: Terminated
+srun: error: nid006444: tasks 12,14-15: Terminated
+srun: error: nid006444: task 13: Exited with exit code 1
+srun: error: nid006439: task 2: Exited with exit code 1
+srun: error: nid006443: tasks 8-11: Terminated
+srun: error: nid006442: task 7: Exited with exit code 1
+srun: Force Terminated StepId=447025.0
+END TIME: Sun May 18 15:35:13 CEST 2025

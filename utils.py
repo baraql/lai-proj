@@ -1,11 +1,14 @@
 import argparse
 import functools
 import logging
+import random
 
 from contextlib import contextmanager
-
+import numpy as np
 import torch
 from torch.optim.lr_scheduler import LambdaLR
+
+from model import ScalingStrategy
 
 logger = logging.getLogger()
 
@@ -15,6 +18,7 @@ PRECISION_STR_TO_DTYPE = {
     "fp32": torch.float32,
     "fp64": torch.float64,
 }
+
 
 def init_logger():
     logger.setLevel(logging.INFO)
@@ -100,7 +104,8 @@ def set_default_dtype(dtype: torch.dtype):
     finally:
         torch.set_default_dtype(old_dtype)
 
-def get_args():
+
+def get_arg():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--dataset",
@@ -184,9 +189,40 @@ def get_args():
         help="Set to compile the model with `torch.compile`"
     )
     parser.add_argument(
+        "--scaling-factor",
+        type=int,
+        default=1,
+        help="Scale the model to increase model params"
+    )
+    parser.add_argument(
+        "--scaling-strategy",
+        type=lambda s: ScalingStrategy(s.lower()),
+        choices=list(ScalingStrategy),
+        default=ScalingStrategy.ALL,
+        help="Scaling strategy to apply to the model (options: all, n_layers)"
+    )
+    parser.add_argument(
+        "--set-seed",
+        type=int,
+        default=None,
+        help="If not None, set's the seed before running the experiments"
+    )
+    parser.add_argument(
         "--fused-attention",
         action='store_true',
         help="use fused-attention from transformer-engine"
     )
     args = parser.parse_args()
     return args
+
+
+def set_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)  # for multi-GPU
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+

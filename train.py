@@ -6,18 +6,9 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
 from dataset import CollatorForCLM, ParquetDataset
-from model import Transformer, TransformerModelArgs
-from utils import (
-    build_lr_scheduler,
-    clip_grad_norm_,
-    get_args,
-    get_num_params,
-    get_num_flop_per_token,
-    init_logger,
-    logger,
-    PRECISION_STR_TO_DTYPE,
-    set_default_dtype,
-)
+from model import Transformer
+from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, \
+    logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
 
 
 def train(args):
@@ -40,7 +31,7 @@ def train(args):
         train_ds, batch_size=args.batch_size, collate_fn=train_collator
     )
     train_dl_iterator = iter(train_dl)
-    
+
     if args.fused_attention:
         logger.info("activating fused attention")
         os.environ["NVTE_FUSED_ATTN"] = "1"
@@ -48,20 +39,16 @@ def train(args):
 
     # Set up Model
     logger.info("Setting up Model...")
-    model_config = TransformerModelArgs(
-        dim=4096,
-        n_layers=32,
-        n_heads=32,
-        n_kv_heads=8,
-        ffn_dim_multiplier=1.3,
-        multiple_of=1024,
-        rope_theta=500000,
-        vocab_size=tokenizer.vocab_size,
-        seq_len=args.sequence_length,
-        use_fused=args.fused_attention
-    )
+
+    model_config = args.scaling_strategy.scale(args.scaling_factor)
+    model_config.vocab_size = tokenizer.vocab_size
+    logger.info(
+        f"Loading a model with scale={args.scaling_factor}, scaling_strategy={args.scaling_strategy}, config:\n{model_config}")
+
     with set_default_dtype(model_dtype):
         model = Transformer(model_config).to(device)
+
+    logger.info(f"Total model parameters: {sum(p.numel() for p in model.parameters()):,}")
 
     if args.compile:
         logger.info("Using `torch.compile`")
@@ -90,6 +77,7 @@ def train(args):
     mfus = []
     tflopslst = []
     traintokenslst = []
+
     while train_step < args.training_steps:
         train_step += 1
 
@@ -131,9 +119,9 @@ def train(args):
             training_tps = ntraining_tokens_since_last_log / time_delta
             mfus.append(mfu)
             tflopslst.append(tflops)
-            traintokenslst.append(100*training_tps/tps)
+            traintokenslst.append(100 * training_tps / tps)
             logger.info(
-                f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}"
+                f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100 * training_tps / tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}"
             )
             ntokens_since_last_log = 0
             ntraining_tokens_since_last_log = 0
@@ -144,11 +132,10 @@ def train(args):
             torch.cuda.cudart().cudaProfilerStop()
 
     logger.info("Training completed")
-    mfus =  torch.tensor(mfus, dtype=torch.float32)
-    tflopslst =     torch.tensor(tflopslst, dtype=torch.float32)
-    traintokenslst =     torch.tensor(traintokenslst, dtype=torch.float32)
-    
-    
+    mfus = torch.tensor(mfus, dtype=torch.float32)
+    tflopslst = torch.tensor(tflopslst, dtype=torch.float32)
+    traintokenslst = torch.tensor(traintokenslst, dtype=torch.float32)
+
     logger.info(f"average mfu: {torch.mean(mfus).item()}, (+-){torch.std(mfus).item()}")
     logger.info(f"average tflops: {torch.mean(tflopslst).item()}, (+-){torch.std(tflopslst).item()}")
     logger.info(f"average trantokens/sec %: {torch.mean(traintokenslst).item()}, (+-){torch.std(traintokenslst).item()}")
@@ -157,4 +144,7 @@ def train(args):
 if __name__ == "__main__":
     init_logger()
     args = get_args()
+    if args.set_seed is not None:
+        set_seed(args.set_seed)
+        logger.info(f"Setting seed to {args.set_seed}")
     train(args)

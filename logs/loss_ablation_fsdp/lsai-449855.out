@@ -1,0 +1,137 @@
+START TIME: Mon May 19 14:56:35 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-19 14:56:59,566 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 14:56:59,577 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=15, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 14:57:03,154 - root - INFO - [rank 1] world size: 2
+2025-05-19 14:57:03,154 - root - INFO - Setting up DataLoaders...
+2025-05-19 14:57:03,262 - root - INFO - [rank 0] world size: 2
+2025-05-19 14:57:03,262 - root - INFO - Setting up DataLoaders...
+2025-05-19 14:57:06,376 - root - INFO - Setting up Model...
+2025-05-19 14:57:06,377 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-19 14:57:40,542 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-19 14:57:40,542 - root - INFO - [rank 0] local params: 4026664960
+2025-05-19 14:57:40,544 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 14:57:41,011 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-19 14:57:41,011 - root - INFO - [rank 1] local params: 4026664960
+2025-05-19 14:57:41,013 - root - INFO - Starting training!
+2025-05-19 14:57:44,871 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 950.21 | Training tokens per second (%): 19.38 | MFU (%): 2.94 | TFLOPs: 29.08
+2025-05-19 14:57:44,873 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 1065.81 | Training tokens per second (%): 19.38 | MFU (%): 3.30 | TFLOPs: 32.62
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 163, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 120, in train
+[rank0]:     clip_grad_norm_(model.parameters(), args.grad_max_norm)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/utils.py", line 89, in clip_grad_norm_
+[rank0]:     total_norm = torch.nn.utils.get_total_norm(grads, error_if_nonfinite=True)
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 34, in _no_grad_wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 101, in _get_total_norm
+[rank0]:     if error_if_nonfinite and torch.logical_or(total_norm.isnan(), total_norm.isinf()):
+[rank0]:                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank0]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank0]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 163, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 120, in train
+[rank1]:     clip_grad_norm_(model.parameters(), args.grad_max_norm)
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/utils.py", line 89, in clip_grad_norm_
+[rank1]:     total_norm = torch.nn.utils.get_total_norm(grads, error_if_nonfinite=True)
+[rank1]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 34, in _no_grad_wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/utils/clip_grad.py", line 101, in _get_total_norm
+[rank1]:     if error_if_nonfinite and torch.logical_or(total_norm.isnan(), total_norm.isinf()):
+[rank1]:                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank1]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank1]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank1]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+E0519 14:57:47.463000 148691 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 149075) of binary: /usr/bin/python
+E0519 14:57:47.481000 14952 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 15315) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-19_14:57:47
+  host      : nid006441
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 149075)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-19_14:57:47
+  host      : nid006447
+  rank      : 1 (local_rank: 0)
+  exitcode  : 1 (pid: 15315)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006441: task 0: Exited with exit code 1
+srun: Terminating StepId=449855.0
+srun: error: nid006447: task 1: Exited with exit code 1
+END TIME: Mon May 19 14:57:48 CEST 2025

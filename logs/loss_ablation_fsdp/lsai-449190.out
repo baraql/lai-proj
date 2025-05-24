@@ -1,0 +1,121 @@
+START TIME: Mon May 19 13:34:56 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-19 13:35:16,493 - root - INFO - Setting seed to 42
+2025-05-19 13:35:16,493 - root - INFO - Setting seed to 42
+2025-05-19 13:35:16,493 - root - INFO - Setting seed to 42
+2025-05-19 13:35:16,493 - root - INFO - Setting seed to 42
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 169, in <module>
+        train(args)        train(args)
+train(args)train(args)
+
+
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 29, in train
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 29, in train
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 29, in train
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py", line 29, in train
+    local_rank = int(os.environ["LO3CAL_RANK"])    
+    local_rank = int(os.environ["LO3CAL_RANK"])local_rank = int(os.environ["LO3CAL_RANK"])
+
+    local_rank = int(os.environ["LO3CAL_RANK"])
+                                                         ~ ~      ~   ~   ~   ~    ~ ~ ~~~ ~ ~~~ ~~~~~ ~^ ~~^~~~~^^~~^^~^~~~~^~^~^^~~^~^^~^^^^^^^^^^^^^^^^^^^^^^
+^^  File "<frozen os>", line 685, in __getitem__
+^^^^^^^^KeyError^
+^: ^'LO3CAL_RANK'^
+  File "<frozen os>", line 685, in __getitem__
+^^^^^^^^^KeyError^
+: 
+'LO3CAL_RANK'  File "<frozen os>", line 685, in __getitem__
+
+  File "<frozen os>", line 685, in __getitem__
+KeyErrorKeyError: : 'LO3CAL_RANK''LO3CAL_RANK'
+
+E0519 13:35:17.244000 222852 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 223432) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/baraq/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-19_13:35:17
+  host      : nid006459
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 223433)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-19_13:35:17
+  host      : nid006459
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 223434)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-19_13:35:17
+  host      : nid006459
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 223435)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-19_13:35:17
+  host      : nid006459
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 223432)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+srun: error: nid006459: tasks 0-1: Exited with exit code 1
+srun: Terminating StepId=449190.0
+slurmstepd: error: *** STEP 449190.0 ON nid006459 CANCELLED AT 2025-05-19T13:35:17 ***
+srun: error: nid006459: tasks 2-3: Terminated
+srun: Force Terminated StepId=449190.0
+END TIME: Mon May 19 13:35:18 CEST 2025

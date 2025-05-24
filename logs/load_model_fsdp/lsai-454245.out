@@ -1,0 +1,124 @@
+START TIME: Wed May 21 02:11:18 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 02:11:44,871 - root - INFO - Starting the main function
+2025-05-21 02:11:44,871 - root - INFO - Starting the main function
+2025-05-21 02:11:44,871 - root - INFO - Starting the main function
+2025-05-21 02:11:44,871 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,871 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,871 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,871 - root - INFO - Starting the main function
+2025-05-21 02:11:44,871 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,879 - root - INFO - Starting the main function
+2025-05-21 02:11:44,879 - root - INFO - Starting the main function
+2025-05-21 02:11:44,879 - root - INFO - Starting the main function
+2025-05-21 02:11:44,879 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,879 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,879 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:44,879 - root - INFO - Starting the main function
+2025-05-21 02:11:44,879 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL
+2025-05-21 02:11:51,905 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,351 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,429 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,429 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,505 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,921 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:52,924 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:11:53,149 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:13:58,659 - root - INFO - Error while loading the model!
+2025-05-21 02:13:58,659 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 0 has a total capacity of 94.50 GiB of which 30.87 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:13:58,660 - root - INFO - Took 2 min 7 sec
+2025-05-21 02:13:58,660 - root - INFO - 
+
+
+2025-05-21 02:13:58,680 - root - INFO - Error while loading the model!
+2025-05-21 02:13:58,680 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 1 has a total capacity of 94.50 GiB of which 30.67 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:13:58,682 - root - INFO - Took 2 min 6 sec
+2025-05-21 02:13:58,682 - root - INFO - 
+
+
+2025-05-21 02:13:58,737 - root - INFO - Error while loading the model!
+2025-05-21 02:13:58,737 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 0 has a total capacity of 94.50 GiB of which 30.50 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:13:58,739 - root - INFO - Took 2 min 6 sec
+2025-05-21 02:13:58,739 - root - INFO - 
+
+
+[rank1]:[W521 02:13:58.750978074 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]:[W521 02:13:58.807805803 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:13:59,491 - root - INFO - Error while loading the model!
+2025-05-21 02:13:59,491 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 3 has a total capacity of 94.50 GiB of which 30.50 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:13:59,492 - root - INFO - Took 2 min 6 sec
+2025-05-21 02:13:59,492 - root - INFO - 
+
+
+[rank3]:[W521 02:13:59.552052133 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank4]:[W521 02:13:59.554181162 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 4]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:14:00,145 - root - INFO - Error while loading the model!
+2025-05-21 02:14:00,145 - root - INFO - Error while loading the model!
+2025-05-21 02:14:00,145 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 2 has a total capacity of 94.50 GiB of which 30.85 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:14:00,145 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 1 has a total capacity of 94.50 GiB of which 30.86 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:14:00,147 - root - INFO - Took 2 min 8 sec
+2025-05-21 02:14:00,147 - root - INFO - 
+
+
+2025-05-21 02:14:00,147 - root - INFO - Took 2 min 8 sec
+2025-05-21 02:14:00,147 - root - INFO - 
+
+
+[rank5]:[W521 02:14:00.927638446 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 5]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank6]:[W521 02:14:00.928045730 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 6]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:14:04,196 - root - INFO - Error while loading the model!
+2025-05-21 02:14:04,196 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 2 has a total capacity of 94.50 GiB of which 30.43 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:14:04,197 - root - INFO - Took 2 min 11 sec
+2025-05-21 02:14:04,197 - root - INFO - 
+
+
+[rank2]:[W521 02:14:04.253423880 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:14:05,305 - root - INFO - Error while loading the model!
+2025-05-21 02:14:05,359 - root - INFO - CUDA out of memory. Tried to allocate 62.24 GiB. GPU 3 has a total capacity of 94.50 GiB of which 30.84 GiB is free. Including non-PyTorch memory, this process has 63.57 GiB memory in use. Of the allocated memory 62.52 GiB is allocated by PyTorch, and 526.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-21 02:14:05,360 - root - INFO - Took 2 min 13 sec
+2025-05-21 02:14:05,360 - root - INFO - 
+
+
+[rank7]:[W521 02:14:05.061650712 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 7]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+2025-05-21 02:14:10,463 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,466 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,691 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,757 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,862 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,897 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:10,980 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:14:11,024 - root - INFO - Loading a model with scale=15, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3840, n_layers=120, n_heads=120, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 454245.0 ON nid006843 CANCELLED AT 2025-05-21T02:15:28 ***
+slurmstepd: error: *** JOB 454245 ON nid006843 CANCELLED AT 2025-05-21T02:15:28 ***
+srun: forcing job termination
+srun: got SIGCONT
+W0521 02:15:28.060000 40141 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 02:15:28.085000 40141 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 40529 closing signal SIGTERM
+W0521 02:15:28.061000 62485 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 02:15:28.086000 62485 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 62912 closing signal SIGTERM
+W0521 02:15:28.088000 40141 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 40530 closing signal SIGTERM
+W0521 02:15:28.089000 40141 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 40531 closing signal SIGTERM
+W0521 02:15:28.089000 62485 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 62913 closing signal SIGTERM
+W0521 02:15:28.090000 40141 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 40532 closing signal SIGTERM
+W0521 02:15:28.090000 62485 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 62914 closing signal SIGTERM
+W0521 02:15:28.092000 62485 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 62915 closing signal SIGTERM

@@ -1,0 +1,1140 @@
+START TIME: Fri May 23 15:36:04 CEST 2025
+Node IP: 172.28.37.48
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - [RANK 0 / 16] AVAILABLE GPUS: 16
+2025-05-23 15:36:28,101 - root - INFO - [RANK 0 / 16] NODES: 4.0
+2025-05-23 15:36:28,101 - root - INFO - [RANK 0 / 16] Total RAM: 854.46 GB
+2025-05-23 15:36:28,101 - root - INFO - [RANK 0 / 16] Available RAM: 774.90 GB
+2025-05-23 15:36:28,101 - root - INFO - [RANK 0 / 16] Available per-process RAM: 193.73 GB
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:28,101 - root - INFO - Setting seed to 42
+2025-05-23 15:36:34,822 - root - INFO - [RANK 0 / 16] GPU 0: NVIDIA GH200 120GB
+2025-05-23 15:36:34,822 - root - INFO - [RANK 0 / 16]   Total memory: 94.50 GB
+2025-05-23 15:36:34,823 - root - INFO - [RANK 0 / 16]   Allocated memory: 0.00 GB
+2025-05-23 15:36:34,823 - root - INFO - [RANK 0 / 16]   Cached memory: 0.00 GB
+2025-05-23 15:36:34,823 - root - INFO - [RANK 0 / 16] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=20, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-23 15:36:34,823 - root - INFO - [RANK 0 / 16] world size: 16
+2025-05-23 15:36:34,823 - root - INFO - [RANK 0 / 16] Setting up DataLoaders...
+2025-05-23 15:36:40,558 - root - INFO - [RANK 0 / 16] Setting up Model...
+2025-05-23 15:36:40,558 - root - INFO - [RANK 0 / 16] Loading a model with scale=20, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5120, n_layers=160, n_heads=160, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+2025-05-23 15:40:00,007 - root - INFO - [RANK 0 / 16] Wrapping model with FSDP
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+2025-05-23 15:40:03,533 - root - INFO - [RANK 0 / 16] The model is now: FullyShardedDataParallel
+2025-05-23 15:40:03,534 - root - INFO - [rank 0] local params: 3387003200
+2025-05-23 15:40:03,541 - root - INFO - [RANK 0 / 16] Starting training!
+Total model parameters: 54192051200
+2025-05-23 15:40:03,663 - root - INFO - [rank 6] local params: 3387003200
+2025-05-23 15:40:04,216 - root - INFO - [rank 7] local params: 3387003200
+Total model parameters: 54192051200
+2025-05-23 15:40:04,706 - root - INFO - [rank 2] local params: 3387003200
+2025-05-23 15:40:04,776 - root - INFO - [rank 1] local params: 3387003200
+Total model parameters: 54192051200
+Total model parameters: 54192051200
+2025-05-23 15:40:05,195 - root - INFO - [rank 5] local params: 3387003200
+2025-05-23 15:40:05,196 - root - INFO - [rank 3] local params: 3387003200
+Total model parameters: 54192051200
+2025-05-23 15:40:05,410 - root - INFO - [rank 9] local params: 3387003200
+2025-05-23 15:40:05,896 - root - INFO - [rank 4] local params: 3387003200
+2025-05-23 15:40:06,449 - root - INFO - [rank 8] local params: 3387003200
+2025-05-23 15:40:06,607 - root - INFO - [rank 11] local params: 3387003200
+Total model parameters: 54192051200
+2025-05-23 15:40:07,607 - root - INFO - [rank 14] local params: 3387003200
+2025-05-23 15:40:07,858 - root - INFO - [rank 12] local params: 3387003200
+2025-05-23 15:40:08,356 - root - INFO - [rank 10] local params: 3387003200
+2025-05-23 15:40:08,695 - root - INFO - [rank 13] local params: 3387003200
+2025-05-23 15:40:10,787 - root - INFO - [rank 15] local params: 3387003200
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank8]:     train(args)
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank8]:     logits = model(input_ids)
+[rank8]:              ^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank8]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank8]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank8]:     h = layer(h, self.freqs_cis)
+[rank8]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank8]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank8]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank8]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank8]:                                 ^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank8]:     return self._call_impl(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank8]:     return forward_call(*args, **kwargs)
+[rank8]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank8]:     output = self._norm(x.float()).type_as(x)
+[rank8]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank8]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 95, in _norm
+[rank8]:     return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+[rank8]:                            ^^^^^^^^
+[rank8]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.58 GiB is free. Including non-PyTorch memory, this process has 91.38 GiB memory in use. Of the allocated memory 90.16 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank11]: Traceback (most recent call last):
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank11]:     train(args)
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank11]:     logits = model(input_ids)
+[rank11]:              ^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank11]:     return self._call_impl(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank11]:     return forward_call(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank11]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank11]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank11]:     return self._call_impl(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank11]:     return forward_call(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank11]:     h = layer(h, self.freqs_cis)
+[rank11]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank11]:     return self._call_impl(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank11]:     return forward_call(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank11]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank11]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank11]:     return self._call_impl(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank11]:     return forward_call(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank11]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank11]:                                 ^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank11]:     return self._call_impl(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank11]:     return forward_call(*args, **kwargs)
+[rank11]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank11]:     output = self._norm(x.float()).type_as(x)
+[rank11]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank11]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 95, in _norm
+[rank11]:     return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+[rank11]:                            ^^^^^^^^
+[rank11]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 3 has a total capacity of 94.50 GiB of which 2.60 GiB is free. Including non-PyTorch memory, this process has 91.38 GiB memory in use. Of the allocated memory 90.16 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank9]:     train(args)
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank9]:     logits = model(input_ids)
+[rank9]:              ^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank9]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank9]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank9]:     h = layer(h, self.freqs_cis)
+[rank9]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank9]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank9]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank9]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank9]:                                 ^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank9]:     return self._call_impl(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank9]:     return forward_call(*args, **kwargs)
+[rank9]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank9]:     output = self._norm(x.float()).type_as(x)
+[rank9]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank9]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 95, in _norm
+[rank9]:     return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+[rank9]:                            ^^^^^^^^
+[rank9]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 1 has a total capacity of 94.50 GiB of which 2.64 GiB is free. Including non-PyTorch memory, this process has 91.38 GiB memory in use. Of the allocated memory 90.16 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank3]:     logits = model(input_ids)
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank3]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank3]:     h = layer(h, self.freqs_cis)
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank3]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 360, in forward
+[rank3]:     h = x + self.attention(self.attention_norm(x), freqs_cis)
+[rank3]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 250, in forward
+[rank3]:     xq, xk = apply_rotary_emb(xq, xk, freqs_cis=freqs_cis)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 173, in apply_rotary_emb
+[rank3]:     xq_out = torch.view_as_real(xq_ * freqs_cis).flatten(3)
+[rank3]:                                 ~~~~^~~~~~~~~~~
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 3 has a total capacity of 94.50 GiB of which 2.64 GiB is free. Including non-PyTorch memory, this process has 91.19 GiB memory in use. Of the allocated memory 90.01 GiB is allocated by PyTorch, and 12.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank13]:     train(args)
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank13]:     logits = model(input_ids)
+[rank13]:              ^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank13]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank13]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank13]:     h = layer(h, self.freqs_cis)
+[rank13]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank13]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank13]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank13]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank13]:                                 ^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank13]:     output = self._norm(x.float()).type_as(x)
+[rank13]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank13]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 95, in _norm
+[rank13]:     return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+[rank13]:                            ^^^^^^^^
+[rank13]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 1 has a total capacity of 94.50 GiB of which 2.55 GiB is free. Including non-PyTorch memory, this process has 91.38 GiB memory in use. Of the allocated memory 90.16 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank12]: Traceback (most recent call last):
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank12]:     train(args)
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank12]:     logits = model(input_ids)
+[rank12]:              ^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank12]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank12]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank12]:     h = layer(h, self.freqs_cis)
+[rank12]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank12]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank12]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 360, in forward
+[rank12]:     h = x + self.attention(self.attention_norm(x), freqs_cis)
+[rank12]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank12]:     return self._call_impl(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank12]:     return forward_call(*args, **kwargs)
+[rank12]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 250, in forward
+[rank12]:     xq, xk = apply_rotary_emb(xq, xk, freqs_cis=freqs_cis)
+[rank12]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank12]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 175, in apply_rotary_emb
+[rank12]:     return xq_out.type_as(xq), xk_out.type_as(xk)
+[rank12]:            ^^^^^^^^^^^^^^^^^^
+[rank12]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 40.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.56 GiB is free. Including non-PyTorch memory, this process has 91.26 GiB memory in use. Of the allocated memory 90.09 GiB is allocated by PyTorch, and 8.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank10]: Traceback (most recent call last):
+[rank10]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank10]:     train(args)
+[rank10]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank10]:     logits = model(input_ids)
+[rank10]:              ^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank10]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank10]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank10]:     h = layer(h, self.freqs_cis)
+[rank10]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank10]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank10]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank10]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank10]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 305, in forward
+[rank10]:     return self.w2(F.silu(self.w1(x)) * self.w3(x))
+[rank10]:                           ^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank10]:     return self._call_impl(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank10]:     return forward_call(*args, **kwargs)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank10]:     return F.linear(input, self.weight, self.bias)
+[rank10]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank10]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 140.00 MiB. GPU 2 has a total capacity of 94.50 GiB of which 2.59 GiB is free. Including non-PyTorch memory, this process has 91.46 GiB memory in use. Of the allocated memory 90.24 GiB is allocated by PyTorch, and 57.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank14]: Traceback (most recent call last):
+[rank14]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank14]:     train(args)
+[rank14]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank14]:     logits = model(input_ids)
+[rank14]:              ^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank14]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank14]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank14]:     h = layer(h, self.freqs_cis)
+[rank14]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank14]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank14]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank14]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank14]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 305, in forward
+[rank14]:     return self.w2(F.silu(self.w1(x)) * self.w3(x))
+[rank14]:                           ^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank14]:     return self._call_impl(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank14]:     return forward_call(*args, **kwargs)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank14]:     return F.linear(input, self.weight, self.bias)
+[rank14]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank14]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 140.00 MiB. GPU 2 has a total capacity of 94.50 GiB of which 2.59 GiB is free. Including non-PyTorch memory, this process has 91.46 GiB memory in use. Of the allocated memory 90.24 GiB is allocated by PyTorch, and 57.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank15]: Traceback (most recent call last):
+[rank15]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank15]:     train(args)
+[rank15]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank15]:     logits = model(input_ids)
+[rank15]:              ^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank15]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank15]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank15]:     h = layer(h, self.freqs_cis)
+[rank15]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank15]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank15]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank15]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank15]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 305, in forward
+[rank15]:     return self.w2(F.silu(self.w1(x)) * self.w3(x))
+[rank15]:                           ^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank15]:     return self._call_impl(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank15]:     return forward_call(*args, **kwargs)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank15]:     return F.linear(input, self.weight, self.bias)
+[rank15]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank15]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 140.00 MiB. GPU 3 has a total capacity of 94.50 GiB of which 2.59 GiB is free. Including non-PyTorch memory, this process has 91.46 GiB memory in use. Of the allocated memory 90.24 GiB is allocated by PyTorch, and 57.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank0]:     logits = model(input_ids)
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank0]:     h = layer(h, self.freqs_cis)
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 360, in forward
+[rank0]:     h = x + self.attention(self.attention_norm(x), freqs_cis)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 250, in forward
+[rank0]:     xq, xk = apply_rotary_emb(xq, xk, freqs_cis=freqs_cis)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 170, in apply_rotary_emb
+[rank0]:     xq_ = torch.view_as_complex(xq.float().reshape(*xq.shape[:-1], -1, 2))
+[rank0]:                                 ^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.63 GiB is free. Including non-PyTorch memory, this process has 91.15 GiB memory in use. Of the allocated memory 89.93 GiB is allocated by PyTorch, and 56.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank2]:     logits = model(input_ids)
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank2]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank2]:     h = layer(h, self.freqs_cis)
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank2]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank2]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank2]:                                 ^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank2]:     output = self._norm(x.float()).type_as(x)
+[rank2]:                         ^^^^^^^^^
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 2 has a total capacity of 94.50 GiB of which 2.61 GiB is free. Including non-PyTorch memory, this process has 91.30 GiB memory in use. Of the allocated memory 90.08 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank1]:     logits = model(input_ids)
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank1]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank1]:     h = layer(h, self.freqs_cis)
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank1]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank1]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank1]:                                 ^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank1]:     output = self._norm(x.float()).type_as(x)
+[rank1]:                         ^^^^^^^^^
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 1 has a total capacity of 94.50 GiB of which 2.60 GiB is free. Including non-PyTorch memory, this process has 91.30 GiB memory in use. Of the allocated memory 90.08 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank5]:     logits = model(input_ids)
+[rank5]:              ^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank5]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank5]:     h = layer(h, self.freqs_cis)
+[rank5]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank5]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank5]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank5]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank5]:                                 ^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank5]:     output = self._norm(x.float()).type_as(x)
+[rank5]:                         ^^^^^^^^^
+[rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 1 has a total capacity of 94.50 GiB of which 2.62 GiB is free. Including non-PyTorch memory, this process has 91.30 GiB memory in use. Of the allocated memory 90.08 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank4]:     logits = model(input_ids)
+[rank4]:              ^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank4]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank4]:     h = layer(h, self.freqs_cis)
+[rank4]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank4]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank4]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank4]:                                 ^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 98, in forward
+[rank4]:     output = self._norm(x.float()).type_as(x)
+[rank4]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 95, in _norm
+[rank4]:     return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
+[rank4]:                            ^^^^^^^^
+[rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.65 GiB is free. Including non-PyTorch memory, this process has 91.38 GiB memory in use. Of the allocated memory 90.16 GiB is allocated by PyTorch, and 57.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank6]:     logits = model(input_ids)
+[rank6]:              ^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank6]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank6]:     h = layer(h, self.freqs_cis)
+[rank6]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank6]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank6]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank6]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank6]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 305, in forward
+[rank6]:     return self.w2(F.silu(self.w1(x)) * self.w3(x))
+[rank6]:                                         ^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank6]:     return F.linear(input, self.weight, self.bias)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 140.00 MiB. GPU 2 has a total capacity of 94.50 GiB of which 2.60 GiB is free. Including non-PyTorch memory, this process has 91.73 GiB memory in use. Of the allocated memory 90.51 GiB is allocated by PyTorch, and 57.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 189, in train
+[rank7]:     logits = model(input_ids)
+[rank7]:              ^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank7]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 423, in forward
+[rank7]:     h = layer(h, self.freqs_cis)
+[rank7]:         ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank7]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank7]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 361, in forward
+[rank7]:     out = h + self.feed_forward(self.ffn_norm(h))
+[rank7]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 305, in forward
+[rank7]:     return self.w2(F.silu(self.w1(x)) * self.w3(x))
+[rank7]:                           ^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank7]:     return F.linear(input, self.weight, self.bias)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 140.00 MiB. GPU 3 has a total capacity of 94.50 GiB of which 2.71 GiB is free. Including non-PyTorch memory, this process has 91.46 GiB memory in use. Of the allocated memory 90.24 GiB is allocated by PyTorch, and 57.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0523 15:40:22.031000 84616 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 85002 closing signal SIGTERM
+W0523 15:40:22.033000 84616 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 85004 closing signal SIGTERM
+W0523 15:40:22.033000 84616 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 85005 closing signal SIGTERM
+W0523 15:40:22.334000 277145 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 277510 closing signal SIGTERM
+W0523 15:40:22.335000 277145 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 277512 closing signal SIGTERM
+E0523 15:40:22.597000 84616 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 85003) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:40:22
+  host      : nid006953
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 85003)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+E0523 15:40:22.799000 277145 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 277509) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:40:22
+  host      : nid006954
+  rank      : 14 (local_rank: 2)
+  exitcode  : 1 (pid: 277511)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:40:22
+  host      : nid006954
+  rank      : 12 (local_rank: 0)
+  exitcode  : 1 (pid: 277509)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+W0523 15:40:23.017000 220167 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 220548 closing signal SIGTERM
+E0523 15:40:23.383000 220167 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 220545) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:40:23
+  host      : nid006950
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 220546)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-23_15:40:23
+  host      : nid006950
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 220547)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:40:23
+  host      : nid006950
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 220545)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006953: task 2: Exited with exit code 1
+srun: Terminating StepId=460667.0
+W0523 15:40:23.899000 177968 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0523 15:40:23.997000 177968 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 178329 closing signal SIGTERM
+W0523 15:40:24.022000 177968 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 178330 closing signal SIGTERM
+W0523 15:40:24.026000 177968 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 178331 closing signal SIGTERM
+W0523 15:40:24.030000 177968 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 178332 closing signal SIGTERM
+srun: error: nid006954: task 3: Exited with exit code 1
+srun: error: nid006950: task 0: Exited with exit code 1
+W0523 15:40:25.313000 177968 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006952_177968_0' has failed to shutdown the rendezvous '16697' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 177968 got signal: 15
+srun: error: nid006952: task 1: Exited with exit code 1

@@ -1,0 +1,46 @@
+START TIME: Wed May 21 03:18:22 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 03:18:52,059 - root - INFO - Loading a model with scale=21, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5376, n_layers=168, n_heads=168, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+slurmstepd: error: Detected 1 oom_kill event in StepId=454276.0. Some of the step tasks have been OOM Killed.
+srun: error: nid006793: task 1: Out Of Memory
+srun: Terminating StepId=454276.0
+slurmstepd: error: *** STEP 454276.0 ON nid006792 CANCELLED AT 2025-05-21T03:22:32 ***
+W0521 03:22:32.399000 165951 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 03:22:32.401000 165951 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 166312 closing signal SIGTERM
+W0521 03:22:32.404000 165951 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 166313 closing signal SIGTERM
+W0521 03:22:32.406000 165951 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 166314 closing signal SIGTERM
+W0521 03:22:32.408000 165951 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 166315 closing signal SIGTERM
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 165951 got signal: 15
+srun: error: nid006792: task 0: Exited with exit code 1

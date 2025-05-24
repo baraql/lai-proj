@@ -1,0 +1,244 @@
+START TIME: Wed May 21 02:45:44 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 02:46:17,190 - root - INFO - Starting the main function
+2025-05-21 02:46:17,191 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL, auto_wrap_policy=<function transformer_auto_wrap_policy at 0x4001b0132020>
+2025-05-21 02:46:17,421 - root - INFO - Starting the main function
+2025-05-21 02:46:17,421 - root - INFO - Running binary search with scale low=15, high=19, precision=0, scaling_strategy=ScalingStrategy.ALL, auto_wrap_policy=<function transformer_auto_wrap_policy at 0x4001c0e82020>
+2025-05-21 02:46:17,720 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 02:46:18,131 - root - INFO - Loading a model with scale=17, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4352, n_layers=136, n_heads=136, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank4]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank4]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank4]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank4]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank4]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank4]:     _auto_wrap(
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank4]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank4]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank4]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank4]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank7]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank7]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank7]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank7]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank7]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank7]:     _auto_wrap(
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank7]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank7]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank7]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank4]:[W521 02:48:23.819787528 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank1]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank1]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank1]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank1]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank1]:     _auto_wrap(
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank1]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank1]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank1]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank5]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank5]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank5]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank5]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank5]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank5]:     _auto_wrap(
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank5]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank5]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank5]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank5]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank3]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank3]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank3]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank3]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank3]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank3]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank3]:     _auto_wrap(
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank3]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank3]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank3]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank6]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank6]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank6]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank6]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank6]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank6]:     _auto_wrap(
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank6]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank6]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank6]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank6]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank0]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank0]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank0]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank0]:     _auto_wrap(
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank0]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank0]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank0]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+[rank0]:[W521 02:48:27.315213975 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 136, in <module>
+[rank2]:     best_fit = binary_search(low=low, high=high, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 102, in binary_search
+[rank2]:     does_fit = load_model_fsdp(scaling_factor=mid, scaling_strategy=scaling_strategy, auto_wrap_policy=auto_wrap_policy)
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 59, in load_model_fsdp
+[rank2]:     model = FSDP(model, auto_wrap_policy=auto_wrap_policy, device_id=torch.cuda.current_device())
+[rank2]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 483, in __init__
+[rank2]:     _auto_wrap(
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_wrap_utils.py", line 101, in _auto_wrap
+[rank2]:     _recursive_wrap(**recursive_wrap_kwargs, **root_kwargs)  # type: ignore[arg-type]
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/wrap.py", line 539, in _recursive_wrap
+[rank2]:     if auto_wrap_policy(module=module, recurse=True, nonwrapped_numel=nonwrapped_numel):
+[rank2]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: TypeError: transformer_auto_wrap_policy() missing 1 required positional argument: 'transformer_layer_cls'
+W0521 02:48:30.469000 203159 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203542 closing signal SIGTERM
+W0521 02:48:30.470000 203159 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203543 closing signal SIGTERM
+W0521 02:48:30.471000 203159 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 203544 closing signal SIGTERM
+W0521 02:48:30.496000 240899 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 241266 closing signal SIGTERM
+W0521 02:48:30.498000 240899 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 241267 closing signal SIGTERM
+W0521 02:48:30.498000 240899 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 241268 closing signal SIGTERM
+E0521 02:48:30.734000 203159 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 203541) of binary: /usr/bin/python
+E0521 02:48:30.775000 240899 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 241265) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:48:30
+  host      : nid007021
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 241265)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:48:30
+  host      : nid007019
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 203541)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid007021: task 1: Exited with exit code 1
+srun: Terminating StepId=454263.0
+srun: error: nid007019: task 0: Exited with exit code 1

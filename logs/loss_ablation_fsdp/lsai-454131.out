@@ -1,0 +1,221 @@
+START TIME: Wed May 21 00:48:20 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 00:48:47,218 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,218 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,218 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,218 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,218 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=19, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 00:48:47,285 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,285 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,285 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,285 - root - INFO - Setting seed to 42
+2025-05-21 00:48:47,285 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=19, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-21 00:48:53,894 - root - INFO - [rank 0] world size: 8
+2025-05-21 00:48:53,894 - root - INFO - Setting up DataLoaders...
+2025-05-21 00:48:53,974 - root - INFO - [rank 4] world size: 8
+2025-05-21 00:48:53,975 - root - INFO - Setting up DataLoaders...
+2025-05-21 00:48:57,005 - root - INFO - Setting up Model...
+2025-05-21 00:48:57,005 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,005 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,005 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,006 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,007 - root - INFO - Setting up Model...
+2025-05-21 00:48:57,007 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,007 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,007 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+2025-05-21 00:48:57,007 - root - INFO - Loading a model with scale=19, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=4864, n_layers=152, n_heads=152, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=-1)
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank5]:     train(args)
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank5]:     model = Transformer(model_config).to(device)
+[rank5]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank5]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank5]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank5]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank5]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank6]:     train(args)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank6]:     model = Transformer(model_config).to(device)
+[rank6]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank6]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank6]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank6]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank6]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank7]:     train(args)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank7]:     model = Transformer(model_config).to(device)
+[rank7]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank7]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank7]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank7]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank4]:     train(args)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank4]:     model = Transformer(model_config).to(device)
+[rank4]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank4]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank4]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank4]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank4]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank0]:     train(args)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank0]:     model = Transformer(model_config).to(device)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank0]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank0]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank2]:     train(args)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank2]:     model = Transformer(model_config).to(device)
+[rank2]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank2]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank2]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank2]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank1]:     train(args)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank1]:     model = Transformer(model_config).to(device)
+[rank1]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank1]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank1]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank1]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 158, in <module>
+[rank3]:     train(args)
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 60, in train
+[rank3]:     model = Transformer(model_config).to(device)
+[rank3]:             ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/model.py", line 389, in __init__
+[rank3]:     self.tok_embeddings = nn.Embedding(model_args.vocab_size, model_args.dim)
+[rank3]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 167, in __init__
+[rank3]:     torch.empty((num_embeddings, embedding_dim), **factory_kwargs),
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: RuntimeError: Trying to create tensor with negative dimension -1: [-1, 4864]
+[rank4]:[W521 00:48:57.072995137 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[rank0]:[W521 00:48:57.399458065 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0521 00:48:57.802000 206301 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 206694 closing signal SIGTERM
+W0521 00:48:57.802000 206301 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 206695 closing signal SIGTERM
+W0521 00:48:57.803000 206301 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 206696 closing signal SIGTERM
+W0521 00:48:57.803000 291283 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 291650 closing signal SIGTERM
+W0521 00:48:57.803000 291283 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 291651 closing signal SIGTERM
+W0521 00:48:57.804000 291283 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 291652 closing signal SIGTERM
+E0521 00:48:58.098000 206301 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 206693) of binary: /usr/bin/python
+E0521 00:48:58.133000 291283 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 291649) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_00:48:57
+  host      : nid006445
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 206693)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_00:48:57
+  host      : nid006444
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 291649)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006445: task 1: Exited with exit code 1
+srun: Terminating StepId=454131.0
+srun: error: nid006444: task 0: Exited with exit code 1
+END TIME: Wed May 21 00:48:59 CEST 2025

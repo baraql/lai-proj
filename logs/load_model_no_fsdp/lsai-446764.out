@@ -1,0 +1,8 @@
+START TIME: Sun May 18 13:29:31 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 446764.0 ON nid006982 CANCELLED AT 2025-05-18T13:44:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 446764 ON nid006982 CANCELLED AT 2025-05-18T13:44:19 DUE TO TIME LIMIT ***
+srun: forcing job termination
+srun: got SIGCONT

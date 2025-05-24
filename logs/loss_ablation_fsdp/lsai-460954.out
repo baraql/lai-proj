@@ -1,0 +1,3 @@
+slurmstepd: error: *** JOB 460954 ON nid006481 CANCELLED AT 2025-05-23T18:08:56 ***
+slurmstepd: error: spank: required plugin spank_pyxis.so: exit() failed with rc=-1
+slurmstepd: error: spank_fini failed

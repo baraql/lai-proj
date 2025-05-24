@@ -1,0 +1,112 @@
+START TIME: Mon May 19 13:36:29 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-19 13:36:50,400 - root - INFO - Setting seed to 42
+2025-05-19 13:36:50,400 - root - INFO - Setting seed to 42
+2025-05-19 13:36:50,400 - root - INFO - Setting seed to 42
+2025-05-19 13:36:50,400 - root - INFO - Setting seed to 42
+2025-05-19 13:36:50,400 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 13:36:55,860 - root - INFO - [rank 0] world size: 4
+2025-05-19 13:36:55,860 - root - INFO - Setting up DataLoaders...
+2025-05-19 13:36:58,583 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-19 13:37:32,523 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-19 13:37:32,523 - root - INFO - [rank 3] local params: 2013332480
+Total params: 8053329920
+2025-05-19 13:37:32,633 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-19 13:37:32,633 - root - INFO - [rank 1] local params: 2013332480
+Total params: 8053329920
+2025-05-19 13:37:32,938 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-19 13:37:32,938 - root - INFO - [rank 0] local params: 2013332480
+2025-05-19 13:37:32,939 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 13:37:33,123 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-19 13:37:33,124 - root - INFO - [rank 2] local params: 2013332480
+2025-05-19 13:37:41,255 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 493.03 | Training tokens per second (%): 19.38 | MFU (%): 0.92 | TFLOPs: 9.13
+2025-05-19 13:37:43,513 - root - INFO - Step: 5 | Loss: 11.92 | Tokens per second: 7324.85 | Training tokens per second (%): 11.41 | MFU (%): 13.72 | TFLOPs: 135.67
+2025-05-19 13:37:46,396 - root - INFO - Step: 10 | Loss: 11.89 | Tokens per second: 7157.53 | Training tokens per second (%): 25.72 | MFU (%): 13.40 | TFLOPs: 132.58
+2025-05-19 13:37:49,298 - root - INFO - Step: 15 | Loss: 11.67 | Tokens per second: 7107.40 | Training tokens per second (%): 35.21 | MFU (%): 13.31 | TFLOPs: 131.65
+2025-05-19 13:37:52,213 - root - INFO - Step: 20 | Loss: 11.33 | Tokens per second: 7078.46 | Training tokens per second (%): 34.78 | MFU (%): 13.26 | TFLOPs: 131.11
+2025-05-19 13:37:55,064 - root - INFO - Step: 25 | Loss: 10.83 | Tokens per second: 7236.22 | Training tokens per second (%): 18.28 | MFU (%): 13.55 | TFLOPs: 134.03
+2025-05-19 13:37:57,951 - root - INFO - Step: 30 | Loss: 9.78 | Tokens per second: 7145.40 | Training tokens per second (%): 26.99 | MFU (%): 13.38 | TFLOPs: 132.35
+2025-05-19 13:38:00,784 - root - INFO - Step: 35 | Loss: 9.88 | Tokens per second: 7284.81 | Training tokens per second (%): 13.78 | MFU (%): 13.64 | TFLOPs: 134.93
+2025-05-19 13:38:03,612 - root - INFO - Step: 40 | Loss: 9.85 | Tokens per second: 7296.07 | Training tokens per second (%): 9.95 | MFU (%): 13.66 | TFLOPs: 135.14
+2025-05-19 13:38:06,448 - root - INFO - Step: 45 | Loss: 9.35 | Tokens per second: 7275.75 | Training tokens per second (%): 15.59 | MFU (%): 13.63 | TFLOPs: 134.76
+2025-05-19 13:38:09,275 - root - INFO - Step: 50 | Loss: 9.22 | Tokens per second: 7297.83 | Training tokens per second (%): 10.93 | MFU (%): 13.67 | TFLOPs: 135.17
+2025-05-19 13:38:12,163 - root - INFO - Step: 55 | Loss: 9.34 | Tokens per second: 7144.04 | Training tokens per second (%): 28.32 | MFU (%): 13.38 | TFLOPs: 132.33
+2025-05-19 13:38:15,054 - root - INFO - Step: 60 | Loss: 8.70 | Tokens per second: 7134.81 | Training tokens per second (%): 26.71 | MFU (%): 13.36 | TFLOPs: 132.15
+2025-05-19 13:38:17,934 - root - INFO - Step: 65 | Loss: 8.95 | Tokens per second: 7165.41 | Training tokens per second (%): 24.18 | MFU (%): 13.42 | TFLOPs: 132.72
+2025-05-19 13:38:20,815 - root - INFO - Step: 70 | Loss: 8.24 | Tokens per second: 7161.18 | Training tokens per second (%): 26.25 | MFU (%): 13.41 | TFLOPs: 132.64
+2025-05-19 13:38:23,667 - root - INFO - Step: 75 | Loss: 8.34 | Tokens per second: 7232.55 | Training tokens per second (%): 16.89 | MFU (%): 13.55 | TFLOPs: 133.96
+2025-05-19 13:38:26,515 - root - INFO - Step: 80 | Loss: 8.24 | Tokens per second: 7243.99 | Training tokens per second (%): 17.36 | MFU (%): 13.57 | TFLOPs: 134.18
+2025-05-19 13:38:29,368 - root - INFO - Step: 85 | Loss: 8.34 | Tokens per second: 7233.65 | Training tokens per second (%): 16.04 | MFU (%): 13.55 | TFLOPs: 133.98
+2025-05-19 13:38:32,383 - root - INFO - Step: 90 | Loss: 7.80 | Tokens per second: 6840.32 | Training tokens per second (%): 57.98 | MFU (%): 12.81 | TFLOPs: 126.70
+2025-05-19 13:38:35,376 - root - INFO - Step: 95 | Loss: 7.53 | Tokens per second: 6890.48 | Training tokens per second (%): 57.90 | MFU (%): 12.90 | TFLOPs: 127.63
+2025-05-19 13:38:38,493 - root - INFO - Step: 100 | Loss: 7.48 | Tokens per second: 6615.84 | Training tokens per second (%): 93.89 | MFU (%): 12.39 | TFLOPs: 122.54
+2025-05-19 13:38:38,493 - root - INFO - Training completed
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    if result.is_failed():
+       ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_failed'
+srun: error: nid006459: tasks 0,2: Exited with exit code 1
+srun: Terminating StepId=449193.0
+slurmstepd: error: *** STEP 449193.0 ON nid006459 CANCELLED AT 2025-05-19T13:38:41 ***
+srun: error: nid006459: task 1: Terminated
+srun: Force Terminated StepId=449193.0
+END TIME: Mon May 19 13:38:41 CEST 2025

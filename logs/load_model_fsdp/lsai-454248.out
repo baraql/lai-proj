@@ -1,0 +1,193 @@
+START TIME: Wed May 21 02:22:42 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+    log_dist(f"Starting the main function")
+TypeError: log_dist() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+    log_dist(f"Starting the main function")
+TypeError: log_dist() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+W0521 02:23:25.235000 225561 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 226228 closing signal SIGTERM
+W0521 02:23:25.236000 225561 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 226229 closing signal SIGTERM
+W0521 02:23:25.236000 225561 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 226230 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 116, in <module>
+W0521 02:23:25.446000 77388 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 77750 closing signal SIGTERM
+W0521 02:23:25.447000 77388 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 77751 closing signal SIGTERM
+W0521 02:23:25.448000 77388 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 77752 closing signal SIGTERM
+E0521 02:23:25.701000 225561 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 226227) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:23:25
+  host      : nid007125
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 226227)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+E0521 02:23:25.876000 77388 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 77749) of binary: /usr/bin/python
+[W521 02:23:25.759423637 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid007126-hsn2]:55120, remote=[nid007125]:29500): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400085acbdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40003c3289c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x40003c328d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x40003c32b208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x40003c32ca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x40003c32e9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x400036959460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x400035fbc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #10: /usr/bin/python() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #12: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #13: /usr/bin/python() [0x529450]
+frame #14: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #15: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #16: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #17: /usr/bin/python() [0x55f968]
+frame #18: /usr/bin/python() [0x503c0c]
+frame #19: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #20: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #21: /usr/bin/python() [0x68bad8]
+frame #22: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #23: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #24: <unknown function> + 0x284c4 (0x400034e584c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: __libc_start_main + 0x98 (0x400034e58598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 02:23:25.891000 77388 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007126_77388_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 02:23:25.784212865 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid007126-hsn2]:55120, remote=[nid007125]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400085acbdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40003c3289c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40003c328fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40003c32d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40003c32e99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400036959460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x400035fbc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x400034e584c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400034e58598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 02:23:25.914000 77388 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007126_77388_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W521 02:23:25.797933319 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid007126-hsn2]:55120, remote=[nid007125]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400085acbdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40003c3289c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40003c328fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40003c32d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40003c32e99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400036959460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x400035fbc060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x400034e584c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400034e58598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0521 02:23:25.928000 77388 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007126_77388_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_02:23:25
+  host      : nid007126
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 77749)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid007125: task 0: Exited with exit code 1
+srun: Terminating StepId=454248.0
+srun: error: nid007126: task 1: Exited with exit code 1

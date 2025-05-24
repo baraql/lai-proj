@@ -1,0 +1,388 @@
+START TIME: Fri May 23 15:23:25 CEST 2025
+Node IP: 172.28.36.208
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+    train(args)
+    train(args)
+    train(args)
+    train(args)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+    print_GPU_stats()
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+    print_GPU_stats()
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+        print_GPU_stats()
+print_GPU_stats()
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+2025-05-23 15:23:48,442 - root - INFO - Setting seed to 42
+2025-05-23 15:23:48,442 - root - INFO - [RANK 0 / 16] AVAILABLE GPUS: 16
+    log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 235, in <module>
+            log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+            train(args)    train(args)train(args)
+train(args)
+
+        train(args)        train(args)
+train(args)train(args)
+     log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+
+
+
+       log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+    train(args)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+        ~~~~~~~~~~~~~~~~ ~ ~ ~  ~  ~ ~   ~   ~   ~  ~   ~   ~   ~   ~  ^   ~   ~    ~    ~   ~   ~    ~  ~ ~ ~ ~  ~ ~ ~  ~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+        train(args)    train(args)train(args)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+~~~~~~^TypeError^~~: ~~~unsupported operand type(s) for /: 'int' and 'set'~~~~
+
+
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+    print_GPU_stats()
+    print_GPU_stats()    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+      File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+print_GPU_stats()
+    print_GPU_stats()    
+    print_GPU_stats()    print_GPU_stats()print_GPU_stats()
+
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+
+~~~~~~TypeError~~~: ~unsupported operand type(s) for /: 'int' and 'set'
+
+
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 66, in train
+print_GPU_stats()  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+TypeErrorTypeError: : unsupported operand type(s) for /: 'int' and 'set'unsupported operand type(s) for /: 'int' and 'set'
+
+    print_GPU_stats()
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+    print_GPU_stats()
+    log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")
+    log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+        print_GPU_stats()print_GPU_stats()
+
+                  log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+    log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py", line 44, in print_GPU_stats
+           log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")     
+         log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+    log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")
+~log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")~~~
+log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+                         log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}") 
+ 
+        log_dist(f"NODES: {int(os.environ["WORLD_SIZE"]) / {int(os.environ["LOCAL_WORLD_SIZE"])}}")~
+ ~ ~ ~ ~ ~ ~ ~  ~  ~     ~ ~  ~   ~    ~    ~  ~   ~ ~~ ~    ~     ~ ~    ~ ~~  ~~   ~ ^  ~~ ~ ~   ~ ~  ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~^~~~~~~~~~~~~~~~
+~~TypeError: ~unsupported operand type(s) for /: 'int' and 'set'~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                               ~ ~ ~    ~~  ~~   ~~ ~ ~ ~     ~ ~ ~  ~~  ~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~
+~~~TypeError~~: ~~~~~~unsupported operand type(s) for /: 'int' and 'set'~~~
+~~~TypeError~: ~unsupported operand type(s) for /: 'int' and 'set'TypeError~~
+: ~unsupported operand type(s) for /: 'int' and 'set'~
+~~~~~~~~~~~~
+~~
+TypeError: TypeErrorunsupported operand type(s) for /: 'int' and 'set': 
+~~~~~~
+~~TypeError~: ~unsupported operand type(s) for /: 'int' and 'set'
+
+unsupported operand type(s) for /: 'int' and 'set'
+TypeError: unsupported operand type(s) for /: 'int' and 'set'
+~ ~   ~   ~   ~     ~   ~   ~   ~  ~   ~   ~   ~   ~    ~   ~   ~   ~     ~     ~~ ~ ~  ~~   ~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~^~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~TypeError~~~~~~~~: ~~~~~~unsupported operand type(s) for /: 'int' and 'set'~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~TypeError~~: 
+unsupported operand type(s) for /: 'int' and 'set'~TypeError
+~: 
+unsupported operand type(s) for /: 'int' and 'set'
+TypeError: unsupported operand type(s) for /: 'int' and 'set'
+E0523 15:23:49.157000 178023 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 178383) of binary: /usr/bin/python
+E0523 15:23:49.159000 262398 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 262761) of binary: /usr/bin/python
+E0523 15:23:49.159000 240658 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 241005) of binary: /usr/bin/python
+E0523 15:23:49.161000 239974 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 240334) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006924
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 178384)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006924
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 178385)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006924
+  rank      : 11 (local_rank: 3)
+  exitcode  : 1 (pid: 178386)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006924
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 178383)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006923
+  rank      : 5 (local_rank: 1)
+  exitcode  : 1 (pid: 241006)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006923
+  rank      : 6 (local_rank: 2)
+  exitcode  : 1 (pid: 241007)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006923
+  rank      : 7 (local_rank: 3)
+  exitcode  : 1 (pid: 241008)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006923
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 241005)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006922
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 262762)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006922
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 262763)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006922
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 262764)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006922
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 262761)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/train_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006925
+  rank      : 13 (local_rank: 1)
+  exitcode  : 1 (pid: 240335)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006925
+  rank      : 14 (local_rank: 2)
+  exitcode  : 1 (pid: 240336)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006925
+  rank      : 15 (local_rank: 3)
+  exitcode  : 1 (pid: 240337)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-23_15:23:49
+  host      : nid006925
+  rank      : 12 (local_rank: 0)
+  exitcode  : 1 (pid: 240334)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006925: task 3: Exited with exit code 1
+srun: Terminating StepId=460645.0
+srun: error: nid006923: task 1: Exited with exit code 1
+srun: error: nid006922: task 0: Exited with exit code 1
+srun: error: nid006924: task 2: Exited with exit code 1

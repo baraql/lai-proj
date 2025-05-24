@@ -1,0 +1,18 @@
+START TIME: Sun May 18 15:09:19 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+usage: train.py [-h] [--dataset DATASET]
+                [--tokenizer-name-or-path TOKENIZER_NAME_OR_PATH]
+                [--sequence-length SEQUENCE_LENGTH] [--batch-size BATCH_SIZE]
+                [--fused-optimizer] [--learning-rate LEARNING_RATE]
+                [--lr-warmup-steps LR_WARMUP_STEPS]
+                [--training-steps TRAINING_STEPS]
+                [--logging-frequency LOGGING_FREQUENCY] [--profile]
+                [--profile-step-start PROFILE_STEP_START]
+                [--profile-step-end PROFILE_STEP_END]
+                [--grad-max-norm GRAD_MAX_NORM] [--model-dtype MODEL_DTYPE]
+                [--compile]
+train.py: error: unrecognized arguments: --scale 27 --seed 42
+srun: error: nid006459: task 0: Exited with exit code 2
+srun: Terminating StepId=446993.0
+END TIME: Sun May 18 15:09:39 CEST 2025

@@ -1,10 +1,16 @@
+# Large Scale AI Engineering Merger: FSDP x Flash Attention 
 
-to enable fused attention, simply add `--fused-attention` to the train args.
-There were various options to play around with in assignment 2, but for example `--compile` doesn't work.
-I suggest we use `--fused-optimizer` and `--sequence-length 2048` and then see what happens when we activate/deactivate `--fused-attention`. 
-Currently train.py is logging the average mfu etc. at the end, if we want to plot the train loss we'd need to create a script that parses the logs.
+This repository contains the project for the ETH course Large-Scale AI Engineering. It implements a merger of two features — **Fully Sharded Data Parallel (FSDP)** and **Flash Attention** — for a Transformer model and runs experiments on a multi-GPU cluster.
 
-https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/api/pytorch.html#transformer_engine.pytorch.DotProductAttention
-To enable fused attention we just set environment variables
-NVTE_FUSED_ATTN=1
-NVTE_FLASH_ATTN=0
+To view the features separately, see the `feature-fsdp` and `feature-flash-attention` branches, respectively.
+
+## Project Structure
+- `sbatch_files/` — contains Slurm job scripts
+
+- `*.py` — training, evaluation, and model code
+
+-  `logs/` — output logs (written per job)
+
+
+## Running merged experiments
+TODO

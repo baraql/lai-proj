@@ -1,0 +1,154 @@
+START TIME: Wed May 21 04:11:39 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 04:12:06,503 - root - INFO - Loading a model with scale=21, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5376, n_layers=168, n_heads=168, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 04:12:06,504 - root - INFO - Creating model with meta device to avoid OOM during initialization
+2025-05-21 04:12:06,586 - root - INFO - Total model parameters: 62,219,592,960
+2025-05-21 04:12:06,586 - root - INFO - Wrapping model with FSDP
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 548, in __getattr__
+[rank6]:     return super().__getattr__(name)  # defer to nn.Module's logic
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank6]:     raise AttributeError(
+[rank6]: AttributeError: 'FullyShardedDataParallel' object has no attribute 'config'
+
+[rank6]: During handling of the above exception, another exception occurred:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank6]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank6]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 118, in load_model_fsdp
+[rank6]:     input_ids = torch.ones(batch_size, model.config.seq_len, dtype=torch.long, device=device)
+[rank6]:                                        ^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 550, in __getattr__
+[rank6]:     return getattr(self._fsdp_wrapped_module, name)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank6]:     raise AttributeError(
+[rank6]: AttributeError: 'Transformer' object has no attribute 'config'
+W0521 04:12:09.551000 103410 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 103766 closing signal SIGTERM
+W0521 04:12:09.552000 103410 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 103767 closing signal SIGTERM
+W0521 04:12:09.553000 103410 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 103769 closing signal SIGTERM
+E0521 04:12:09.895000 103410 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 103768) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_04:12:09
+  host      : nid006833
+  rank      : 6 (local_rank: 2)
+  exitcode  : 1 (pid: 103768)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+2025-05-21 04:12:10,574 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-21 04:12:10,575 - root - INFO - [rank 0] local params: 7777449120
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 548, in __getattr__
+[rank0]:     return super().__getattr__(name)  # defer to nn.Module's logic
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'FullyShardedDataParallel' object has no attribute 'config'
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank0]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 118, in load_model_fsdp
+[rank0]:     input_ids = torch.ones(batch_size, model.config.seq_len, dtype=torch.long, device=device)
+[rank0]:                                        ^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 550, in __getattr__
+[rank0]:     return getattr(self._fsdp_wrapped_module, name)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'Transformer' object has no attribute 'config'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 548, in __getattr__
+[rank2]:     return super().__getattr__(name)  # defer to nn.Module's logic
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank2]:     raise AttributeError(
+[rank2]: AttributeError: 'FullyShardedDataParallel' object has no attribute 'config'
+
+[rank2]: During handling of the above exception, another exception occurred:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank2]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 118, in load_model_fsdp
+[rank2]:     input_ids = torch.ones(batch_size, model.config.seq_len, dtype=torch.long, device=device)
+[rank2]:                                        ^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 550, in __getattr__
+[rank2]:     return getattr(self._fsdp_wrapped_module, name)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1935, in __getattr__
+[rank2]:     raise AttributeError(
+[rank2]: AttributeError: 'Transformer' object has no attribute 'config'
+[rank0]:[W521 04:12:10.092215324 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+srun: error: nid006833: task 1: Exited with exit code 1
+srun: Terminating StepId=454293.0
+slurmstepd: error: *** STEP 454293.0 ON nid006793 CANCELLED AT 2025-05-21T04:12:11 ***
+W0521 04:12:11.143000 126426 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0521 04:12:11.143000 126426 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126809 closing signal SIGTERM
+W0521 04:12:11.144000 126426 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126810 closing signal SIGTERM
+W0521 04:12:11.145000 126426 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126811 closing signal SIGTERM
+W0521 04:12:11.147000 126426 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 126812 closing signal SIGTERM
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 126426 got signal: 15
+srun: error: nid006793: task 0: Exited with exit code 1

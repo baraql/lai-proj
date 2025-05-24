@@ -1,0 +1,224 @@
+START TIME: Wed May 21 04:07:30 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-21 04:08:08,344 - root - INFO - Loading a model with scale=21, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=5376, n_layers=168, n_heads=168, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-21 04:08:08,344 - root - INFO - Creating model with meta device to avoid OOM during initialization
+2025-05-21 04:08:08,428 - root - INFO - Total model parameters: 62,219,592,960
+2025-05-21 04:08:08,428 - root - INFO - Wrapping model with FSDP
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank4]:[W521 04:08:10.573479627 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 4]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank4]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 139, in load_model_fsdp
+[rank4]:     cleanup()
+[rank4]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 39, in cleanup
+[rank4]:     dist.barrier()
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank4]:     work = group.barrier(opts=opts)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank4]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank4]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank4]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank7]:[W521 04:08:10.655199966 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 7]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank7]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 139, in load_model_fsdp
+[rank7]:     cleanup()
+[rank7]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 39, in cleanup
+[rank7]:     dist.barrier()
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank7]:     return func(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank7]:     work = group.barrier(opts=opts)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank7]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank7]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank7]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank2]:[W521 04:08:11.264057016 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank2]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 139, in load_model_fsdp
+[rank2]:     cleanup()
+[rank2]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 39, in cleanup
+[rank2]:     dist.barrier()
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank2]:     work = group.barrier(opts=opts)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank2]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank2]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank2]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank4]:[W521 04:08:11.882562243 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+2025-05-21 04:08:11,222 - root - INFO - Error while loading the model!
+2025-05-21 04:08:11,222 - root - INFO - CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-05-21 04:08:11,222 - root - INFO - Took 0 min 17 sec
+2025-05-21 04:08:11,222 - root - INFO - 
+
+
+[rank0]:[W521 04:08:11.420226902 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank0]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 139, in load_model_fsdp
+[rank0]:     cleanup()
+[rank0]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 39, in cleanup
+[rank0]:     dist.barrier()
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank0]:     work = group.barrier(opts=opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank0]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank0]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank0]:[W521 04:08:11.706993424 ProcessGroupNCCL.cpp:1427] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W0521 04:08:11.700000 101592 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 101942 closing signal SIGTERM
+W0521 04:08:11.701000 101592 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 101943 closing signal SIGTERM
+W0521 04:08:11.701000 101592 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 101944 closing signal SIGTERM
+/usr/local/lib/python3.12/dist-packages/torch/distributed/fsdp/_init_utils.py:928: UserWarning: Unable to call `reset_parameters()` for module on meta device with error CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+. Please ensure that your module oftype <class 'model.Transformer'> implements a `reset_parameters()` method.
+  warnings.warn(
+[rank1]:[W521 04:08:11.081929407 ProcessGroupNCCL.cpp:4454] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 198, in <module>
+[rank1]:     load_model_fsdp(scaling_factor=21, scaling_strategy=scaling_strategy)
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 139, in load_model_fsdp
+[rank1]:     cleanup()
+[rank1]:   File "/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py", line 39, in cleanup
+[rank1]:     dist.barrier()
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 4472, in barrier
+[rank1]:     work = group.barrier(opts=opts)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank1]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank1]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[rank1]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+W0521 04:08:11.999000 124379 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 124715 closing signal SIGTERM
+W0521 04:08:11.999000 124379 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 124716 closing signal SIGTERM
+W0521 04:08:12.000000 124379 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 124718 closing signal SIGTERM
+E0521 04:08:12.011000 101592 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 101945) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_04:08:11
+  host      : nid006833
+  rank      : 7 (local_rank: 3)
+  exitcode  : 1 (pid: 101945)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+E0521 04:08:12.284000 124379 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 124717) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/iopsstor/scratch/cscs/elyulina/lai-proj/load_model_fsdp.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-21_04:08:11
+  host      : nid006793
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 124717)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: nid006833: task 1: Exited with exit code 1
+srun: Terminating StepId=454292.0
+srun: error: nid006793: task 0: Exited with exit code 1
