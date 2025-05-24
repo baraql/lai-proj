@@ -352,27 +352,31 @@ For each number of GPUs, we start scaling the model until we get the OOM error, 
 Here are the corresponding log files:
 | # GPUs      | scaling factor | log file                           |  success?    |
 | ----------- | -------------- | ---------------------------------- | -------------|
-| 1 (No FSDP) | 2              | logs/train_no_fsdp/lsai-460955.out |              |
-| 1 (No FSDP) | 4              | logs/train_no_fsdp/lsai-460958.out |              |
-| 1 (No FSDP) | 6              | logs/train_no_fsdp/lsai-460959.out |              |
-| 1 (No FSDP) | 8              | logs/train_no_fsdp/lsai-460964.out |              |
-| 1 (No FSDP) | 10             | logs/train_no_fsdp/lsai-460969.out |              |
-| 2  (FSDP)   | 2              | logs/train_fsdp/lsai-461379.out    |              |
-| 2  (FSDP)   | 4              | logs/train_fsdp/lsai-461380.out    |              |
-| 2  (FSDP)   | 6              | logs/train_fsdp/lsai-461406.out    |              |
-| 2  (FSDP)   | 10             | logs/train_fsdp/lsai-461407.out    |              |
-| 2  (FSDP)   | 14             | logs/train_fsdp/lsai-461412.out    |              |
-| 16 (FSDP)   | 1              | logs/train_fsdp/lsai-461073.out    |              |
-| 16 (FSDP)   | 2              | logs/train_fsdp/lsai-460981.out    |              |
-| 16 (FSDP)   | 6              | logs/train_fsdp/lsai-460997.out    |              |
-| 16 (FSDP)   | 10             | logs/train_fsdp/lsai-461014.out    |              |
-| 16 (FSDP)   | 14             | logs/train_fsdp/lsai-461015.out    |              |
+| 1 (No FSDP) | 2              | logs/train_no_fsdp/lsai-460955.out | ✅           |
+| 1 (No FSDP) | 4              | logs/train_no_fsdp/lsai-460958.out | ✅           |
+| 1 (No FSDP) | 6              | logs/train_no_fsdp/lsai-460959.out | ✅           |
+| 1 (No FSDP) | 8              | logs/train_no_fsdp/lsai-460964.out | ✅           |
+| 1 (No FSDP) | 10             | logs/train_no_fsdp/lsai-460969.out | ❌ (OOM)     |
+| 2  (FSDP)   | 2              | logs/train_fsdp/lsai-461379.out    | ✅           |
+| 2  (FSDP)   | 4              | logs/train_fsdp/lsai-461380.out    | ✅           |
+| 2  (FSDP)   | 6              | logs/train_fsdp/lsai-461406.out    | ✅           |
+| 2  (FSDP)   | 10             | logs/train_fsdp/lsai-461407.out    | ✅           |
+| 2  (FSDP)   | 14             | logs/train_fsdp/lsai-461412.out    | ✅           |
+| 16 (FSDP)   | 1              | logs/train_fsdp/lsai-461073.out    | ✅           |
+| 16 (FSDP)   | 2              | logs/train_fsdp/lsai-460981.out    | ✅           |
+| 16 (FSDP)   | 6              | logs/train_fsdp/lsai-460997.out    | ✅           |
+| 16 (FSDP)   | 10             | logs/train_fsdp/lsai-461014.out    | ✅           |
+| 16 (FSDP)   | 14             | logs/train_fsdp/lsai-461015.out    | ✅           |
 | 16 (FSDP)   | 16             | logs/train_fsdp/lsai-461072.out    | ❌ (OOM)     |
 
 
-
 Then, we plot the results for each metric:
-TODO
+
+![avg_mfu](plots/avg_mfu_pct.png)
+![avg_tflops](plots/avg_tflops.png)
+![avg_tokens_per_sec](plots/avg_tokens_per_sec.png)
+![avg_training_tokens_pct](plots/avg_training_tokens_pct.png)
+
 
 
 
