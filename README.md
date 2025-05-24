@@ -13,7 +13,7 @@ This repository contains the project for the ETH course **Large Scale AI Enginee
 
 ## Introduction
 
-Fully Sharded Data Parallel (FSDP) is a distributed training paradigm introduced by Meta AI ~\cite{zhao2023pytorchfsdpexperiencesscaling} that enables efficient training of large AI models by sharding model parameters, gradients, and optimizer states across all participating GPUs. Unlike Distributed Data Parallel (DDP) which replicates the full model on each device, FSDP stores only a fraction ($1/N$ for $N$ GPUs) of parameters on each GPU during idle periods, dramatically reducing memory requirements. During computation, FSDP employs a communication strategy where parameters are gathered only when needed for the forward or backward pass and immediately released afterward. This approach addresses key limitations in scaling model training: GPU memory constraints that prevent fitting billion-parameter models, communication bottlenecks from parameter synchronization, and suboptimal resource utilization.
+Fully Sharded Data Parallel (FSDP) is a distributed training paradigm introduced by Meta AI that enables efficient training of large AI models by sharding model parameters, gradients, and optimizer states across all participating GPUs. Unlike Distributed Data Parallel (DDP) which replicates the full model on each device, FSDP stores only a fraction ($1/N$ for $N$ GPUs) of parameters on each GPU during idle periods, dramatically reducing memory requirements. During computation, FSDP employs a communication strategy where parameters are gathered only when needed for the forward or backward pass and immediately released afterward. This approach addresses key limitations in scaling model training: GPU memory constraints that prevent fitting billion-parameter models, communication bottlenecks from parameter synchronization, and suboptimal resource utilization.
 
 Our project implements FSDP with three primary experimental objectives: (1) establish baseline memory constraints by finding the maximum model size that fits on a single GPU without FSDP; (2) validate FSDP correctness through loss ablation studies comparing training with and without FSDP on identical model architectures; and (3) analyze scaling behavior by measuring throughput and memory consumption as model size increases when using FSDP. Through memory profiling and performance tracing, we aim to quantify the memory efficiency gains and potential computational overhead introduced by FSDP's communication patterns. These experiments will demonstrate how FSDP enables training of significantly larger models than would otherwise be possible with our available GPU resources while maintaining training integrity.
 
@@ -116,10 +116,6 @@ We used the following sources to ensure correct implementation:
 **Sbatch file**: `sbatch_files/train_fsdp.sh` \
 
 
-## Result Abstract
-
-From our results, we see that FSDP average training throughput remains stable across model scales. However, FSDP significantly reduces hardware efficiency—both MFU and TFLOPS drop sharply, leading to lower absolute throughput and underutilized GPU resources at larger model scales.
-
 ## Experiment 1: maximum model size that fits on a single GPU without FSDP 
 
 First, we establish the biggest model that can fit into a single GPU wihtout FSDP. For that we run a binary search scaling model's parameters until we find the best fit. We also implemented another scaling strategy that only changes the number of layers, allowing for more flexibility and therefore fitting a bigger model at the expense of its architecture. 
@@ -204,7 +200,9 @@ Here are the corresponding log files:
 
 Note that some long computations were stopped early once there were enough steps to obtain the average value.
 
-Then, we plot the results for each metric:
+From our results, we see that FSDP average training throughput remains stable across model scales. However, FSDP significantly reduces hardware efficiency—both MFU and TFLOPS drop sharply, leading to lower absolute throughput and underutilized GPU resources at larger model scales.
+
+We plotted the results for each metric:
 
 ![avg_mfu](plots/avg_mfu_pct.png)
 ![avg_tflops](plots/avg_tflops.png)
@@ -227,7 +225,3 @@ And run:
 ```bash
 $ python plots.py
 ```
-
-
-
-
