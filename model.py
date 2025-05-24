@@ -4,6 +4,7 @@ from typing import Optional, Tuple
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
+import transformer_engine.pytorch as te
 
 @dataclass
 class TransformerModelArgs:
@@ -18,6 +19,7 @@ class TransformerModelArgs:
     norm_type: str = "rmsnorm"
     seq_len: int = 2048 # defined later by config
     vocab_size: int = -1  # defined later by tokenizer
+    use_fused : bool = False
     
 class RMSNorm(nn.Module):
     """
@@ -213,6 +215,72 @@ class Attention(nn.Module):
         return self.wo(output)
 
 
+class AttentionFused(nn.Module):
+    """
+    Multi-head fused attention module using Transformer Engine.
+
+    Args:
+        model_args (TransformerModelArgs): Model configuration arguments.
+    """
+
+    def __init__(self, model_args: TransformerModelArgs):
+        super().__init__()
+        self.n_heads = model_args.n_heads
+        self.n_kv_heads = model_args.n_heads if model_args.n_kv_heads is None else model_args.n_kv_heads
+        self.n_rep = self.n_heads // self.n_kv_heads
+        self.head_dim = model_args.dim // self.n_heads
+        self.hidden_size = model_args.dim
+
+        self.wq = nn.Linear(model_args.dim, self.n_heads * self.head_dim, bias=False)
+        self.wk = nn.Linear(model_args.dim, self.n_kv_heads * self.head_dim, bias=False)
+        self.wv = nn.Linear(model_args.dim, self.n_kv_heads * self.head_dim, bias=False)
+        self.wo = nn.Linear(self.n_heads * self.head_dim, model_args.dim, bias=False)
+
+        kv_ch = self.head_dim
+        self.attn = te.DotProductAttention(
+            num_attention_heads=self.n_heads,
+            kv_channels=kv_ch,
+            attn_mask_type="causal",
+            sequence_parallel=False,
+            qkv_format="bshd",
+            #dtype=torch.get_default_dtype(),
+            #use_flash_attention=True,
+        )
+
+    def forward(self, x: torch.Tensor, freqs_cis: torch.Tensor) -> torch.Tensor:
+        """
+        Forward pass of the fused attention module.
+
+        Args:
+            x (torch.Tensor): Input tensor.
+            freqs_cis (torch.Tensor): Precomputed rotary positional encoding.
+
+        Returns:
+            torch.Tensor: Output tensor after attention.
+        """
+        bs, seqlen, _ = x.shape
+        xq = self.wq(x).view(bs, seqlen, -1, self.head_dim)
+        xk = self.wk(x).view(bs, seqlen, -1, self.head_dim)
+        xv = self.wv(x).view(bs, seqlen, -1, self.head_dim)
+
+        xq, xk = apply_rotary_emb(xq, xk, freqs_cis=freqs_cis)
+
+        keys = repeat_kv(xk, self.n_rep)
+        values = repeat_kv(xv, self.n_rep)
+
+        # Transformer Engine expects [bs, n_heads, seqlen, head_dim]
+        # xq = xq.view(bs, seqlen, -1, self.head_dim)
+        # keys = keys.permute(0, 2, 1, 3).contiguous()
+        # values = values.permute(0, 2, 1, 3).contiguous()
+
+        output = self.attn(xq, keys, values)
+
+        # [bs, n_heads, seqlen, head_dim] -> [bs, seqlen, n_heads, head_dim]
+        # output = output.permute(0, 2, 1, 3).contiguous()
+        output = output.view(bs, seqlen, -1)
+        return self.wo(output)
+
+
 class FeedForward(nn.Module):
     """
     FeedForward module
@@ -275,7 +343,7 @@ class TransformerBlock(nn.Module):
         super().__init__()
         self.n_heads = model_args.n_heads
         self.dim = model_args.dim
-        self.attention = Attention(model_args)
+        self.attention = AttentionFused(model_args) if model_args.use_fused else Attention(model_args)
         self.feed_forward = FeedForward(
             dim=model_args.dim,
             hidden_dim=4 * model_args.dim,
@@ -344,6 +412,7 @@ class Transformer(nn.Module):
         self.norm = RMSNorm(model_args.dim, eps=model_args.norm_eps)
 
         self.output = nn.Linear(model_args.dim, model_args.vocab_size, bias=False)
+        
 
     def _precompute_freqs_cis(self) -> torch.Tensor:
         return precompute_freqs_cis(
