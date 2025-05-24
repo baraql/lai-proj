@@ -346,7 +346,6 @@ With this experiment, we aim at showing the impact of the model's size and the n
 - MFU 
 - TFLOPs
 
-We have decided to choose the standard approach of powers of 2 for the number of GPUs for our experiments: 1, 2, 4, 8, 16. 
 For each number of GPUs, we start scaling the model until we get the OOM error, logging the training metrics for each scale. 
 
 Here are the corresponding log files:
@@ -369,6 +368,7 @@ Here are the corresponding log files:
 | 16 (FSDP)   | 14             | logs/train_fsdp/lsai-461015.out    | ✅           |
 | 16 (FSDP)   | 16             | logs/train_fsdp/lsai-461072.out    | ❌ (OOM)     |
 
+Note that some long computations were stopped early once there were enough steps to obtain the average value.
 
 Then, we plot the results for each metric:
 
@@ -391,7 +391,7 @@ $ pip install seaborn
 
 And run: 
 ```bash
-python plots.py
+$ python plots.py
 ```
 
 
