@@ -29,7 +29,7 @@ TRAINING_CMD="python3 $ASSIGNMENT_DIR/train.py \
     --learning-rate 5e-5 \
     --lr-warmup-steps 100 \
     --training-steps 100 \
-    --scaling-factor 9 \
+    --scaling-factor 10 \
     --scaling-strategy all \
     --set-seed 42 \
     "

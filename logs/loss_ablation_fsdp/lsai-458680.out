@@ -1,0 +1,48 @@
+START TIME: Thu May 22 19:54:18 CEST 2025
+Node IP: 172.28.33.4
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 19:54:41,678 - root - INFO - Setting seed to 42
+2025-05-22 19:54:41,678 - root - INFO - Setting seed to 42
+2025-05-22 19:54:41,678 - root - INFO - [RANK 0 / 4] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=9, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-22 19:54:41,678 - root - INFO - [RANK 0 / 4] world size: 4
+2025-05-22 19:54:41,678 - root - INFO - [RANK 0 / 4] Setting up DataLoaders...
+2025-05-22 19:54:41,709 - root - INFO - Setting seed to 42
+2025-05-22 19:54:41,709 - root - INFO - Setting seed to 42
+2025-05-22 19:54:45,073 - root - INFO - [RANK 0 / 4] Setting up Model...
+2025-05-22 19:54:45,073 - root - INFO - [RANK 0 / 4] Loading a model with scale=9, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2304, n_layers=72, n_heads=72, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total model parameters: 5530523904
+Total model parameters: 5530523904
+Total model parameters: 5530523904
+2025-05-22 19:55:08,866 - root - INFO - [RANK 0 / 4] Wrapping model with FSDP
+Total model parameters: 5530523904
+2025-05-22 19:55:10,535 - root - INFO - [RANK 0 / 4] The model is now: FullyShardedDataParallel
+2025-05-22 19:55:10,536 - root - INFO - [rank 0] local params: 1382630976
+2025-05-22 19:55:10,539 - root - INFO - [RANK 0 / 4] Starting training!
+2025-05-22 19:55:11,070 - root - INFO - [rank 1] local params: 1382630976
+2025-05-22 19:55:11,417 - root - INFO - [rank 2] local params: 1382630976
+2025-05-22 19:55:11,424 - root - INFO - [rank 3] local params: 1382630976
+2025-05-22 19:55:17,941 - root - INFO - [RANK 0 / 4] Step: 1 | Loss: 11.92 | Tokens per second: 553.40 | Training tokens per second (%): 19.38 | MFU (%): 0.92 | TFLOPs: 9.10
+2025-05-22 19:55:24,877 - root - INFO - [RANK 0 / 4] Step: 5 | Loss: 11.97 | Tokens per second: 2362.62 | Training tokens per second (%): 11.41 | MFU (%): 3.93 | TFLOPs: 38.86
+2025-05-22 19:55:33,433 - root - INFO - [RANK 0 / 4] Step: 10 | Loss: 11.93 | Tokens per second: 2393.67 | Training tokens per second (%): 25.72 | MFU (%): 3.98 | TFLOPs: 39.37
+2025-05-22 19:55:41,962 - root - INFO - [RANK 0 / 4] Step: 15 | Loss: 11.79 | Tokens per second: 2401.46 | Training tokens per second (%): 35.21 | MFU (%): 3.99 | TFLOPs: 39.50
+2025-05-22 19:55:50,518 - root - INFO - [RANK 0 / 4] Step: 20 | Loss: 11.42 | Tokens per second: 2393.80 | Training tokens per second (%): 34.78 | MFU (%): 3.98 | TFLOPs: 39.38
+2025-05-22 19:55:59,055 - root - INFO - [RANK 0 / 4] Step: 25 | Loss: 11.05 | Tokens per second: 2399.01 | Training tokens per second (%): 18.28 | MFU (%): 3.99 | TFLOPs: 39.46
+2025-05-22 19:56:07,561 - root - INFO - [RANK 0 / 4] Step: 30 | Loss: 10.25 | Tokens per second: 2407.81 | Training tokens per second (%): 26.99 | MFU (%): 4.00 | TFLOPs: 39.61
+2025-05-22 19:56:16,114 - root - INFO - [RANK 0 / 4] Step: 35 | Loss: 10.32 | Tokens per second: 2394.85 | Training tokens per second (%): 13.78 | MFU (%): 3.98 | TFLOPs: 39.39
+2025-05-22 19:56:24,623 - root - INFO - [RANK 0 / 4] Step: 40 | Loss: 10.36 | Tokens per second: 2407.12 | Training tokens per second (%): 9.95 | MFU (%): 4.00 | TFLOPs: 39.60
+2025-05-22 19:56:33,288 - root - INFO - [RANK 0 / 4] Step: 45 | Loss: 9.80 | Tokens per second: 2363.65 | Training tokens per second (%): 15.59 | MFU (%): 3.93 | TFLOPs: 38.88
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 458680.0 ON nid006639 CANCELLED AT 2025-05-22T19:56:41 ***
+slurmstepd: error: *** JOB 458680 ON nid006639 CANCELLED AT 2025-05-22T19:56:41 ***
+srun: forcing job termination
+srun: got SIGCONT
+W0522 19:56:41.222000 129397 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0522 19:56:41.222000 53893 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0522 19:56:41.223000 129397 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 129765 closing signal SIGTERM
+W0522 19:56:41.223000 53893 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 54255 closing signal SIGTERM
+W0522 19:56:41.224000 129397 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 129766 closing signal SIGTERM
+W0522 19:56:41.224000 53893 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 54256 closing signal SIGTERM

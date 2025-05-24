@@ -1,0 +1,153 @@
+START TIME: Mon May 19 16:55:41 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,115 - root - INFO - Setting seed to 42
+2025-05-19 16:56:04,116 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scale=1, set_seed=42)
+2025-05-19 16:56:10,856 - root - INFO - [rank 4] world size: 8
+2025-05-19 16:56:10,856 - root - INFO - Setting up DataLoaders...
+2025-05-19 16:56:11,132 - root - INFO - [rank 0] world size: 8
+2025-05-19 16:56:11,132 - root - INFO - Setting up DataLoaders...
+2025-05-19 16:56:13,784 - root - INFO - Setting up Model...
+2025-05-19 16:56:13,785 - root - INFO - Setting up Model...
+Total params: 8053329920
+2025-05-19 16:56:47,542 - root - INFO - [rank 6] model is now: FullyShardedDataParallel
+2025-05-19 16:56:47,542 - root - INFO - [rank 6] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:56:47,628 - root - INFO - [rank 7] model is now: FullyShardedDataParallel
+2025-05-19 16:56:47,628 - root - INFO - [rank 7] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:56:47,723 - root - INFO - [rank 3] model is now: FullyShardedDataParallel
+2025-05-19 16:56:47,723 - root - INFO - [rank 3] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:56:47,806 - root - INFO - [rank 5] model is now: FullyShardedDataParallel
+2025-05-19 16:56:47,807 - root - INFO - [rank 5] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:56:47,919 - root - INFO - [rank 0] model is now: FullyShardedDataParallel
+2025-05-19 16:56:47,920 - root - INFO - [rank 0] local params: 1006666240
+2025-05-19 16:56:47,921 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 16:56:48,066 - root - INFO - [rank 2] model is now: FullyShardedDataParallel
+2025-05-19 16:56:48,066 - root - INFO - [rank 2] local params: 1006666240
+Total params: 8053329920
+2025-05-19 16:56:50,819 - root - INFO - [rank 4] model is now: FullyShardedDataParallel
+2025-05-19 16:56:50,819 - root - INFO - [rank 4] local params: 1006666240
+2025-05-19 16:56:50,821 - root - INFO - Starting training!
+Total params: 8053329920
+2025-05-19 16:56:50,867 - root - INFO - [rank 1] model is now: FullyShardedDataParallel
+2025-05-19 16:56:50,868 - root - INFO - [rank 1] local params: 1006666240
+2025-05-19 16:56:55,148 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 567.29 | Training tokens per second (%): 19.38 | MFU (%): 0.72 | TFLOPs: 7.08
+2025-05-19 16:56:55,150 - root - INFO - Step: 1 | Loss: 11.91 | Tokens per second: 947.49 | Training tokens per second (%): 19.38 | MFU (%): 1.20 | TFLOPs: 11.83
+2025-05-19 16:56:58,346 - root - INFO - Step: 5 | Loss: 11.92 | Tokens per second: 5143.36 | Training tokens per second (%): 11.41 | MFU (%): 6.49 | TFLOPs: 64.20
+2025-05-19 16:56:58,346 - root - INFO - Step: 5 | Loss: 11.92 | Tokens per second: 5140.38 | Training tokens per second (%): 11.41 | MFU (%): 6.49 | TFLOPs: 64.16
+2025-05-19 16:57:02,719 - root - INFO - Step: 10 | Loss: 11.89 | Tokens per second: 4694.10 | Training tokens per second (%): 25.72 | MFU (%): 5.92 | TFLOPs: 58.59
+2025-05-19 16:57:02,719 - root - INFO - Step: 10 | Loss: 11.89 | Tokens per second: 4694.24 | Training tokens per second (%): 25.72 | MFU (%): 5.92 | TFLOPs: 58.60
+2025-05-19 16:57:06,809 - root - INFO - Step: 15 | Loss: 11.67 | Tokens per second: 5019.53 | Training tokens per second (%): 35.21 | MFU (%): 6.34 | TFLOPs: 62.66
+2025-05-19 16:57:06,809 - root - INFO - Step: 15 | Loss: 11.67 | Tokens per second: 5019.78 | Training tokens per second (%): 35.21 | MFU (%): 6.34 | TFLOPs: 62.66
+2025-05-19 16:57:10,897 - root - INFO - Step: 20 | Loss: 11.33 | Tokens per second: 5021.75 | Training tokens per second (%): 34.78 | MFU (%): 6.34 | TFLOPs: 62.68
+2025-05-19 16:57:10,897 - root - INFO - Step: 20 | Loss: 11.33 | Tokens per second: 5021.92 | Training tokens per second (%): 34.78 | MFU (%): 6.34 | TFLOPs: 62.69
+2025-05-19 16:57:15,045 - root - INFO - Step: 25 | Loss: 10.83 | Tokens per second: 4949.52 | Training tokens per second (%): 18.28 | MFU (%): 6.25 | TFLOPs: 61.78
+2025-05-19 16:57:15,046 - root - INFO - Step: 25 | Loss: 10.83 | Tokens per second: 4948.83 | Training tokens per second (%): 18.28 | MFU (%): 6.25 | TFLOPs: 61.77
+2025-05-19 16:57:19,113 - root - INFO - Step: 30 | Loss: 9.78 | Tokens per second: 5047.29 | Training tokens per second (%): 26.99 | MFU (%): 6.37 | TFLOPs: 63.00
+2025-05-19 16:57:19,113 - root - INFO - Step: 30 | Loss: 9.78 | Tokens per second: 5047.23 | Training tokens per second (%): 26.99 | MFU (%): 6.37 | TFLOPs: 63.00
+2025-05-19 16:57:23,126 - root - INFO - Step: 35 | Loss: 9.88 | Tokens per second: 5116.73 | Training tokens per second (%): 13.78 | MFU (%): 6.46 | TFLOPs: 63.87
+2025-05-19 16:57:23,126 - root - INFO - Step: 35 | Loss: 9.88 | Tokens per second: 5116.83 | Training tokens per second (%): 13.78 | MFU (%): 6.46 | TFLOPs: 63.87
+2025-05-19 16:57:27,142 - root - INFO - Step: 40 | Loss: 9.85 | Tokens per second: 5113.10 | Training tokens per second (%): 9.95 | MFU (%): 6.45 | TFLOPs: 63.82
+2025-05-19 16:57:27,142 - root - INFO - Step: 40 | Loss: 9.85 | Tokens per second: 5113.15 | Training tokens per second (%): 9.95 | MFU (%): 6.45 | TFLOPs: 63.82
+2025-05-19 16:57:31,156 - root - INFO - Step: 45 | Loss: 9.35 | Tokens per second: 5114.47 | Training tokens per second (%): 15.59 | MFU (%): 6.46 | TFLOPs: 63.84
+2025-05-19 16:57:31,156 - root - INFO - Step: 45 | Loss: 9.35 | Tokens per second: 5114.64 | Training tokens per second (%): 15.59 | MFU (%): 6.46 | TFLOPs: 63.84
+2025-05-19 16:57:35,172 - root - INFO - Step: 50 | Loss: 9.22 | Tokens per second: 5112.95 | Training tokens per second (%): 10.93 | MFU (%): 6.45 | TFLOPs: 63.82
+2025-05-19 16:57:35,172 - root - INFO - Step: 50 | Loss: 9.22 | Tokens per second: 5112.41 | Training tokens per second (%): 10.93 | MFU (%): 6.45 | TFLOPs: 63.82
+2025-05-19 16:57:39,245 - root - INFO - Step: 55 | Loss: 9.35 | Tokens per second: 5040.67 | Training tokens per second (%): 28.32 | MFU (%): 6.36 | TFLOPs: 62.92
+2025-05-19 16:57:39,245 - root - INFO - Step: 55 | Loss: 9.35 | Tokens per second: 5040.70 | Training tokens per second (%): 28.32 | MFU (%): 6.36 | TFLOPs: 62.92
+2025-05-19 16:57:43,297 - root - INFO - Step: 60 | Loss: 8.70 | Tokens per second: 5067.05 | Training tokens per second (%): 26.71 | MFU (%): 6.40 | TFLOPs: 63.25
+2025-05-19 16:57:43,297 - root - INFO - Step: 60 | Loss: 8.70 | Tokens per second: 5067.15 | Training tokens per second (%): 26.71 | MFU (%): 6.40 | TFLOPs: 63.25
+2025-05-19 16:57:47,380 - root - INFO - Step: 65 | Loss: 8.95 | Tokens per second: 5028.41 | Training tokens per second (%): 24.18 | MFU (%): 6.35 | TFLOPs: 62.77
+2025-05-19 16:57:47,380 - root - INFO - Step: 65 | Loss: 8.95 | Tokens per second: 5028.43 | Training tokens per second (%): 24.18 | MFU (%): 6.35 | TFLOPs: 62.77
+2025-05-19 16:57:51,441 - root - INFO - Step: 70 | Loss: 8.24 | Tokens per second: 5055.31 | Training tokens per second (%): 26.25 | MFU (%): 6.38 | TFLOPs: 63.10
+2025-05-19 16:57:51,441 - root - INFO - Step: 70 | Loss: 8.24 | Tokens per second: 5055.47 | Training tokens per second (%): 26.25 | MFU (%): 6.38 | TFLOPs: 63.10
+2025-05-19 16:57:55,472 - root - INFO - Step: 75 | Loss: 8.34 | Tokens per second: 5093.80 | Training tokens per second (%): 16.89 | MFU (%): 6.43 | TFLOPs: 63.58
+2025-05-19 16:57:55,472 - root - INFO - Step: 75 | Loss: 8.34 | Tokens per second: 5093.96 | Training tokens per second (%): 16.89 | MFU (%): 6.43 | TFLOPs: 63.59
+2025-05-19 16:57:59,505 - root - INFO - Step: 80 | Loss: 8.24 | Tokens per second: 5090.65 | Training tokens per second (%): 17.36 | MFU (%): 6.43 | TFLOPs: 63.54
+2025-05-19 16:57:59,505 - root - INFO - Step: 80 | Loss: 8.24 | Tokens per second: 5090.76 | Training tokens per second (%): 17.36 | MFU (%): 6.43 | TFLOPs: 63.55
+2025-05-19 16:58:03,517 - root - INFO - Step: 85 | Loss: 8.34 | Tokens per second: 5117.41 | Training tokens per second (%): 16.04 | MFU (%): 6.46 | TFLOPs: 63.88
+2025-05-19 16:58:03,517 - root - INFO - Step: 85 | Loss: 8.34 | Tokens per second: 5117.54 | Training tokens per second (%): 16.04 | MFU (%): 6.46 | TFLOPs: 63.88
+2025-05-19 16:58:07,711 - root - INFO - Step: 90 | Loss: 7.80 | Tokens per second: 4895.33 | Training tokens per second (%): 57.98 | MFU (%): 6.18 | TFLOPs: 61.11
+2025-05-19 16:58:07,711 - root - INFO - Step: 90 | Loss: 7.80 | Tokens per second: 4894.96 | Training tokens per second (%): 57.98 | MFU (%): 6.18 | TFLOPs: 61.10
+2025-05-19 16:58:11,898 - root - INFO - Step: 95 | Loss: 7.53 | Tokens per second: 4903.72 | Training tokens per second (%): 57.90 | MFU (%): 6.19 | TFLOPs: 61.21
+2025-05-19 16:58:11,898 - root - INFO - Step: 95 | Loss: 7.53 | Tokens per second: 4904.04 | Training tokens per second (%): 57.90 | MFU (%): 6.19 | TFLOPs: 61.21
+2025-05-19 16:58:16,221 - root - INFO - Step: 100 | Loss: 7.48 | Tokens per second: 4747.67 | Training tokens per second (%): 93.89 | MFU (%): 5.99 | TFLOPs: 59.26
+2025-05-19 16:58:16,221 - root - INFO - Step: 100 | Loss: 7.48 | Tokens per second: 4748.00 | Training tokens per second (%): 93.89 | MFU (%): 5.99 | TFLOPs: 59.27
+2025-05-19 16:58:16,222 - root - INFO - Training completed
+2025-05-19 16:58:16,222 - root - INFO - Training completed
+[W519 16:58:24.911201880 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid006448-hsn2]:48358, remote=[nid006446]:29500): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006519bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40001b9f89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x40001b9f8d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x40001b9fb208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x40001b9fca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x40001b9fe9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x400016029460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x40001568c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #10: /usr/bin/python() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #12: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #13: /usr/bin/python() [0x529450]
+frame #14: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #15: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #16: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #17: /usr/bin/python() [0x55f968]
+frame #18: /usr/bin/python() [0x503c0c]
+frame #19: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #20: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #21: /usr/bin/python() [0x68bad8]
+frame #22: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #23: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #24: <unknown function> + 0x284c4 (0x4000145284c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: __libc_start_main + 0x98 (0x400014528598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0519 16:58:24.695000 109096 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006448_109096_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+[W519 16:58:24.983452998 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006448-hsn2]:48358, remote=[nid006446]:29500): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40006519bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40001b9f89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40001b9f8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40001b9fd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x40001b9fe99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x400016029460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40001568c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x55f968]
+frame #17: /usr/bin/python() [0x503c0c]
+frame #18: PyObject_Vectorcall + 0x4c (0x4c396c in /usr/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x8a0 (0x564764 in /usr/bin/python)
+frame #20: /usr/bin/python() [0x68bad8]
+frame #21: Py_RunMain + 0x1ac (0x68b19c in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x4000145284c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x400014528598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0519 16:58:24.705000 109096 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006448_109096_0' has failed to shutdown the rendezvous 'none' due to an error of type RendezvousConnectionError.
+END TIME: Mon May 19 16:58:25 CEST 2025

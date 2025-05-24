@@ -2,12 +2,12 @@
 
 #SBATCH --account=a-large-sc
 #SBATCH --partition=normal
-#SBATCH --time=00:14:59
+#SBATCH --time=00:4:59
 #SBATCH --job-name=lsai
 #SBATCH --output=/iopsstor/scratch/cscs/$MY_USER/lai-proj/logs/loss_ablation_fsdp/%x-%j.out
 #SBATCH --nodes=2
-#SBATCH --ntasks=2 # should match the --nodes parameter
-#SBATCH --gpus-per-node=2 # should be up to 4, based on our hardware
+#SBATCH --ntasks=2# should match the --nodes parameter
+#SBATCH --gpus-per-node=1 # should be up to 4, based on our hardware
 #SBATCH --cpus-per-task=72
 #SBATCH --mem=460000 # set to maximum to load the biggest models into CPU 
 #SBATCH --environment=/iopsstor/scratch/cscs/$MY_USER/ngc_pt_jan.toml     # Vanilla 25.01 PyTorch NGC Image 
@@ -59,7 +59,7 @@ srun torchrun \
       --learning-rate 5e-5 \
       --lr-warmup-steps 100 \
       --training-steps 100 \
-      --scaling-factor 10 \
+      --scaling-factor 14 \
       --scaling-strategy all \
       --set-seed 42
 

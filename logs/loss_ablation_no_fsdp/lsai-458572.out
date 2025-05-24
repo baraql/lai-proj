@@ -1,0 +1,108 @@
+START TIME: Thu May 22 19:15:30 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-22 19:15:51,472 - root - INFO - Setting seed to 42
+2025-05-22 19:15:51,472 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=11, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-22 19:15:51,472 - root - INFO - Setting up DataLoaders...
+2025-05-22 19:15:52,919 - root - INFO - Setting seed to 42
+2025-05-22 19:15:52,919 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=11, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-22 19:15:52,919 - root - INFO - Setting up DataLoaders...
+2025-05-22 19:15:55,007 - root - INFO - Setting up Model...
+2025-05-22 19:15:55,008 - root - INFO - Loading a model with scale=11, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2816, n_layers=88, n_heads=88, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 19:15:55,072 - root - INFO - Setting up Model...
+2025-05-22 19:15:55,072 - root - INFO - Loading a model with scale=11, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2816, n_layers=88, n_heads=88, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-22 19:16:36,547 - root - INFO - Total model parameters: 9,683,573,504
+2025-05-22 19:16:36,552 - root - INFO - Starting training!
+2025-05-22 19:16:37,199 - root - INFO - Total model parameters: 9,683,573,504
+2025-05-22 19:16:37,204 - root - INFO - Starting training!
+2025-05-22 19:16:38,532 - root - INFO - Step: 1 | Loss: 11.96 | Tokens per second: 2090.93 | Training tokens per second (%): 19.38 | MFU (%): 14.39 | TFLOPs: 142.32
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train.py", line 119, in <module>
+    train(args)
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train.py", line 80, in train
+    logits = model(input_ids)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 423, in forward
+    h = layer(h, self.freqs_cis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 361, in forward
+    out = h + self.feed_forward(self.ffn_norm(h))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 305, in forward
+    return self.w2(F.silu(self.w1(x)) * self.w3(x))
+                   ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/functional.py", line 2380, in silu
+    return torch._C._nn.silu(input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 78.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.48 GiB is free. Including non-PyTorch memory, this process has 90.48 GiB memory in use. Of the allocated memory 82.56 GiB is allocated by PyTorch, and 7.15 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-05-22 19:16:39,086 - root - INFO - Step: 1 | Loss: 11.96 | Tokens per second: 2201.62 | Training tokens per second (%): 19.38 | MFU (%): 15.15 | TFLOPs: 149.86
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train.py", line 119, in <module>
+    train(args)
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/train.py", line 80, in train
+    logits = model(input_ids)
+             ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 423, in forward
+    h = layer(h, self.freqs_cis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 361, in forward
+    out = h + self.feed_forward(self.ffn_norm(h))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/iopsstor/scratch/cscs/baraq/lai-proj/model.py", line 305, in forward
+    return self.w2(F.silu(self.w1(x)) * self.w3(x))
+                                        ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1740, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1751, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 78.00 MiB. GPU 0 has a total capacity of 94.50 GiB of which 2.65 GiB is free. Including non-PyTorch memory, this process has 90.25 GiB memory in use. Of the allocated memory 82.07 GiB is allocated by PyTorch, and 7.41 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+srun: error: nid006439: task 0: Exited with exit code 1
+srun: Terminating StepId=458572.0
+srun: error: nid006442: task 1: Terminated
+srun: Force Terminated StepId=458572.0
+END TIME: Thu May 22 19:16:41 CEST 2025
