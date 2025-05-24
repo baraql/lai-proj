@@ -4,7 +4,7 @@
 #SBATCH --partition=normal
 #SBATCH --time=00:14:59
 #SBATCH --job-name=lsai
-#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/%x-%j.out
+#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/flash_attention/%x-%j.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=4
