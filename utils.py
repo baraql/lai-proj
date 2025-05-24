@@ -183,5 +183,10 @@ def get_args():
         action='store_true',
         help="Set to compile the model with `torch.compile`"
     )
+    parser.add_argument(
+        "--fused-attention",
+        action='store_true',
+        help="use fused-attention from transformer-engine"
+    )
     args = parser.parse_args()
     return args
