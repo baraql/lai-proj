@@ -327,7 +327,7 @@ Log NO FSDP:
 As we can see, the results are indentical (with the biggest difference in loss values of 0.01) proving the correct implementation of FSDP. 
 
 **Implementation**: `loss_ablation.py` \
-**Reproduction**: \
+**Replication**: \
 Activate a conda environment:
 ```bash
 $ conda activate 
@@ -376,6 +376,23 @@ Then, we plot the results for each metric:
 ![avg_tflops](plots/avg_tflops.png)
 ![avg_tokens_per_sec](plots/avg_tokens_per_sec.png)
 ![avg_training_tokens_pct](plots/avg_training_tokens_pct.png)
+
+**Implementation**: `plots.py` \
+**Replication**: \
+Activate a conda environment:
+```bash
+$ conda activate 
+```
+
+Install `seaborn` if necessary:
+```bash
+$ pip install seaborn
+```
+
+And run: 
+```bash
+python plots.py
+```
 
 
 
