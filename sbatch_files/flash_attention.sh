@@ -10,7 +10,7 @@
 #SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=72
 #SBATCH --mem=460000
-#SBATCH --environment=my_env     # Vanilla 25.01 PyTorch NGC Image
+#SBATCH --environment=ngc_pt_jan      # Vanilla 25.01 PyTorch NGC Image
 #SBATCH --no-requeue	# Prevent Slurm to requeue the job if the execution crashes (e.g. node failure) so we don't loose the logs
 
 echo "START TIME: $(date)"
@@ -29,10 +29,13 @@ TRAINING_CMD="python3 $ASSIGNMENT_DIR/train.py \
     --batch-size 1 \
     --learning-rate 5e-5 \
     --lr-warmup-steps 100 \
-    --training-steps 1000 \
+    --training-steps 100 \
     --fused-optimizer \
     --fused-attention \
+    --scaling-factor 1 \
+    --scaling-strategy n_layers \
     "
+# with these ^^^ scaling factor / strategy, the model should be the default size (as in the assignment 2) 
 
 # PROFILING_CMD="nsys profile -s none -w true \
 # --trace='nvtx,cudnn,cublas,cuda' \

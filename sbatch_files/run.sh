@@ -6,9 +6,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=4
 #SBATCH --time=00:03:00
-#SBATCH --output=output_%j.log
-#SBATCH --error=output_%j.err
-#SBATCH --environment=my_env
+#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/run/output_%j.log
+#SBATCH --error=/iopsstor/scratch/cscs/%u/lai-proj/logs/run/output_%j.err
+#SBATCH --environment=ngc_pt_jan
 # Stop the script if a command fails or if an undefined variable is used 
 set -eo pipefail
 # The sbatch script is executed by only one node. 

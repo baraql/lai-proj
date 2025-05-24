@@ -105,7 +105,7 @@ def set_default_dtype(dtype: torch.dtype):
         torch.set_default_dtype(old_dtype)
 
 
-def get_arg():
+def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--dataset",

@@ -2,12 +2,12 @@
 
 #SBATCH --account=a-large-sc
 #SBATCH --partition=normal
-#SBATCH --time=00:4:59
+#SBATCH --time=00:14:59
 #SBATCH --job-name=lsai
-#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/loss_ablation_fsdp/%x-%j.out
+#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/train_flash_attention_fsdp/%x-%j.out
 #SBATCH --nodes=2
-#SBATCH --ntasks=2# should match the --nodes parameter
-#SBATCH --gpus-per-node=1 # should be up to 4, based on our hardware
+#SBATCH --ntasks=2 # should match the --nodes parameter
+#SBATCH --gpus-per-node=4 # should be up to 4, based on our hardware
 #SBATCH --cpus-per-task=72
 #SBATCH --mem=460000 # set to maximum to load the biggest models into CPU 
 #SBATCH --environment=ngc_pt_jan     # Vanilla 25.01 PyTorch NGC Image 
@@ -40,13 +40,6 @@ echo Node IP: $head_node_ip
 # Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
 # 
 # Then (i believe) the port is already used so need to change to another port (eg 29505, 29500)
-
-# 10 pass
-# 11 pass
-# 12 pass
-# 13 pass
-# 14 pass
-# 15 fail
 srun torchrun \
     --nnodes $SLURM_JOB_NUM_NODES \
     --nproc_per_node $SLURM_GPUS_PER_NODE \
@@ -59,8 +52,10 @@ srun torchrun \
       --learning-rate 5e-5 \
       --lr-warmup-steps 100 \
       --training-steps 100 \
-      --scaling-factor 14 \
+      --scaling-factor 10 \
       --scaling-strategy all \
-      --set-seed 42
+      --set-seed 42 \
+      --fused-optimizer \
+      --fused-attention \
 
 echo "END TIME: $(date)"

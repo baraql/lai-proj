@@ -84,6 +84,11 @@ def train(args):
                         collate_fn=train_collator)
   train_dl_iterator = iter(train_dl)
 
+  if args.fused_attention:
+      logger.info("activating fused attention")
+      os.environ["NVTE_FUSED_ATTN"] = "1"
+      os.environ["NVTE_FLASH_ATTN"] = "0"
+
   # PREPARE MODEL CONFIG
   log_dist("Setting up Model...")
   model_config = args.scaling_strategy.scale(args.scaling_factor)
@@ -166,8 +171,10 @@ def train(args):
   time_last_log = time.perf_counter()
 
   log_dist("Starting training!")
-    
   train_step = 0
+  mfus = []
+  tflopslst = []
+  traintokenslst = []
   
   while train_step < args.training_steps:
     train_step += 1
@@ -207,8 +214,12 @@ def train(args):
       tflops = num_flop_per_token * tps / 1e12
       training_tps = ntraining_tokens_since_last_log / time_delta
 
-      if local_rank == 0:
-        log_dist(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
+      mfus.append(mfu)
+      tflopslst.append(tflops)
+      traintokenslst.append(100 * training_tps / tps)
+            
+      log_dist(f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100*training_tps/tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}")
+      
       ntokens_since_last_log = 0
       ntraining_tokens_since_last_log = 0
       time_last_log = time.perf_counter()
@@ -218,7 +229,14 @@ def train(args):
       torch.cuda.cudart().cudaProfilerStop()
 
   log_dist("Training completed")
-    
+  mfus = torch.tensor(mfus, dtype=torch.float32)
+  tflopslst = torch.tensor(tflopslst, dtype=torch.float32)
+  traintokenslst = torch.tensor(traintokenslst, dtype=torch.float32)
+
+  log_dist(f"average mfu: {torch.mean(mfus).item()}, (+-){torch.std(mfus).item()}")
+  log_dist(f"average tflops: {torch.mean(tflopslst).item()}, (+-){torch.std(tflopslst).item()}")
+  log_dist(f"average trantokens/sec %: {torch.mean(traintokenslst).item()}, (+-){torch.std(traintokenslst).item()}")
+
   end_time = time.time()
   print_time_stats(start_time, end_time)
   

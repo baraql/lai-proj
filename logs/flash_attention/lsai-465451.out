@@ -1,0 +1,97 @@
+START TIME: Sat May 24 19:33:58 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/lightning_thunder-0.2.0.dev0-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/nvfuser-0.2.23a0+6627725-py3.12-linux-aarch64.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/dill-0.3.9-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/looseversion-1.3.0-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/opt_einsum-3.4.0-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /usr/local/lib/python3.12/dist-packages/lightning_utilities-0.12.0.dev0-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (4.48.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from transformers) (3.16.1)
+Requirement already satisfied: huggingface-hub<1.0,>=0.24.0 in /usr/local/lib/python3.12/dist-packages (from transformers) (0.28.1)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers) (23.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers) (6.0.2)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers) (2024.11.6)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers) (2.32.3)
+Requirement already satisfied: tokenizers<0.22,>=0.21 in /usr/local/lib/python3.12/dist-packages (from transformers) (0.21.0)
+Requirement already satisfied: safetensors>=0.4.1 in /usr/local/lib/python3.12/dist-packages (from transformers) (0.5.2)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers) (4.67.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1.0,>=0.24.0->transformers) (2024.10.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1.0,>=0.24.0->transformers) (4.12.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers) (2024.12.14)
+
+[notice] A new release of pip is available: 24.3.1 -> 25.1.1
+[notice] To update, run: python -m pip install --upgrade pip
+[INFO     | root               ]: Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=2048, batch_size=1, fused_optimizer=True, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=1, scaling_strategy=<ScalingStrategy.N_LAYERS: 'n_layers'>, set_seed=None, fused_attention=True)
+2025-05-24 19:34:29,182 - root - INFO - Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=2048, batch_size=1, fused_optimizer=True, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=1, scaling_strategy=<ScalingStrategy.N_LAYERS: 'n_layers'>, set_seed=None, fused_attention=True)
+[INFO     | root               ]: Setting up DataLoaders...
+2025-05-24 19:34:29,182 - root - INFO - Setting up DataLoaders...
+[INFO     | root               ]: activating fused attention
+2025-05-24 19:34:31,905 - root - INFO - activating fused attention
+[INFO     | root               ]: Setting up Model...
+2025-05-24 19:34:31,905 - root - INFO - Setting up Model...
+[INFO     | root               ]: Loading a model with scale=1, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=32, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072, use_fused=False)
+2025-05-24 19:34:31,905 - root - INFO - Loading a model with scale=1, scaling_strategy=ScalingStrategy.N_LAYERS, config:
+TransformerModelArgs(dim=4096, n_layers=32, n_heads=32, n_kv_heads=8, multiple_of=1024, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072, use_fused=False)
+[INFO     | root               ]: Total model parameters: 8,053,329,920
+2025-05-24 19:35:05,902 - root - INFO - Total model parameters: 8,053,329,920
+[INFO     | root               ]: Starting training!
+2025-05-24 19:35:05,904 - root - INFO - Starting training!
+[INFO     | root               ]: Step: 1 | Loss: 11.98 | Tokens per second: 1707.60 | Training tokens per second (%): 38.77 | MFU (%): 8.90 | TFLOPs: 88.01
+2025-05-24 19:35:07,155 - root - INFO - Step: 1 | Loss: 11.98 | Tokens per second: 1707.60 | Training tokens per second (%): 38.77 | MFU (%): 8.90 | TFLOPs: 88.01
+[INFO     | root               ]: Step: 5 | Loss: 11.96 | Tokens per second: 7861.15 | Training tokens per second (%): 22.83 | MFU (%): 40.97 | TFLOPs: 405.17
+2025-05-24 19:35:08,251 - root - INFO - Step: 5 | Loss: 11.96 | Tokens per second: 7861.15 | Training tokens per second (%): 22.83 | MFU (%): 40.97 | TFLOPs: 405.17
+[INFO     | root               ]: Step: 10 | Loss: 11.95 | Tokens per second: 7507.36 | Training tokens per second (%): 51.44 | MFU (%): 39.12 | TFLOPs: 386.94
+2025-05-24 19:35:09,669 - root - INFO - Step: 10 | Loss: 11.95 | Tokens per second: 7507.36 | Training tokens per second (%): 51.44 | MFU (%): 39.12 | TFLOPs: 386.94
+[INFO     | root               ]: Step: 15 | Loss: 11.79 | Tokens per second: 7535.39 | Training tokens per second (%): 48.58 | MFU (%): 39.27 | TFLOPs: 388.38
+2025-05-24 19:35:11,084 - root - INFO - Step: 15 | Loss: 11.79 | Tokens per second: 7535.39 | Training tokens per second (%): 48.58 | MFU (%): 39.27 | TFLOPs: 388.38
+[INFO     | root               ]: Step: 20 | Loss: 11.45 | Tokens per second: 7511.19 | Training tokens per second (%): 49.55 | MFU (%): 39.14 | TFLOPs: 387.14
+2025-05-24 19:35:12,500 - root - INFO - Step: 20 | Loss: 11.45 | Tokens per second: 7511.19 | Training tokens per second (%): 49.55 | MFU (%): 39.14 | TFLOPs: 387.14
+[INFO     | root               ]: Step: 25 | Loss: 10.93 | Tokens per second: 7613.21 | Training tokens per second (%): 36.56 | MFU (%): 39.68 | TFLOPs: 392.39
+2025-05-24 19:35:13,900 - root - INFO - Step: 25 | Loss: 10.93 | Tokens per second: 7613.21 | Training tokens per second (%): 36.56 | MFU (%): 39.68 | TFLOPs: 392.39
+[INFO     | root               ]: Step: 30 | Loss: 9.85 | Tokens per second: 7483.99 | Training tokens per second (%): 50.15 | MFU (%): 39.00 | TFLOPs: 385.73
+2025-05-24 19:35:15,323 - root - INFO - Step: 30 | Loss: 9.85 | Tokens per second: 7483.99 | Training tokens per second (%): 50.15 | MFU (%): 39.00 | TFLOPs: 385.73
+[INFO     | root               ]: Step: 35 | Loss: 9.85 | Tokens per second: 7724.44 | Training tokens per second (%): 27.57 | MFU (%): 40.26 | TFLOPs: 398.13
+2025-05-24 19:35:16,702 - root - INFO - Step: 35 | Loss: 9.85 | Tokens per second: 7724.44 | Training tokens per second (%): 27.57 | MFU (%): 40.26 | TFLOPs: 398.13
+[INFO     | root               ]: Step: 40 | Loss: 9.83 | Tokens per second: 7718.64 | Training tokens per second (%): 19.90 | MFU (%): 40.23 | TFLOPs: 397.83
+2025-05-24 19:35:18,082 - root - INFO - Step: 40 | Loss: 9.83 | Tokens per second: 7718.64 | Training tokens per second (%): 19.90 | MFU (%): 40.23 | TFLOPs: 397.83
+[INFO     | root               ]: Step: 45 | Loss: 9.34 | Tokens per second: 7632.65 | Training tokens per second (%): 31.17 | MFU (%): 39.78 | TFLOPs: 393.40
+2025-05-24 19:35:19,477 - root - INFO - Step: 45 | Loss: 9.34 | Tokens per second: 7632.65 | Training tokens per second (%): 31.17 | MFU (%): 39.78 | TFLOPs: 393.40
+[INFO     | root               ]: Step: 50 | Loss: 9.17 | Tokens per second: 7731.30 | Training tokens per second (%): 21.87 | MFU (%): 40.29 | TFLOPs: 398.48
+2025-05-24 19:35:20,856 - root - INFO - Step: 50 | Loss: 9.17 | Tokens per second: 7731.30 | Training tokens per second (%): 21.87 | MFU (%): 40.29 | TFLOPs: 398.48
+[INFO     | root               ]: Step: 55 | Loss: 9.41 | Tokens per second: 7428.14 | Training tokens per second (%): 54.01 | MFU (%): 38.71 | TFLOPs: 382.86
+2025-05-24 19:35:22,287 - root - INFO - Step: 55 | Loss: 9.41 | Tokens per second: 7428.14 | Training tokens per second (%): 54.01 | MFU (%): 38.71 | TFLOPs: 382.86
+[INFO     | root               ]: Step: 60 | Loss: 8.74 | Tokens per second: 7533.81 | Training tokens per second (%): 49.63 | MFU (%): 39.26 | TFLOPs: 388.30
+2025-05-24 19:35:23,703 - root - INFO - Step: 60 | Loss: 8.74 | Tokens per second: 7533.81 | Training tokens per second (%): 49.63 | MFU (%): 39.26 | TFLOPs: 388.30
+[INFO     | root               ]: Step: 65 | Loss: 8.92 | Tokens per second: 7498.29 | Training tokens per second (%): 48.10 | MFU (%): 39.08 | TFLOPs: 386.47
+2025-05-24 19:35:25,124 - root - INFO - Step: 65 | Loss: 8.92 | Tokens per second: 7498.29 | Training tokens per second (%): 48.10 | MFU (%): 39.08 | TFLOPs: 386.47
+[INFO     | root               ]: Step: 70 | Loss: 8.29 | Tokens per second: 7647.25 | Training tokens per second (%): 32.49 | MFU (%): 39.85 | TFLOPs: 394.15
+2025-05-24 19:35:26,517 - root - INFO - Step: 70 | Loss: 8.29 | Tokens per second: 7647.25 | Training tokens per second (%): 32.49 | MFU (%): 39.85 | TFLOPs: 394.15
+[INFO     | root               ]: Step: 75 | Loss: 8.35 | Tokens per second: 7590.79 | Training tokens per second (%): 33.31 | MFU (%): 39.56 | TFLOPs: 391.24
+2025-05-24 19:35:27,919 - root - INFO - Step: 75 | Loss: 8.35 | Tokens per second: 7590.79 | Training tokens per second (%): 33.31 | MFU (%): 39.56 | TFLOPs: 391.24
+[INFO     | root               ]: Step: 80 | Loss: 8.30 | Tokens per second: 7613.65 | Training tokens per second (%): 34.72 | MFU (%): 39.68 | TFLOPs: 392.42
+2025-05-24 19:35:29,318 - root - INFO - Step: 80 | Loss: 8.30 | Tokens per second: 7613.65 | Training tokens per second (%): 34.72 | MFU (%): 39.68 | TFLOPs: 392.42
+[INFO     | root               ]: Step: 85 | Loss: 8.35 | Tokens per second: 7634.59 | Training tokens per second (%): 32.09 | MFU (%): 39.79 | TFLOPs: 393.50
+2025-05-24 19:35:30,713 - root - INFO - Step: 85 | Loss: 8.35 | Tokens per second: 7634.59 | Training tokens per second (%): 32.09 | MFU (%): 39.79 | TFLOPs: 393.50
+[INFO     | root               ]: Step: 90 | Loss: 7.81 | Tokens per second: 7227.03 | Training tokens per second (%): 76.84 | MFU (%): 37.66 | TFLOPs: 372.49
+2025-05-24 19:35:32,186 - root - INFO - Step: 90 | Loss: 7.81 | Tokens per second: 7227.03 | Training tokens per second (%): 76.84 | MFU (%): 37.66 | TFLOPs: 372.49
+[INFO     | root               ]: Step: 95 | Loss: 7.60 | Tokens per second: 7346.15 | Training tokens per second (%): 76.98 | MFU (%): 38.28 | TFLOPs: 378.63
+2025-05-24 19:35:33,634 - root - INFO - Step: 95 | Loss: 7.60 | Tokens per second: 7346.15 | Training tokens per second (%): 76.98 | MFU (%): 38.28 | TFLOPs: 378.63
+[INFO     | root               ]: Step: 100 | Loss: 7.78 | Tokens per second: 7140.52 | Training tokens per second (%): 100.00 | MFU (%): 37.21 | TFLOPs: 368.03
+2025-05-24 19:35:35,125 - root - INFO - Step: 100 | Loss: 7.78 | Tokens per second: 7140.52 | Training tokens per second (%): 100.00 | MFU (%): 37.21 | TFLOPs: 368.03
+[INFO     | root               ]: Training completed
+2025-05-24 19:35:35,125 - root - INFO - Training completed
+[INFO     | root               ]: average mfu: 37.89146423339844, (+-)6.700082302093506
+2025-05-24 19:35:35,125 - root - INFO - average mfu: 37.89146423339844, (+-)6.700082302093506
+[INFO     | root               ]: average tflops: 374.7466125488281, (+-)66.26380920410156
+2025-05-24 19:35:35,125 - root - INFO - average tflops: 374.7466125488281, (+-)66.26380920410156
+[INFO     | root               ]: average trantokens/sec %: 44.59751510620117, (+-)20.123497009277344
+2025-05-24 19:35:35,126 - root - INFO - average trantokens/sec %: 44.59751510620117, (+-)20.123497009277344
+END TIME: Sat May 24 19:35:37 CEST 2025

@@ -117,9 +117,11 @@ def train(args):
             mfu = 100 * num_flop_per_token * tps / 989e12
             tflops = num_flop_per_token * tps / 1e12
             training_tps = ntraining_tokens_since_last_log / time_delta
+           
             mfus.append(mfu)
             tflopslst.append(tflops)
             traintokenslst.append(100 * training_tps / tps)
+            
             logger.info(
                 f"Step: {train_step} | Loss: {loss.item():.2f} | Tokens per second: {tps:.2f} | Training tokens per second (%): {100 * training_tps / tps:.2f} | MFU (%): {mfu:.2f} | TFLOPs: {tflops:.2f}"
             )
