@@ -92,7 +92,7 @@ Log NO FSDP:
   tflops: 387.34
 ```
 
-As we can see, the results are indentical (with the biggest difference in loss values of 0.01) proving the correct implementation of FSDP. 
+As we can see, the results are identical (with the biggest difference in loss values of 0.01) proving the correct implementation of FSDP. 
 
 **Implementation**: `loss_ablation.py` \
 **Reproduction**: \
