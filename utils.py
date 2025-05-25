@@ -22,6 +22,8 @@ PRECISION_STR_TO_DTYPE = {
 
 def init_logger():
     logger.setLevel(logging.INFO)
+    logger.handlers.clear()
+
     ch = logging.StreamHandler()
     ch.setLevel(logging.INFO)
     formatter = logging.Formatter(
