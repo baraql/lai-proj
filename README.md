@@ -50,7 +50,7 @@ Use `sbatch_files/flash_attention.sh`, `sbatch_files/train_fsdp.sh`, or `sbatch_
 To prove the correctness of the merger, we fix the seed and train the same model with FSDP (trained on 1 nodes with 2 GPUs each) and Flash Attention or with neither (the default version). We chose the model with 3,959,687,168 parameters (scaling factor = 8).
  Then we compare the loss values parsed from the log files.  
 
-**FSDP x Flash Attention log file**: `logs/train_flash_attention_fsdp/lsai-466275.out`
+**FSDP x Flash Attention log file**: `logs/train_flash_attention_fsdp/lsai-466275.out` \
 **Default log file**: `logs/train_no_fsdp/lsai-466292.out`
 
 **Results**:
