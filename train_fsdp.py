@@ -100,7 +100,7 @@ def train(args):
     model = Transformer(model_config)
   
   total_params = sum(p.numel() for p in model.parameters())
-  print("Total model parameters:", total_params)
+  log_dist(f"Total model parameters: {total_params}")
   
   # SETTING CUDA DEVICE
   local_rank = int(os.environ["LOCAL_RANK"])

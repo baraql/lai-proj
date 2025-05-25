@@ -1,5 +1,6 @@
 import os
 import time
+import psutil
 
 import torch
 from torch.utils.data import DataLoader
@@ -9,7 +10,23 @@ from dataset import CollatorForCLM, ParquetDataset
 from model import Transformer
 from utils import build_lr_scheduler, clip_grad_norm_, get_args, get_num_params, get_num_flop_per_token, init_logger, logger, PRECISION_STR_TO_DTYPE, set_default_dtype, set_seed
 
+def print_GPU_stats():
+  logger.info(f"AVAILABLE GPUS: {int(os.environ["SLURM_NTASKS"])}")
+  logger.info(f"NODES: {int(os.environ["SLURM_NTASKS"]) / int(os.environ["SLURM_NTASKS_PER_NODE"])}")
+  
+  
+def print_memory_info():
+  mem = psutil.virtual_memory()
+  logger.info(f"Total RAM: {mem.total / (1024**3):.2f} GB")
+  logger.info(f"Available RAM: {mem.available / (1024**3):.2f} GB")
+  tasks = int(os.environ["SLURM_NTASKS_PER_NODE"])
+  per_process_mem = mem.available / ((1024**3) * tasks)
+  logger.info(f"Available per-process RAM: {per_process_mem:.2f} GB")
+  
 def train(args):
+  print_GPU_stats()
+  print_memory_info()
+  
   logger.info(f"Experiment args: {args}")
   # Init
   device = torch.device(f"cuda:{int(os.getenv('LOCAL_RANK', 0))}")

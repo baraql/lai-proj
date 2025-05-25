@@ -1,0 +1,167 @@
+START TIME: Sun May 25 11:53:53 CEST 2025
+Node IP: 172.28.31.228
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] Setting seed to 42
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] AVAILABLE GPUS: 4
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] NODES: 1.0
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] Total RAM: 854.46 GB
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] Available RAM: 775.97 GB
+2025-05-25 11:54:15,327 - root - INFO - [RANK 0 / 4] Available per-process RAM: 193.99 GB
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4] GPU 0: NVIDIA GH200 120GB
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4]   Total memory: 94.50 GB
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4]   Allocated memory: 0.00 GB
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4]   Cached memory: 0.00 GB
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=50, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=2, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-25 11:54:22,072 - root - INFO - [RANK 0 / 4] world size: 4
+2025-05-25 11:54:22,073 - root - INFO - [RANK 0 / 4] Setting up DataLoaders...
+2025-05-25 11:54:24,734 - root - INFO - [RANK 0 / 4] Setting up Model...
+2025-05-25 11:54:24,734 - root - INFO - [RANK 0 / 4] Loading a model with scale=2, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=512, n_layers=16, n_heads=16, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+Total model parameters: 190857728
+2025-05-25 11:54:26,124 - root - INFO - [RANK 0 / 4] Wrapping model with FSDP
+Total model parameters: 190857728
+Total model parameters: 190857728
+Total model parameters: 190857728
+2025-05-25 11:54:26,971 - root - INFO - [RANK 0 / 4] The model is now: FullyShardedDataParallel
+2025-05-25 11:54:26,971 - root - INFO - [rank 0] local params: 47714432
+2025-05-25 11:54:26,972 - root - INFO - [RANK 0 / 4] Starting training!
+2025-05-25 11:54:26,975 - root - INFO - [rank 2] local params: 47714432
+2025-05-25 11:54:26,976 - root - INFO - [rank 1] local params: 47714432
+2025-05-25 11:54:31,877 - root - INFO - [rank 3] local params: 47714432
+2025-05-25 11:54:39,174 - root - INFO - [RANK 0 / 4] Step: 1 | Loss: 11.92 | Tokens per second: 335.70 | Training tokens per second (%): 19.38 | MFU (%): 0.02 | TFLOPs: 0.23
+2025-05-25 11:54:40,469 - root - INFO - [RANK 0 / 4] Step: 5 | Loss: 11.95 | Tokens per second: 12658.90 | Training tokens per second (%): 11.41 | MFU (%): 0.88 | TFLOPs: 8.72
+2025-05-25 11:54:41,834 - root - INFO - [RANK 0 / 4] Step: 10 | Loss: 11.93 | Tokens per second: 15003.14 | Training tokens per second (%): 25.72 | MFU (%): 1.05 | TFLOPs: 10.34
+2025-05-25 11:54:43,189 - root - INFO - [RANK 0 / 4] Step: 15 | Loss: 11.96 | Tokens per second: 15120.55 | Training tokens per second (%): 35.21 | MFU (%): 1.05 | TFLOPs: 10.42
+2025-05-25 11:54:44,611 - root - INFO - [RANK 0 / 4] Step: 20 | Loss: 11.91 | Tokens per second: 14404.99 | Training tokens per second (%): 34.78 | MFU (%): 1.00 | TFLOPs: 9.92
+2025-05-25 11:54:45,962 - root - INFO - [RANK 0 / 4] Step: 25 | Loss: 11.90 | Tokens per second: 15167.53 | Training tokens per second (%): 18.28 | MFU (%): 1.06 | TFLOPs: 10.45
+2025-05-25 11:54:47,336 - root - INFO - [RANK 0 / 4] Step: 30 | Loss: 11.93 | Tokens per second: 14905.31 | Training tokens per second (%): 26.99 | MFU (%): 1.04 | TFLOPs: 10.27
+2025-05-25 11:54:48,703 - root - INFO - [RANK 0 / 4] Step: 35 | Loss: 11.97 | Tokens per second: 14983.90 | Training tokens per second (%): 13.78 | MFU (%): 1.04 | TFLOPs: 10.32
+2025-05-25 11:54:50,070 - root - INFO - [RANK 0 / 4] Step: 40 | Loss: 11.94 | Tokens per second: 14986.39 | Training tokens per second (%): 9.95 | MFU (%): 1.04 | TFLOPs: 10.32
+2025-05-25 11:54:51,466 - root - INFO - [RANK 0 / 4] Step: 45 | Loss: 11.95 | Tokens per second: 14676.01 | Training tokens per second (%): 15.59 | MFU (%): 1.02 | TFLOPs: 10.11
+2025-05-25 11:54:52,839 - root - INFO - [RANK 0 / 4] Step: 50 | Loss: 11.87 | Tokens per second: 14914.86 | Training tokens per second (%): 10.93 | MFU (%): 1.04 | TFLOPs: 10.28
+2025-05-25 11:54:52,839 - root - INFO - [RANK 0 / 4] Training completed
+2025-05-25 11:54:52,839 - root - INFO - [RANK 0 / 4] Took 0 min 30 sec
+[W525 11:54:54.040471442 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006555]:56638, remote=[nid006555]:29505): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400073b7bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40002a3d89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40002a3d8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002a3dd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002a3dec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002a3df10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40002a3e061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400024a09044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002406c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #11: /usr/bin/python() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #14: /usr/bin/python() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #18: /usr/bin/python() [0x59bc74]
+frame #19: /usr/bin/python() [0x680934]
+frame #20: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #21: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #22: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #23: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #24: <unknown function> + 0x284c4 (0x400022e084c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: __libc_start_main + 0x98 (0x400022e08598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0525 11:54:54.723000 68088 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006555_68088_0' has failed to shutdown the rendezvous '7360' due to an error of type RendezvousConnectionError.
+[W525 11:54:54.051053815 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid006555]:56638, remote=[nid006555]:29505): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x400073b7bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x40002a3d89c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x40002a3d8fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x40002a3dd124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x148 (0x40002a3dec48 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2c (0x40002a3df10c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x9c (0x40002a3e061c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xfd9044 (0x400024a09044 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x63c060 (0x40002406c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #9: /usr/bin/python() [0x503e14]
+frame #10: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #11: /usr/bin/python() [0x4c709c]
+frame #12: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #13: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #14: /usr/bin/python() [0x529450]
+frame #15: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #16: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #17: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #18: /usr/bin/python() [0x59bc74]
+frame #19: /usr/bin/python() [0x680934]
+frame #20: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #21: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #22: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #23: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #24: <unknown function> + 0x284c4 (0x400022e084c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: __libc_start_main + 0x98 (0x400022e08598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #26: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0525 11:54:54.733000 68088 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid006555_68088_0' has failed to shutdown the rendezvous '7360' due to an error of type RendezvousConnectionError.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 117, in _call_store
+    return getattr(self._store, store_op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.distributed.DistNetworkError: failed to recv, got 0 bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.6.0a0+ecf3bae40a.nv25.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 683, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/agent/server/api.py", line 500, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 1162, in next_rendezvous
+    self._op_executor.run(join_op, deadline, self._get_deadline)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 648, in run
+    has_set = self._state_holder.sync()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/dynamic_rendezvous.py", line 437, in sync
+    get_response = self._backend.get_state()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 75, in get_state
+    base64_state: bytes = self._call_store("get", self._key)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.py", line 119, in _call_store
+    raise RendezvousConnectionError(
+torch.distributed.elastic.rendezvous.api.RendezvousConnectionError: The connection to the C10d store has failed. See inner exception for details.
+srun: error: nid006555: task 1: Exited with exit code 1
+srun: Terminating StepId=465935.0

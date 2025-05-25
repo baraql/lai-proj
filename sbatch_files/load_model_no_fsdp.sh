@@ -4,13 +4,13 @@
 #SBATCH --partition=normal
 #SBATCH --time=00:29:59
 #SBATCH --job-name=lsai
-#SBATCH --output=/iopsstor/scratch/cscs/$MY_USER/lai-proj/logs/load_model_no_fsdp/%x-%j.out
+#SBATCH --output=/iopsstor/scratch/cscs/%u/lai-proj/logs/load_model_no_fsdp/%x-%j.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1
 #SBATCH --cpus-per-task=72
 #SBATCH --mem=460000
-#SBATCH --environment=/iopsstor/scratch/cscs/$MY_USER/ngc_pt_jan.toml     # Vanilla 25.01 PyTorch NGC Image 
+#SBATCH --environment=ngc_pt_jan     # Vanilla 25.01 PyTorch NGC Image 
 #SBATCH --no-requeue	# Prevent Slurm to requeue the job if the execution crashes (e.g. node failure) so we don't loose the logs
 
 set -eo pipefail
@@ -19,7 +19,7 @@ echo "START TIME: $(date)"
 
 # Set up ENV
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-ASSIGNMENT_DIR="/iopsstor/scratch/cscs/$MY_USER/lai-proj"
+ASSIGNMENT_DIR="/iopsstor/scratch/cscs/$USER/lai-proj"
 
 CMD_PREFIX="numactl --membind=0-3"
 

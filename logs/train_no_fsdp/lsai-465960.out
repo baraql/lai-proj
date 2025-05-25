@@ -1,0 +1,17 @@
+START TIME: Sun May 25 12:27:32 CEST 2025
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-25 12:27:53,954 - root - INFO - Setting seed to 42
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train.py", line 136, in <module>
+    train(args)
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train.py", line 27, in train
+    print_GPU_stats()
+  File "/iopsstor/scratch/cscs/elyulina/lai-proj/train.py", line 14, in print_GPU_stats
+    logger.info(f"AVAILABLE GPUS: {int(os.environ["WORLD_SIZE"])}")
+                                       ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<frozen os>", line 685, in __getitem__
+KeyError: 'WORLD_SIZE'
+srun: error: nid006451: task 0: Exited with exit code 1
+srun: Terminating StepId=465960.0
+END TIME: Sun May 25 12:27:54 CEST 2025
