@@ -88,3 +88,6 @@ $ python plots.py
 
 ## Analysis
 
+We observe that fused attention offers substantial performance improvements in FSDP training, especially for small to mid-sized models, by increasing hardware utilization and throughput. We gain a MFU of around 3 percent points and around 25 more TFLOPs, and this stays roughly constant accross model sizes.
+
+Note that the improvement that fused attention brings is much more significant than with standard (no FSDP) training, where it only brings marginal improvements. We assume that this is because of the distributed model of FSDP, where there is a lot of communication overhead, so overall compute is underutilized in comparison. Optimizing attention could leave space to do more work and thus improve utilization. 
