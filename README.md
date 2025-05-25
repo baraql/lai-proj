@@ -5,7 +5,7 @@ This repository contains the project for the ETH course Large-Scale AI Engineeri
 Project code is available on [GitHub](https://github.com/baraql/lai-proj/tree/merger)
 
 To view the features separately, see the `feature-fsdp` and `feature-flash-attention` branches, respectively.
-We also decided not to repeat the description of all the features here, so please consult respective reports for more details about each individual fuature. 
+We also decided not to repeat the description of all the features here, so please consult respective reports for more details about each individual feature. 
 
 ## Project Structure
 - `sbatch_files/` — contains Slurm job scripts
