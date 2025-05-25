@@ -1,5 +1,6 @@
 # Large Scale AI Engineering Merger: FSDP x Flash Attention 
 **Authors: Elena Lyulina, Baraq Lipshitz, Philipp Gerstner, Tommaso Di Mario**
+
 This repository contains the project for the ETH course Large-Scale AI Engineering. It implements a merger of two features — **Fully Sharded Data Parallel (FSDP)** and **Flash Attention** — for a Transformer model and runs experiments on a multi-GPU cluster.
 
 Project code is available on [GitHub](https://github.com/baraql/lai-proj/tree/merger)
