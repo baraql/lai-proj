@@ -1,0 +1,119 @@
+START TIME: Sun May 25 13:39:54 CEST 2025
+Node IP: 172.28.39.64
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] Setting seed to 42
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] AVAILABLE GPUS: 16
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] NODES: 4.0
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] Total RAM: 854.46 GB
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] Available RAM: 773.50 GB
+2025-05-25 13:40:18,786 - root - INFO - [RANK 0 / 16] Available per-process RAM: 193.37 GB
+2025-05-25 13:40:25,547 - root - INFO - [RANK 0 / 16] GPU 0: NVIDIA GH200 120GB
+2025-05-25 13:40:25,547 - root - INFO - [RANK 0 / 16]   Total memory: 94.50 GB
+2025-05-25 13:40:25,548 - root - INFO - [RANK 0 / 16]   Allocated memory: 0.00 GB
+2025-05-25 13:40:25,548 - root - INFO - [RANK 0 / 16]   Cached memory: 0.00 GB
+2025-05-25 13:40:25,548 - root - INFO - [RANK 0 / 16] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=50, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=8, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42)
+2025-05-25 13:40:25,548 - root - INFO - [RANK 0 / 16] world size: 16
+2025-05-25 13:40:25,548 - root - INFO - [RANK 0 / 16] Setting up DataLoaders...
+2025-05-25 13:40:28,475 - root - INFO - [RANK 0 / 16] Setting up Model...
+2025-05-25 13:40:28,475 - root - INFO - [RANK 0 / 16] Loading a model with scale=8, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=2048, n_layers=64, n_heads=64, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072)
+2025-05-25 13:40:45,123 - root - INFO - [RANK 0 / 16] Total model parameters: 3959687168
+2025-05-25 13:40:45,129 - root - INFO - [RANK 0 / 16] Wrapping model with FSDP
+2025-05-25 13:40:45,689 - root - INFO - [rank 6] local params: 247480448
+2025-05-25 13:40:45,702 - root - INFO - [rank 12] local params: 247480448
+2025-05-25 13:40:45,710 - root - INFO - [rank 7] local params: 247480448
+2025-05-25 13:40:45,714 - root - INFO - [rank 5] local params: 247480448
+2025-05-25 13:40:45,771 - root - INFO - [rank 13] local params: 247480448
+2025-05-25 13:40:45,848 - root - INFO - [rank 15] local params: 247480448
+2025-05-25 13:40:45,923 - root - INFO - [RANK 0 / 16] The model is now: FullyShardedDataParallel
+2025-05-25 13:40:45,924 - root - INFO - [rank 0] local params: 247480448
+2025-05-25 13:40:45,926 - root - INFO - [RANK 0 / 16] Starting training!
+2025-05-25 13:40:45,974 - root - INFO - [rank 8] local params: 247480448
+2025-05-25 13:40:45,992 - root - INFO - [rank 1] local params: 247480448
+2025-05-25 13:40:46,002 - root - INFO - [rank 3] local params: 247480448
+2025-05-25 13:40:46,044 - root - INFO - [rank 11] local params: 247480448
+2025-05-25 13:40:46,118 - root - INFO - [rank 10] local params: 247480448
+2025-05-25 13:40:46,422 - root - INFO - [rank 4] local params: 247480448
+2025-05-25 13:40:47,622 - root - INFO - [rank 2] local params: 247480448
+2025-05-25 13:40:47,794 - root - INFO - [rank 14] local params: 247480448
+2025-05-25 13:40:48,609 - root - INFO - [rank 9] local params: 247480448
+2025-05-25 13:40:54,532 - root - INFO - [RANK 0 / 16] Step: 1 | Loss: 11.94 | Tokens per second: 475.97 | Training tokens per second (%): 19.38 | MFU (%): 0.38 | TFLOPs: 3.77
+2025-05-25 13:41:00,565 - root - INFO - [RANK 0 / 16] Step: 5 | Loss: 11.92 | Tokens per second: 2715.98 | Training tokens per second (%): 11.41 | MFU (%): 2.18 | TFLOPs: 21.53
+2025-05-25 13:41:07,351 - root - INFO - [RANK 0 / 16] Step: 10 | Loss: 11.92 | Tokens per second: 3018.43 | Training tokens per second (%): 25.72 | MFU (%): 2.42 | TFLOPs: 23.93
+2025-05-25 13:41:13,757 - root - INFO - [RANK 0 / 16] Step: 15 | Loss: 11.78 | Tokens per second: 3197.12 | Training tokens per second (%): 35.21 | MFU (%): 2.56 | TFLOPs: 25.34
+2025-05-25 13:41:20,880 - root - INFO - [RANK 0 / 16] Step: 20 | Loss: 11.67 | Tokens per second: 2875.31 | Training tokens per second (%): 34.78 | MFU (%): 2.30 | TFLOPs: 22.79
+2025-05-25 13:41:27,226 - root - INFO - [RANK 0 / 16] Step: 25 | Loss: 11.25 | Tokens per second: 3227.64 | Training tokens per second (%): 18.28 | MFU (%): 2.59 | TFLOPs: 25.59
+2025-05-25 13:41:33,829 - root - INFO - [RANK 0 / 16] Step: 30 | Loss: 10.62 | Tokens per second: 3101.60 | Training tokens per second (%): 26.99 | MFU (%): 2.49 | TFLOPs: 24.59
+2025-05-25 13:41:40,148 - root - INFO - [RANK 0 / 16] Step: 35 | Loss: 10.54 | Tokens per second: 3241.30 | Training tokens per second (%): 13.78 | MFU (%): 2.60 | TFLOPs: 25.69
+2025-05-25 13:41:46,460 - root - INFO - [RANK 0 / 16] Step: 40 | Loss: 10.55 | Tokens per second: 3244.58 | Training tokens per second (%): 9.95 | MFU (%): 2.60 | TFLOPs: 25.72
+2025-05-25 13:41:53,216 - root - INFO - [RANK 0 / 16] Step: 45 | Loss: 9.97 | Tokens per second: 3031.56 | Training tokens per second (%): 15.59 | MFU (%): 2.43 | TFLOPs: 24.03
+2025-05-25 13:41:59,515 - root - INFO - [RANK 0 / 16] Step: 50 | Loss: 9.93 | Tokens per second: 3251.52 | Training tokens per second (%): 10.93 | MFU (%): 2.61 | TFLOPs: 25.78
+2025-05-25 13:41:59,516 - root - INFO - [RANK 0 / 16] Training completed
+2025-05-25 13:41:59,516 - root - INFO - [RANK 0 / 16] Took 1 min 33 sec
+[W525 13:42:05.516815320 TCPStore.cpp:115] [c10d] recvVector failed on SocketImpl(fd=3, addr=[nid007109-hsn1]:32778, remote=[nid007104]:29505): failed to recv, got 0 bytes
+Exception raised from recvBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:671 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007331bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400029b789c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8d14 (0x400029b78d14 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ab208 (0x400029b7b208 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: <unknown function> + 0x58aca84 (0x400029b7ca84 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1bc (0x400029b7e9ac in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0xfd9460 (0x4000241a9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x63c060 (0x40002380c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #8: /usr/bin/python() [0x503e14]
+frame #9: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #10: /usr/bin/python() [0x4c709c]
+frame #11: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #12: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #13: /usr/bin/python() [0x529450]
+frame #14: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #15: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #16: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #17: /usr/bin/python() [0x59bc74]
+frame #18: /usr/bin/python() [0x680934]
+frame #19: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #20: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #21: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #22: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #23: <unknown function> + 0x284c4 (0x4000225a84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: __libc_start_main + 0x98 (0x4000225a8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #25: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0525 13:42:05.169000 48022 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007109_48022_0' has failed to shutdown the rendezvous '1661' due to an error of type RendezvousConnectionError.
+[W525 13:42:05.572571038 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=3, addr=[nid007109-hsn1]:32778, remote=[nid007104]:29505): Broken pipe
+Exception raised from sendBytes at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/Utils.hpp:646 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0xd4 (0x40007331bdd4 in /usr/local/lib/python3.12/dist-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x58a89c0 (0x400029b789c0 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x58a8fcc (0x400029b78fcc in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x58ad124 (0x400029b7d124 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::compareSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&) + 0x1ac (0x400029b7e99c in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: <unknown function> + 0xfd9460 (0x4000241a9460 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #6: <unknown function> + 0x63c060 (0x40002380c060 in /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch_python.so)
+frame #7: /usr/bin/python() [0x503e14]
+frame #8: _PyObject_MakeTpCall + 0x78 (0x4c2db8 in /usr/bin/python)
+frame #9: /usr/bin/python() [0x4c709c]
+frame #10: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #11: _PyObject_Call_Prepend + 0xc4 (0x4c4894 in /usr/bin/python)
+frame #12: /usr/bin/python() [0x529450]
+frame #13: PyObject_Call + 0xa4 (0x4c52d4 in /usr/bin/python)
+frame #14: _PyEval_EvalFrameDefault + 0x3e70 (0x567d34 in /usr/bin/python)
+frame #15: PyEval_EvalCode + 0x130 (0x562ab4 in /usr/bin/python)
+frame #16: /usr/bin/python() [0x59bc74]
+frame #17: /usr/bin/python() [0x680934]
+frame #18: _PyRun_SimpleFileObject + 0x194 (0x680508 in /usr/bin/python)
+frame #19: _PyRun_AnyFileObject + 0x54 (0x6802d4 in /usr/bin/python)
+frame #20: Py_RunMain + 0x2dc (0x68b2cc in /usr/bin/python)
+frame #21: Py_BytesMain + 0x28 (0x68ae88 in /usr/bin/python)
+frame #22: <unknown function> + 0x284c4 (0x4000225a84c4 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #23: __libc_start_main + 0x98 (0x4000225a8598 in /usr/lib/aarch64-linux-gnu/libc.so.6)
+frame #24: _start + 0x30 (0x5f6e30 in /usr/bin/python)
+
+W0525 13:42:05.177000 48022 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1284] The node 'nid007109_48022_0' has failed to shutdown the rendezvous '1661' due to an error of type RendezvousConnectionError.
+END TIME: Sun May 25 13:42:06 CEST 2025
