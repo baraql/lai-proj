@@ -85,7 +85,7 @@ def train(args):
   train_dl_iterator = iter(train_dl)
 
   if args.fused_attention:
-      logger.info("activating fused attention")
+      log_dist("activating fused attention")
       os.environ["NVTE_FUSED_ATTN"] = "1"
       os.environ["NVTE_FLASH_ATTN"] = "0"
 
@@ -105,7 +105,7 @@ def train(args):
     model = Transformer(model_config)
   
   total_params = sum(p.numel() for p in model.parameters())
-  print("Total model parameters:", total_params)
+  log_dist(f"Total model parameters: {total_params}")
   
   # SETTING CUDA DEVICE
   local_rank = int(os.environ["LOCAL_RANK"])

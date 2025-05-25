@@ -52,7 +52,7 @@ srun torchrun \
       --learning-rate 5e-5 \
       --lr-warmup-steps 100 \
       --training-steps 100 \
-      --scaling-factor 2 \
+      --scaling-factor 8 \
       --scaling-strategy all \
       --set-seed 42 \
       --fused-optimizer \

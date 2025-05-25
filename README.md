@@ -3,6 +3,7 @@
 This repository contains the project for the ETH course Large-Scale AI Engineering. It implements a merger of two features — **Fully Sharded Data Parallel (FSDP)** and **Flash Attention** — for a Transformer model and runs experiments on a multi-GPU cluster.
 
 To view the features separately, see the `feature-fsdp` and `feature-flash-attention` branches, respectively.
+We also decided not to repeat the desciption of all the features here, so please consult respective reports for more details about each individual fuature. 
 
 ## Project Structure
 - `sbatch_files/` — contains Slurm job scripts
@@ -11,7 +12,7 @@ To view the features separately, see the `feature-fsdp` and `feature-flash-atten
 
 -  `logs/` — output logs (written per job)
 
-## 🚀 Getting Started 
+## Getting Started 
 For convinience, we explicitely provide the environment file `ngc_pt_jan.toml`.
 To make it work with the experiments, run the following command:
 ```
@@ -45,6 +46,49 @@ The corresponding log files will appear in the `logs/train_flash_attention_fsdp/
 ## Running Individual Experiments 
 Use `sbatch_files/flash_attention.sh`, `sbatch_files/train_fsdp.sh`, or `sbatch_files/train_no_fsdp.sh` to train a model with only flash attention, only FSDP, or neither.
 
+## Loss ablation with FSDP x Flash Attention and without 
+To prove the correctness of the merger, we fix the seed and train the same model with FSDP (trained on 1 nodes with 2 GPUs each) and Flash Attention or with neither (the default version). We chose the model with 3,959,687,168 parameters (scaling factor = 8).
+ Then we compare the loss values parsed from the log files.  
+
+**FSDP x Flash Attention log file**: `logs/train_flash_attention_fsdp/lsai-466275.out` \
+**Default log file**: `logs/train_no_fsdp/lsai-466292.out`
+
+**Results**:
+![merger-loss-ablation](plots/loss_comparison_2025-05-25_17-45-28.png)
+
+```
+=== Max Loss Difference ===
+Step: 95
+Log FSDP x Flash Attention Loss: 8.1200
+Log Deafult Loss: 8.1400
+Absolute Difference: 0.0200
+
+=== Mean Metrics ===
+Log FSDP x Flash Attention:
+  tokens_per_sec: 3990.82
+  training_tokens_pct: 27.98
+  mfu: 7.39
+  tflops: 73.12
+Log Default:
+  tokens_per_sec: 9857.38
+  training_tokens_pct: 27.98
+  mfu: 28.50
+  tflops: 281.82
+```
+
+As we can see, the results are almost identical (with the biggest difference in loss values of 0.02) proving the correct implementation of the merger. 
+
+**Implementation**: `loss_ablation.py` \
+**Reproduction**: \
+Activate a conda environment:
+```bash
+$ conda activate 
+```
+
+And run: 
+```bash
+$ python loss_ablation.py  --merger-logs=logs/train_flash_attention_fsdp/lsai-466275.out --default-logs=logs/train_no_fsdp/lsai-466292.out
+```
 
 ## Model Scaling Experiments
 
