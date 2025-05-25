@@ -46,7 +46,6 @@ The corresponding log files will appear in the `logs/train_flash_attention_fsdp/
 ## Running Individual Experiments 
 Use `sbatch_files/flash_attention.sh`, `sbatch_files/train_fsdp.sh`, or `sbatch_files/train_no_fsdp.sh` to train a model with only flash attention, only FSDP, or neither.
 
-
 ## Loss ablation with FSDP x Flash Attention and without 
 To prove the correctness of the merger, we fix the seed and train the same model with FSDP (trained on 1 nodes with 2 GPUs each) and Flash Attention or with neither (the default version). We chose the model with 3,959,687,168 parameters (scaling factor = 8).
  Then we compare the loss values parsed from the log files.  
@@ -90,3 +89,46 @@ And run:
 ```bash
 $ python loss_ablation.py  --merger-logs=logs/train_flash_attention_fsdp/lsai-466275.out --default-logs=logs/train_no_fsdp/lsai-466292.out
 ```
+
+## Model Scaling Experiments
+
+To see the combined effects, we train on 2 GPUs with an increasing model size, to compare to the results using only FSDP. All runs were successful.
+
+
+| # total GPUs | # nodes | scaling factor | # model parameters | log file                                         |
+| ------------ | ------- | -------------- | ------------------ | ------------------------------------------------ |
+| 2            | 1       | 2              | 190,857,728        | logs/train_flash_attention_fsdp/lsai_scale2.out  |
+| 2            | 1       | 4              | 704,709,632        | logs/train_flash_attention_fsdp/lsai_scale4.out  |
+| 2            | 1       | 6              | 1,856,128,512      | logs/train_flash_attention_fsdp/lsai_scale6.out  |
+| 2            | 1       | 8              | 3,959,687,168      | logs/train_flash_attention_fsdp/lsai_scale8.out  |
+| 2            | 1       | 10             | 7,329,958,400      | logs/train_flash_attention_fsdp/lsai_scale10.out |
+| 2            | 1       | 14             | 19,128,929,792     | logs/train_flash_attention_fsdp/lsai_scale14.out |
+
+**Implementation**: `plots.py` \
+**Replication**: \
+Activate a conda environment:
+```bash
+$ conda activate 
+```
+
+Install `seaborn` if necessary:
+```bash
+$ pip install seaborn
+```
+
+And run: 
+```bash
+$ python plots.py
+```
+
+**Result**
+
+<!-- ![avg_mfu](plots/avg_mfu_pct.png)
+![avg_tflops](plots/avg_tflops.png)
+![avg_tokens_per_sec](plots/avg_tokens_per_sec.png)
+![avg_training_tokens_pct](plots/avg_training_tokens_pct_scale.png)
+![avg_training_tokens_pct](plots/avg_training_tokens_pct_total_params.png) -->
+![training_metrics_comparison_total_params](plots/MERGER_training_metrics_comparison_total_params.png)
+
+## Analysis
+
