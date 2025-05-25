@@ -124,7 +124,7 @@ def plot_single_metric(df, metric, title, ax=None, save_plots=False, output_dir=
     # create unique configurations combining GPU / nodes count and FSDP
     df['config'] = df['gpus'].astype(str) + ' GPU' + (df['gpus'] > 1).map({True: 's', False: ''}) + ', ' + \
             df['nodes'].astype(str) + ' node' + (df['nodes'] > 1).map({True: 's', False: ''}) + \
-            ' (' + df['fsdp'].map({True: 'FSDP', False: 'no FSDP'}) + ', ' + df['flash_attention'].map({True: 'FLASH ATTENTION', False: 'no FLASH ATTENTION'})+ ')'
+            ' (' + df['fsdp'].map({True: 'FSDP', False: 'no FSDP'}) + ', ' + df['flash_attention'].map({True: 'FUSED ATTENTION', False: 'no FUSED ATTENTION'})+ ')'
     
     unique_configs = df['config'].drop_duplicates().tolist()
 
@@ -248,7 +248,6 @@ if __name__ == "__main__":
     "logs/train_fsdp/lsai-466085.out",
     # fsdp, gpus=2, nodes=1, scale=15 OOM 
     # "logs/train_fsdp/lsai-466097.out",
-    'logs/train_flash_attention_fsdp/lsai_scale1.out',
     'logs/train_flash_attention_fsdp/lsai_scale10.out',
     'logs/train_flash_attention_fsdp/lsai_scale14.out',
     'logs/train_flash_attention_fsdp/lsai_scale2.out',
