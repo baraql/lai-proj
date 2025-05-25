@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 PROJECT_DIR = Path(__file__).parent.absolute()
+prefix = "MERGER"
 
 
 def parse_log_file(file_path):
@@ -21,6 +22,8 @@ def parse_log_file(file_path):
         return None
 
     scale = int(scale_match.group(1))
+    
+    flash_attention = 'flash_attention' in file_path
 
     if 'no_fsdp' in file_path:
         fsdp = False
@@ -41,7 +44,6 @@ def parse_log_file(file_path):
         # nodes_float = float(nodes_match.group(1))
         # nodes_int = int(nodes_float)
         nodes = int(float(nodes_match.group(1)))
-
     else:
         print(f"Warning: Could not determine gpus / nodes configuration from {file_path}, skipping this file")
         return None
@@ -77,6 +79,7 @@ def parse_log_file(file_path):
         'gpus': gpus,
         'nodes': nodes,
         'fsdp': fsdp,
+        'flash_attention': flash_attention,
         'avg_tokens_per_sec': df['tokens_per_sec'].mean(),
         'avg_training_tokens_pct': df['training_tokens_pct'].mean(),
         'avg_mfu_pct': df['mfu_pct'].mean(),
@@ -104,7 +107,7 @@ def parse_all_logs(log_file_paths):
     df = pd.DataFrame(results)
     print(f"\nSuccessfully parsed {len(df)} log files")
     print(f"Configurations found:")
-    print(df[['total_params', 'scale', 'gpus', 'nodes', 'fsdp', 'num_step_entries']].to_string(index=False))
+    print(df[['total_params', 'scale', 'gpus', 'nodes', 'fsdp', 'flash_attention', 'num_step_entries']].to_string(index=False))
 
     return df
 
@@ -116,12 +119,12 @@ def plot_single_metric(df, metric, title, ax=None, save_plots=False, output_dir=
         plt.figure(figsize=(10, 6))
         ax = plt.gca()
         
-    df = df.sort_values(['fsdp', 'gpus', 'nodes'])
+    df = df.sort_values(['fsdp', 'flash_attention', 'gpus', 'nodes'])
 
     # create unique configurations combining GPU / nodes count and FSDP
     df['config'] = df['gpus'].astype(str) + ' GPU' + (df['gpus'] > 1).map({True: 's', False: ''}) + ', ' + \
             df['nodes'].astype(str) + ' node' + (df['nodes'] > 1).map({True: 's', False: ''}) + \
-            ' (' + df['fsdp'].map({True: 'FSDP', False: 'no FSDP'}) + ')'
+            ' (' + df['fsdp'].map({True: 'FSDP', False: 'no FSDP'}) + ', ' + df['flash_attention'].map({True: 'FLASH ATTENTION', False: 'no FLASH ATTENTION'})+ ')'
     
     unique_configs = df['config'].drop_duplicates().tolist()
 
@@ -163,7 +166,7 @@ def plot_single_metric(df, metric, title, ax=None, save_plots=False, output_dir=
     if save_plots and output_dir and ax == plt.gca():  # Only save if this is a standalone plot
         safe_filename = metric.replace('_', '_').replace('%', 'pct')
         safe_filename += f"_{x_axis}"
-        plt.savefig(f'{output_dir}/{safe_filename}.png', dpi=300, bbox_inches='tight')
+        plt.savefig(f'{output_dir}/{prefix}_{safe_filename}.png', dpi=300, bbox_inches='tight')
         print(f"Individual plot saved to {output_dir}/{safe_filename}.png")
 
     return ax
@@ -196,8 +199,8 @@ def create_visualizations(df, save_plots=True, output_dir=PROJECT_DIR / 'plots',
     plt.tight_layout()
 
     if save_plots:
-        plt.savefig(f'{output_dir}/training_metrics_comparison_{x_axis}.png', dpi=300, bbox_inches='tight')
-        print(f"Combined plot saved to {output_dir}/training_metrics_comparison_{x_axis}.png")
+        plt.savefig(f'{output_dir}/{prefix}_training_metrics_comparison_{x_axis}.png', dpi=300, bbox_inches='tight')
+        print(f"Combined plot saved to {output_dir}/{prefix}_training_metrics_comparison_{x_axis}.png")
 
     # plt.show()
 
@@ -217,7 +220,7 @@ def main(log_file_paths, x_axis):
         return
 
     print("\n=== Summary Statistics ===")
-    print(df.groupby(['total_params', 'scale', 'gpus', 'fsdp']).agg({
+    print(df.groupby(['total_params', 'scale', 'gpus', 'fsdp', 'flash_attention']).agg({
         'avg_tokens_per_sec': 'mean',
         'avg_training_tokens_pct': 'mean',
         'avg_mfu_pct': 'mean',
@@ -245,6 +248,13 @@ if __name__ == "__main__":
     "logs/train_fsdp/lsai-466085.out",
     # fsdp, gpus=2, nodes=1, scale=15 OOM 
     # "logs/train_fsdp/lsai-466097.out",
+    'logs/train_flash_attention_fsdp/lsai_scale1.out',
+    'logs/train_flash_attention_fsdp/lsai_scale10.out',
+    'logs/train_flash_attention_fsdp/lsai_scale14.out',
+    'logs/train_flash_attention_fsdp/lsai_scale2.out',
+    'logs/train_flash_attention_fsdp/lsai_scale4.out',
+    'logs/train_flash_attention_fsdp/lsai_scale6.out',
+    'logs/train_flash_attention_fsdp/lsai_scale8.out'
 ]
 
 # change x_scale='total_params' to have total model parameters on X axis
