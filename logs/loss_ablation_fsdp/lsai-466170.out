@@ -1,0 +1,67 @@
+START TIME: Sun May 25 15:57:45 CEST 2025
+Node IP: 172.28.31.140
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/workspace': No such file or directory: going to /tmp instead
+[INFO     | root               ]: [RANK 0 / 2] Setting seed to 42
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] Setting seed to 42
+[INFO     | root               ]: [RANK 0 / 2] AVAILABLE GPUS: 2
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] AVAILABLE GPUS: 2
+[INFO     | root               ]: [RANK 0 / 2] NODES: 2.0
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] NODES: 2.0
+[INFO     | root               ]: [RANK 0 / 2] Total RAM: 854.46 GB
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] Total RAM: 854.46 GB
+[INFO     | root               ]: [RANK 0 / 2] Available RAM: 775.45 GB
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] Available RAM: 775.45 GB
+[INFO     | root               ]: [RANK 0 / 2] Available per-process RAM: 775.45 GB
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] Available per-process RAM: 775.45 GB
+[INFO     | root               ]: [RANK 0 / 2] GPU 0: NVIDIA GH200 120GB
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2] GPU 0: NVIDIA GH200 120GB
+[INFO     | root               ]: [RANK 0 / 2]   Total memory: 94.50 GB
+2025-05-25 15:58:13,132 - root - INFO - [RANK 0 / 2]   Total memory: 94.50 GB
+[INFO     | root               ]: [RANK 0 / 2]   Allocated memory: 0.00 GB
+2025-05-25 15:58:13,133 - root - INFO - [RANK 0 / 2]   Allocated memory: 0.00 GB
+[INFO     | root               ]: [RANK 0 / 2]   Cached memory: 0.00 GB
+2025-05-25 15:58:13,133 - root - INFO - [RANK 0 / 2]   Cached memory: 0.00 GB
+[INFO     | root               ]: [RANK 0 / 2] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=14, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42, fused_attention=False)
+2025-05-25 15:58:13,133 - root - INFO - [RANK 0 / 2] Experiment args: Namespace(dataset='/capstor/store/cscs/ethz/large-sc/datasets/train_data.parquet', tokenizer_name_or_path='unsloth/Mistral-Nemo-Base-2407-bnb-4bit', sequence_length=4096, batch_size=1, fused_optimizer=False, learning_rate=5e-05, lr_warmup_steps=100, training_steps=100, logging_frequency=5, profile=False, profile_step_start=10, profile_step_end=12, grad_max_norm=1, model_dtype='bf16', compile=False, scaling_factor=14, scaling_strategy=<ScalingStrategy.ALL: 'all'>, set_seed=42, fused_attention=False)
+[INFO     | root               ]: [RANK 0 / 2] world size: 2
+2025-05-25 15:58:13,133 - root - INFO - [RANK 0 / 2] world size: 2
+[INFO     | root               ]: [RANK 0 / 2] Setting up DataLoaders...
+2025-05-25 15:58:13,133 - root - INFO - [RANK 0 / 2] Setting up DataLoaders...
+[INFO     | root               ]: [RANK 0 / 2] Setting up Model...
+2025-05-25 15:58:16,464 - root - INFO - [RANK 0 / 2] Setting up Model...
+[INFO     | root               ]: [RANK 0 / 2] Loading a model with scale=14, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3584, n_layers=112, n_heads=112, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072, use_fused=False)
+2025-05-25 15:58:16,465 - root - INFO - [RANK 0 / 2] Loading a model with scale=14, scaling_strategy=ScalingStrategy.ALL, config:
+TransformerModelArgs(dim=3584, n_layers=112, n_heads=112, n_kv_heads=8, multiple_of=256, ffn_dim_multiplier=1.3, norm_eps=1e-05, rope_theta=500000, norm_type='rmsnorm', seq_len=4096, vocab_size=131072, use_fused=False)
+Total model parameters: 19128929792
+Total model parameters: 19128929792
+[INFO     | root               ]: [RANK 0 / 2] Wrapping model with FSDP
+2025-05-25 15:59:33,405 - root - INFO - [RANK 0 / 2] Wrapping model with FSDP
+[INFO     | root               ]: [RANK 0 / 2] The model is now: FullyShardedDataParallel
+2025-05-25 15:59:37,375 - root - INFO - [RANK 0 / 2] The model is now: FullyShardedDataParallel
+[INFO     | root               ]: [rank 0] local params: 9564464896
+2025-05-25 15:59:37,376 - root - INFO - [rank 0] local params: 9564464896
+[INFO     | root               ]: [RANK 0 / 2] Starting training!
+2025-05-25 15:59:37,381 - root - INFO - [RANK 0 / 2] Starting training!
+[INFO     | root               ]: [rank 1] local params: 9564464896
+2025-05-25 15:59:38,587 - root - INFO - [rank 1] local params: 9564464896
+[INFO     | root               ]: [RANK 0 / 2] Step: 1 | Loss: 11.92 | Tokens per second: 253.29 | Training tokens per second (%): 19.38 | MFU (%): 1.97 | TFLOPs: 19.53
+2025-05-25 15:59:53,581 - root - INFO - [RANK 0 / 2] Step: 1 | Loss: 11.92 | Tokens per second: 253.29 | Training tokens per second (%): 19.38 | MFU (%): 1.97 | TFLOPs: 19.53
+[INFO     | root               ]: [RANK 0 / 2] Step: 5 | Loss: 12.00 | Tokens per second: 495.21 | Training tokens per second (%): 11.41 | MFU (%): 3.86 | TFLOPs: 38.19
+2025-05-25 16:00:26,667 - root - INFO - [RANK 0 / 2] Step: 5 | Loss: 12.00 | Tokens per second: 495.21 | Training tokens per second (%): 11.41 | MFU (%): 3.86 | TFLOPs: 38.19
+[INFO     | root               ]: [RANK 0 / 2] Step: 10 | Loss: 11.79 | Tokens per second: 512.43 | Training tokens per second (%): 25.72 | MFU (%): 4.00 | TFLOPs: 39.52
+2025-05-25 16:01:06,634 - root - INFO - [RANK 0 / 2] Step: 10 | Loss: 11.79 | Tokens per second: 512.43 | Training tokens per second (%): 25.72 | MFU (%): 4.00 | TFLOPs: 39.52
+[INFO     | root               ]: [RANK 0 / 2] Step: 15 | Loss: 11.28 | Tokens per second: 562.47 | Training tokens per second (%): 35.21 | MFU (%): 4.39 | TFLOPs: 43.38
+2025-05-25 16:01:43,046 - root - INFO - [RANK 0 / 2] Step: 15 | Loss: 11.28 | Tokens per second: 562.47 | Training tokens per second (%): 35.21 | MFU (%): 4.39 | TFLOPs: 43.38
+[INFO     | root               ]: [RANK 0 / 2] Step: 20 | Loss: 10.72 | Tokens per second: 567.81 | Training tokens per second (%): 34.78 | MFU (%): 4.43 | TFLOPs: 43.79
+2025-05-25 16:02:19,115 - root - INFO - [RANK 0 / 2] Step: 20 | Loss: 10.72 | Tokens per second: 567.81 | Training tokens per second (%): 34.78 | MFU (%): 4.43 | TFLOPs: 43.79
+slurmstepd: error: *** STEP 466170.0 ON nid006529 CANCELLED AT 2025-05-25T16:02:42 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 466170 ON nid006529 CANCELLED AT 2025-05-25T16:02:42 DUE TO TIME LIMIT ***
+W0525 16:02:42.013000 181150 torch/distributed/elastic/agent/server/api.py:719] Received 15 death signal, shutting down workers
+W0525 16:02:42.014000 181150 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 181536 closing signal SIGTERM
+--- Logging error ---
+srun: forcing job termination
+W0525 16:02:42.017000 181150 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 181536 closing signal SIGTERM
