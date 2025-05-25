@@ -1,4 +1,5 @@
 # Large Scale AI Engineering – FSDP Project
+**Authors: Elena Lyulina, Baraq Lipshitz**
 
 This repository contains the project for the ETH course **Large Scale AI Engineering**. It implements **Fully Sharded Data Parallel (FSDP)** training for a Transformer model and runs experiments on a multi-GPU cluster.
 
@@ -56,10 +57,9 @@ We used the following sources to ensure correct implementation:
 
 ## Experiment 1: maximum model size that fits on a single GPU without FSDP 
 
-First, we establish the biggest model that can fit into a single GPU wihtout FSDP. For that we run a binary search scaling model's parameters until we find the best fit. We also implemented another scaling strategy that only changes the number of layers, allowing for more flexibility and therefore fitting a bigger model at the expense of its architecture. 
+First, we establish the largest model that can fit into a single GPU without FSDP. For this, we run a binary search, scaling the model's parameters until we find the best fit. We also implemented another scaling strategy that only changes the number of layers, allowing for more flexibility and therefore fitting a larger model at the expense of architectural consistency.
 
-**Results**:
-Scaling all parameters, the biggest model has **46,322,328,320** parameters, achieved with scaling_factor=19 (dim=4864, n_layers=152, n_heads=152). Scaling only the number of layers, the biggest model has **48,185,937,920** parameters, achieved with dim=4096, n_layers=216, n_heads=32. We decided to conduct all the future experiments with only one scaling strategy (scalign all parameters) to 
+**Results**: When scaling all parameters, the largest model has **46,322,328,320** parameters, achieved with scaling_factor=19 (dim=4864, n_layers=152, n_heads=152). When scaling only the number of layers, the largest model has **48,185,937,920** parameters, achieved with dim=4096, n_layers=216, n_heads=32. We decided to conduct all future experiments with only one scaling strategy (scaling all parameters) to save computational resources.
 
 **Implementation**: `load_model_no_fsdp.py` \
 **Sbatch file**: `sbatch_files/load_model_no_fsdp.sh` \
